@@ -9,7 +9,7 @@ const { drakt } = Astro.props;
 const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
 ---
 
-<a href={`/drakt/${drakt.id}`} class="card">
+<a href={`${import.meta.env.BASE_URL}/drakt/${drakt.id}`} class="card">
   <div class="card-image">
     {hasImage ? (
       <img src={drakt.bildeUrl} alt={drakt.navn} loading="lazy" />
