@@ -51,7 +51,6 @@ const tiaar = [...new Set(
 
 <Base title="Fotballdrakter – Min samling">
   <section class="hero">
-    <div class="hero-emoji">🧤👕⚽</div>
     <h1>Fotballdraktsamlingen min</h1>
     <p class="hero-ingress">Her har jeg samlet alle fotballdraktene mine, slik at jeg har oversikt. Litt sært ja.</p>
   </section>
@@ -60,18 +59,22 @@ const tiaar = [...new Set(
   <section class="stats">
     <div class="stat-cards">
       <div class="stat-card">
+        <span class="stat-icon">👕</span>
         <span class="stat-number">{allDrakter.length}</span>
         <span class="stat-label">Drakter totalt</span>
       </div>
       <div class="stat-card">
+        <span class="stat-icon">🌍</span>
         <span class="stat-number">{antallLand}</span>
         <span class="stat-label">Land</span>
       </div>
       <div class="stat-card">
+        <span class="stat-icon">🛡️</span>
         <span class="stat-number">{klubbdrakter}</span>
         <span class="stat-label">Klubbdrakter</span>
       </div>
       <div class="stat-card">
+        <span class="stat-icon">🏴</span>
         <span class="stat-number">{landslagsdrakter}</span>
         <span class="stat-label">Landslagsdrakter</span>
       </div>
@@ -200,14 +203,10 @@ const tiaar = [...new Set(
 <style>
   .hero {
     text-align: center;
-    margin-bottom: 2.5rem;
-    padding: 3rem 1rem 2rem;
-  }
-
-  .hero-emoji {
-    font-size: 2.5rem;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.3rem;
+    margin: -2rem -2rem 2.5rem;
+    padding: 4rem 2rem 3rem;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .hero h1 {
@@ -215,10 +214,7 @@ const tiaar = [...new Set(
     font-weight: 800;
     margin-bottom: 0.5rem;
     letter-spacing: -0.03em;
-    background: linear-gradient(135deg, #1a1a1a 0%, #444 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--color-text);
   }
 
   .hero-ingress {
@@ -252,6 +248,12 @@ const tiaar = [...new Set(
     background: var(--color-bg);
     border-radius: 10px;
     border: 1px solid var(--color-border);
+  }
+
+  .stat-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .stat-number {
