@@ -147,7 +147,7 @@ const tiaar = [...new Set(
   </div>
 
   <!-- Tabellvisning -->
-  <div class="table-wrapper" id="table-view" hidden>
+  <div class="table-wrapper" id="table-view" style="display:none;">
     <table>
       <thead>
         <tr>
@@ -396,10 +396,6 @@ const tiaar = [...new Set(
     overflow-x: auto;
   }
 
-  .table-wrapper[hidden] {
-    display: none;
-  }
-
   table {
     width: 100%;
     border-collapse: collapse;
@@ -466,93 +462,91 @@ const tiaar = [...new Set(
 </style>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const search = document.getElementById("search") as HTMLInputElement;
-    const filterLand = document.getElementById("filter-land") as HTMLSelectElement;
-    const filterType = document.getElementById("filter-type") as HTMLSelectElement;
-    const filterFarge = document.getElementById("filter-farge") as HTMLSelectElement;
-    const filterTiaar = document.getElementById("filter-tiaar") as HTMLSelectElement;
-    const resetBtn = document.getElementById("reset-filters") as HTMLButtonElement;
-    const gridView = document.getElementById("grid")!;
-    const tableView = document.getElementById("table-view")!;
-    const gridItems = gridView.querySelectorAll<HTMLElement>(".grid-item");
-    const tableRows = tableView.querySelectorAll<HTMLElement>(".table-row");
-    const resultsCount = document.getElementById("results-count")!;
-    const toggleBtns = document.querySelectorAll<HTMLButtonElement>(".toggle-btn");
+  // Module scripts are deferred, so DOM is already ready
+  const search = document.getElementById("search") as HTMLInputElement;
+  const filterLand = document.getElementById("filter-land") as HTMLSelectElement;
+  const filterType = document.getElementById("filter-type") as HTMLSelectElement;
+  const filterFarge = document.getElementById("filter-farge") as HTMLSelectElement;
+  const filterTiaar = document.getElementById("filter-tiaar") as HTMLSelectElement;
+  const resetBtn = document.getElementById("reset-filters") as HTMLButtonElement;
+  const gridView = document.getElementById("grid") as HTMLElement;
+  const tableView = document.getElementById("table-view") as HTMLElement;
+  const gridItems = gridView?.querySelectorAll<HTMLElement>(".grid-item") ?? [];
+  const tableRows = tableView?.querySelectorAll<HTMLElement>(".table-row") ?? [];
+  const resultsCount = document.getElementById("results-count") as HTMLElement;
+  const toggleBtns = document.querySelectorAll<HTMLButtonElement>("[data-view]");
 
-    // Visningsveksler
-    toggleBtns.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        toggleBtns.forEach((b) => b.classList.remove("active"));
-        btn.classList.add("active");
-        const view = btn.dataset.view;
-        if (view === "grid") {
-          gridView.hidden = false;
-          tableView.hidden = true;
-        } else {
-          gridView.hidden = true;
-          tableView.hidden = false;
-        }
-      });
+  // Visningsveksler
+  toggleBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      toggleBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      if (btn.dataset.view === "table") {
+        gridView.style.display = "none";
+        tableView.style.display = "block";
+      } else {
+        gridView.style.display = "";
+        tableView.style.display = "none";
+      }
+    });
+  });
+
+  function applyFilters() {
+    const query = search.value.toLowerCase().trim();
+    const land = filterLand.value;
+    const type = filterType.value;
+    const farge = filterFarge.value.toLowerCase();
+    const tiaar = filterTiaar.value;
+    let visible = 0;
+
+    const hasFilters = !!(query || land || type || farge || tiaar);
+    resetBtn.hidden = !hasFilters;
+
+    function matchItem(el: HTMLElement) {
+      const matchSearch =
+        !query ||
+        el.dataset.navn?.includes(query) ||
+        el.dataset.land?.toLowerCase().includes(query) ||
+        el.dataset.farge?.includes(query) ||
+        el.dataset.aar?.includes(query);
+
+      const matchLand = !land || el.dataset.land === land;
+      const matchType = !type || el.dataset.type === type;
+      const matchFarge = !farge || el.dataset.farge?.includes(farge);
+      const matchTiaar = !tiaar || (el.dataset.aar || "").match(new RegExp(`${tiaar}\\d`));
+
+      return matchSearch && matchLand && matchType && matchFarge && matchTiaar;
+    }
+
+    gridItems.forEach((item) => {
+      const show = matchItem(item);
+      item.hidden = !show;
+      if (show) visible++;
     });
 
-    function applyFilters() {
-      const query = search.value.toLowerCase().trim();
-      const land = filterLand.value;
-      const type = filterType.value;
-      const farge = filterFarge.value.toLowerCase();
-      const tiaar = filterTiaar.value;
-      let visible = 0;
+    tableRows.forEach((row) => {
+      const show = matchItem(row);
+      row.hidden = !show;
+    });
 
-      const hasFilters = !!(query || land || type || farge || tiaar);
-      resetBtn.hidden = !hasFilters;
+    resultsCount.textContent = hasFilters
+      ? `Viser ${visible} av ${gridItems.length} drakter`
+      : "";
+  }
 
-      function matchItem(item: HTMLElement) {
-        const matchSearch =
-          !query ||
-          item.dataset.navn?.includes(query) ||
-          item.dataset.land?.toLowerCase().includes(query) ||
-          item.dataset.farge?.includes(query) ||
-          item.dataset.aar?.includes(query);
+  function resetFilters() {
+    search.value = "";
+    filterLand.value = "";
+    filterType.value = "";
+    filterFarge.value = "";
+    filterTiaar.value = "";
+    applyFilters();
+  }
 
-        const matchLand = !land || item.dataset.land === land;
-        const matchType = !type || item.dataset.type === type;
-        const matchFarge = !farge || item.dataset.farge?.includes(farge);
-        const matchTiaar = !tiaar || (item.dataset.aar || "").match(new RegExp(`${tiaar}\\d`));
-
-        return matchSearch && matchLand && matchType && matchFarge && matchTiaar;
-      }
-
-      gridItems.forEach((item) => {
-        const show = matchItem(item);
-        item.hidden = !show;
-        if (show) visible++;
-      });
-
-      tableRows.forEach((row) => {
-        const show = matchItem(row);
-        row.hidden = !show;
-      });
-
-      resultsCount.textContent = hasFilters
-        ? `Viser ${visible} av ${gridItems.length} drakter`
-        : "";
-    }
-
-    function resetFilters() {
-      search.value = "";
-      filterLand.value = "";
-      filterType.value = "";
-      filterFarge.value = "";
-      filterTiaar.value = "";
-      applyFilters();
-    }
-
-    search.addEventListener("input", applyFilters);
-    filterLand.addEventListener("change", applyFilters);
-    filterType.addEventListener("change", applyFilters);
-    filterFarge.addEventListener("change", applyFilters);
-    filterTiaar.addEventListener("change", applyFilters);
-    resetBtn.addEventListener("click", resetFilters);
-  });
+  search.addEventListener("input", applyFilters);
+  filterLand.addEventListener("change", applyFilters);
+  filterType.addEventListener("change", applyFilters);
+  filterFarge.addEventListener("change", applyFilters);
+  filterTiaar.addEventListener("change", applyFilters);
+  resetBtn.addEventListener("click", resetFilters);
 </script>
