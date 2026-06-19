@@ -11,23 +11,25 @@ const antallLand = new Set(allDrakter.map((d) => d.land).filter(Boolean)).size;
 const klubbdrakter = allDrakter.filter((d) => d.typeLag === "Klubb").length;
 const landslagsdrakter = allDrakter.filter((d) => d.typeLag === "Land").length;
 
-// Topp 10 land
+// Topp 5 land
 const landCount = allDrakter.reduce((acc, d) => {
   if (d.land) acc[d.land] = (acc[d.land] || 0) + 1;
   return acc;
 }, {} as Record<string, number>);
-const topp10Land = Object.entries(landCount)
+const topp5Land = Object.entries(landCount)
   .sort((a, b) => b[1] - a[1])
-  .slice(0, 10);
+  .slice(0, 5);
+const maxLand = topp5Land[0]?.[1] || 1;
 
-// Topp 10 klubber (kun de med flere drakter)
+// Topp 5 klubber
 const klubbCount = allDrakter.reduce((acc, d) => {
   if (d.navn) acc[d.navn] = (acc[d.navn] || 0) + 1;
   return acc;
 }, {} as Record<string, number>);
-const topp10Klubber = Object.entries(klubbCount)
+const topp5Klubber = Object.entries(klubbCount)
   .sort((a, b) => b[1] - a[1])
-  .slice(0, 10);
+  .slice(0, 5);
+const maxKlubb = topp5Klubber[0]?.[1] || 1;
 
 // Filteralternativer
 const land = [...new Set(allDrakter.map((d) => d.land).filter(Boolean))].sort();
@@ -49,8 +51,9 @@ const tiaar = [...new Set(
 
 <Base title="Fotballdrakter – Min samling">
   <section class="hero">
-    <h1>Min fotballdraktsamling</h1>
-    <p>En oversikt over {allDrakter.length} fotballdrakter fra hele verden.</p>
+    <div class="hero-emoji">🧤👕⚽</div>
+    <h1>Fotballdraktsamlingen min</h1>
+    <p class="hero-ingress">Her har jeg samlet alle fotballdraktene mine, slik at jeg har oversikt. Litt sært ja.</p>
   </section>
 
   <!-- Statistikk -->
@@ -74,22 +77,34 @@ const tiaar = [...new Set(
       </div>
     </div>
 
-    <div class="stat-lists">
-      <div class="stat-list">
-        <h3>Topp 10 land</h3>
-        <ol>
-          {topp10Land.map(([name, count]) => (
-            <li><span class="list-name">{name}</span><span class="list-count">{count}</span></li>
+    <div class="stat-charts">
+      <div class="chart">
+        <h3>Topp 5 land</h3>
+        <div class="bar-chart">
+          {topp5Land.map(([name, count]) => (
+            <div class="bar-row">
+              <span class="bar-label">{name}</span>
+              <div class="bar-track">
+                <div class="bar-fill" style={`width: ${(count / maxLand) * 100}%`}></div>
+              </div>
+              <span class="bar-value">{count}</span>
+            </div>
           ))}
-        </ol>
+        </div>
       </div>
-      <div class="stat-list">
-        <h3>Topp 10 klubber</h3>
-        <ol>
-          {topp10Klubber.map(([name, count]) => (
-            <li><span class="list-name">{name}</span><span class="list-count">{count}</span></li>
+      <div class="chart">
+        <h3>Topp 5 klubber</h3>
+        <div class="bar-chart">
+          {topp5Klubber.map(([name, count]) => (
+            <div class="bar-row">
+              <span class="bar-label">{name}</span>
+              <div class="bar-track">
+                <div class="bar-fill bar-fill-alt" style={`width: ${(count / maxKlubb) * 100}%`}></div>
+              </div>
+              <span class="bar-value">{count}</span>
+            </div>
           ))}
-        </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -185,105 +200,135 @@ const tiaar = [...new Set(
 <style>
   .hero {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 3rem 1rem 2rem;
+  }
+
+  .hero-emoji {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.3rem;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    margin-bottom: 0.25rem;
-    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #1a1a1a 0%, #444 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .hero p {
+  .hero-ingress {
     color: var(--color-muted);
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
   }
 
   /* Statistikk */
   .stats {
     margin-bottom: 2.5rem;
-    padding: 1.5rem;
+    padding: 2rem;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-    border-radius: var(--radius);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   }
 
   .stat-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
 
   .stat-card {
     text-align: center;
-    padding: 1rem 0.5rem;
+    padding: 1.25rem 0.5rem;
     background: var(--color-bg);
-    border-radius: var(--radius);
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
   }
 
   .stat-number {
     display: block;
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--color-accent);
     line-height: 1.2;
   }
 
   .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--color-muted);
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
   }
 
-  .stat-lists {
+  .stat-charts {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 
-  .stat-list h3 {
-    font-size: 0.85rem;
+  .chart h3 {
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     color: var(--color-muted);
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 1rem;
   }
 
-  .stat-list ol {
-    list-style: none;
-    counter-reset: rank;
-  }
-
-  .stat-list li {
-    counter-increment: rank;
+  .bar-chart {
     display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .bar-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 32px;
     align-items: center;
-    padding: 0.35rem 0;
-    font-size: 0.9rem;
+    gap: 0.75rem;
   }
 
-  .stat-list li::before {
-    content: counter(rank) ".";
-    width: 1.5rem;
-    font-weight: 600;
-    color: var(--color-muted);
-    font-size: 0.8rem;
-  }
-
-  .list-name {
-    flex: 1;
-  }
-
-  .list-count {
-    font-weight: 600;
-    color: var(--color-accent);
+  .bar-label {
     font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bar-track {
+    height: 24px;
+    background: var(--color-bg);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    border-radius: 6px;
+    transition: width 0.6s ease;
+  }
+
+  .bar-fill-alt {
+    background: linear-gradient(90deg, #059669, #34d399);
+  }
+
+  .bar-value {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-muted);
+    text-align: right;
   }
 
   /* Controls */
@@ -440,12 +485,18 @@ const tiaar = [...new Set(
   }
 
   @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.75rem;
+    }
     .stat-cards {
       grid-template-columns: repeat(2, 1fr);
     }
-    .stat-lists {
+    .stat-charts {
       grid-template-columns: 1fr;
       gap: 1.5rem;
+    }
+    .bar-row {
+      grid-template-columns: 80px 1fr 28px;
     }
     .grid {
       grid-template-columns: repeat(2, 1fr);
