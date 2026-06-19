@@ -1,0 +1,174 @@
+---
+import Base from "../layouts/Base.astro";
+import DraktCard from "../components/DraktCard.astro";
+import drakter from "../data/drakter.json";
+import type { Drakt } from "../types";
+
+const allDrakter = drakter as Drakt[];
+
+const land = [...new Set(allDrakter.map((d) => d.land).filter(Boolean))].sort();
+const typer = [...new Set(allDrakter.map((d) => d.typeLag).filter(Boolean))].sort();
+---
+
+<Base title="Fotballdrakter – Min samling">
+  <section class="hero">
+    <h1>Min fotballdraktsamling</h1>
+    <p>En oversikt over {allDrakter.length} fotballdrakter fra hele verden.</p>
+  </section>
+
+  <section class="controls" id="controls">
+    <input
+      type="search"
+      id="search"
+      placeholder="Søk etter klubb, land, farge..."
+      autocomplete="off"
+    />
+    <div class="filters">
+      <select id="filter-land">
+        <option value="">Alle land</option>
+        {land.map((l) => <option value={l}>{l}</option>)}
+      </select>
+      <select id="filter-type">
+        <option value="">Alle typer</option>
+        {typer.map((t) => <option value={t}>{t}</option>)}
+      </select>
+    </div>
+    <p class="results-count" id="results-count"></p>
+  </section>
+
+  <div class="grid" id="grid">
+    {allDrakter.map((drakt) => (
+      <div
+        class="grid-item"
+        data-navn={drakt.navn.toLowerCase()}
+        data-land={drakt.land}
+        data-type={drakt.typeLag}
+        data-farge={drakt.farge.toLowerCase()}
+        data-aar={drakt.aar}
+      >
+        <DraktCard drakt={drakt} />
+      </div>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero p {
+    color: var(--color-muted);
+  }
+
+  .controls {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  #search {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  #search:focus {
+    border-color: var(--color-accent);
+  }
+
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  select {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 0.875rem;
+    background: var(--color-surface);
+    cursor: pointer;
+  }
+
+  .results-count {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    width: 100%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .grid-item[hidden] {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    .controls {
+      flex-direction: column;
+    }
+    #search {
+      width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const search = document.getElementById("search") as HTMLInputElement;
+  const filterLand = document.getElementById("filter-land") as HTMLSelectElement;
+  const filterType = document.getElementById("filter-type") as HTMLSelectElement;
+  const grid = document.getElementById("grid")!;
+  const items = grid.querySelectorAll<HTMLElement>(".grid-item");
+  const resultsCount = document.getElementById("results-count")!;
+
+  function applyFilters() {
+    const query = search.value.toLowerCase().trim();
+    const land = filterLand.value;
+    const type = filterType.value;
+    let visible = 0;
+
+    items.forEach((item) => {
+      const matchSearch =
+        !query ||
+        item.dataset.navn?.includes(query) ||
+        item.dataset.land?.toLowerCase().includes(query) ||
+        item.dataset.farge?.includes(query) ||
+        item.dataset.aar?.includes(query);
+
+      const matchLand = !land || item.dataset.land === land;
+      const matchType = !type || item.dataset.type === type;
+
+      const show = matchSearch && matchLand && matchType;
+      item.hidden = !show;
+      if (show) visible++;
+    });
+
+    resultsCount.textContent =
+      query || land || type ? `Viser ${visible} av ${items.length} drakter` : "";
+  }
+
+  search.addEventListener("input", applyFilters);
+  filterLand.addEventListener("change", applyFilters);
+  filterType.addEventListener("change", applyFilters);
+</script>
