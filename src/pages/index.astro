@@ -1,0 +1,605 @@
+---
+import Base from "../layouts/Base.astro";
+import DraktCard from "../components/DraktCard.astro";
+import drakter from "../data/drakter.json";
+import type { Drakt } from "../types";
+
+const allDrakter = drakter as Drakt[];
+
+// Statistikk
+const antallLand = new Set(allDrakter.map((d) => d.land).filter(Boolean)).size;
+const klubbdrakter = allDrakter.filter((d) => d.typeLag === "Klubb").length;
+const landslagsdrakter = allDrakter.filter((d) => d.typeLag === "Land").length;
+
+// Topp 5 land
+const landCount = allDrakter.reduce((acc, d) => {
+  if (d.land) acc[d.land] = (acc[d.land] || 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+const topp5Land = Object.entries(landCount)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5);
+const maxLand = topp5Land[0]?.[1] || 1;
+
+// Topp 5 klubber
+const klubbCount = allDrakter.reduce((acc, d) => {
+  if (d.navn) acc[d.navn] = (acc[d.navn] || 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+const topp5Klubber = Object.entries(klubbCount)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 5);
+const maxKlubb = topp5Klubber[0]?.[1] || 1;
+
+// Filteralternativer
+const land = [...new Set(allDrakter.map((d) => d.land).filter(Boolean))].sort();
+const typer = [...new Set(allDrakter.map((d) => d.typeLag).filter(Boolean))].sort();
+const farger = [...new Set(
+  allDrakter.flatMap((d) => d.farge.split(",").map((f) => f.trim())).filter(Boolean)
+)].sort();
+
+// Tiår
+const tiaar = [...new Set(
+  allDrakter
+    .flatMap((d) => {
+      const years = d.aar.match(/\d{4}/g);
+      return years ? years.map((y) => `${Math.floor(parseInt(y) / 10) * 10}`) : [];
+    })
+    .filter(Boolean)
+)].sort();
+---
+
+<Base title="Fotballdrakter – Min samling">
+  <section class="hero">
+    <h1>Fotballdraktsamlingen min</h1>
+    <p class="hero-ingress">Her har jeg samlet alle fotballdraktene mine, slik at jeg har oversikt. Litt sært ja.</p>
+  </section>
+
+  <!-- Statistikk -->
+  <section class="stats">
+    <div class="stat-cards">
+      <div class="stat-card">
+        <span class="stat-icon">👕</span>
+        <span class="stat-number">{allDrakter.length}</span>
+        <span class="stat-label">Drakter totalt</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">🌍</span>
+        <span class="stat-number">{antallLand}</span>
+        <span class="stat-label">Land</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">🛡️</span>
+        <span class="stat-number">{klubbdrakter}</span>
+        <span class="stat-label">Klubbdrakter</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">🏴</span>
+        <span class="stat-number">{landslagsdrakter}</span>
+        <span class="stat-label">Landslagsdrakter</span>
+      </div>
+    </div>
+
+    <div class="stat-charts">
+      <div class="chart">
+        <h3>Topp 5 land</h3>
+        <div class="bar-chart">
+          {topp5Land.map(([name, count]) => (
+            <div class="bar-row">
+              <span class="bar-label">{name}</span>
+              <div class="bar-track">
+                <div class="bar-fill" style={`width: ${(count / maxLand) * 100}%`}></div>
+              </div>
+              <span class="bar-value">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="chart">
+        <h3>Topp 5 klubber</h3>
+        <div class="bar-chart">
+          {topp5Klubber.map(([name, count]) => (
+            <div class="bar-row">
+              <span class="bar-label">{name}</span>
+              <div class="bar-track">
+                <div class="bar-fill bar-fill-alt" style={`width: ${(count / maxKlubb) * 100}%`}></div>
+              </div>
+              <span class="bar-value">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Søk og filtrering -->
+  <section class="controls" id="controls">
+    <div class="search-row">
+      <input
+        type="search"
+        id="search"
+        placeholder="Søk etter klubb, land, farge..."
+        autocomplete="off"
+      />
+      <div class="view-toggle" id="view-toggle">
+        <button class="toggle-btn active" data-view="grid" title="Kortvisning">▦</button>
+        <button class="toggle-btn" data-view="table" title="Tabellvisning">☰</button>
+      </div>
+    </div>
+    <div class="filters">
+      <select id="filter-land">
+        <option value="">Alle land</option>
+        {land.map((l) => <option value={l}>{l}</option>)}
+      </select>
+      <select id="filter-type">
+        <option value="">Alle typer</option>
+        {typer.map((t) => <option value={t}>{t}</option>)}
+      </select>
+      <select id="filter-farge">
+        <option value="">Alle farger</option>
+        {farger.map((f) => <option value={f}>{f}</option>)}
+      </select>
+      <select id="filter-tiaar">
+        <option value="">Alle tiår</option>
+        {tiaar.map((t) => <option value={t}>{t}-tallet</option>)}
+      </select>
+      <button id="reset-filters" class="reset-btn" hidden>Nullstill</button>
+    </div>
+    <p class="results-count" id="results-count"></p>
+  </section>
+
+  <!-- Kortvisning -->
+  <div class="grid" id="grid">
+    {allDrakter.map((drakt) => (
+      <div
+        class="grid-item"
+        data-navn={drakt.navn.toLowerCase()}
+        data-land={drakt.land}
+        data-type={drakt.typeLag}
+        data-farge={drakt.farge.toLowerCase()}
+        data-aar={drakt.aar}
+      >
+        <DraktCard drakt={drakt} />
+      </div>
+    ))}
+  </div>
+
+  <!-- Tabellvisning -->
+  <div class="table-wrapper" id="table-view" style="display:none;">
+    <table>
+      <thead>
+        <tr>
+          <th>Navn</th>
+          <th>Sesong</th>
+          <th>Land</th>
+          <th>Type</th>
+          <th>Farge</th>
+          <th>Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        {allDrakter.map((drakt) => (
+          <tr
+            class="table-row"
+            data-navn={drakt.navn.toLowerCase()}
+            data-land={drakt.land}
+            data-type={drakt.typeLag}
+            data-farge={drakt.farge.toLowerCase()}
+            data-aar={drakt.aar}
+          >
+            <td><a href={`/drakt/${drakt.id}`}>{drakt.navn}</a></td>
+            <td>{drakt.aar}</td>
+            <td>{drakt.land}</td>
+            <td>{drakt.typeLag}</td>
+            <td>{drakt.farge}</td>
+            <td class="info-cell">{drakt.informasjon}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    text-align: center;
+    margin: -2rem -2rem 2.5rem;
+    padding: 4rem 2rem 3rem;
+    background: linear-gradient(135deg, #e8f5e9 0%, #f0f7f0 100%);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+  }
+
+  .hero-ingress {
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Statistikk */
+  .stats {
+    margin-bottom: 2.5rem;
+    padding: 2rem;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  }
+
+  .stat-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    text-align: center;
+    padding: 1.25rem 0.5rem;
+    background: var(--color-bg);
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+  }
+
+  .stat-icon {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-accent);
+    line-height: 1.2;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0.25rem;
+  }
+
+  .stat-charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .chart h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-muted);
+    margin-bottom: 1rem;
+  }
+
+  .bar-chart {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .bar-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 32px;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .bar-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bar-track {
+    height: 24px;
+    background: var(--color-bg);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #2d8a4e, #66bb6a);
+    border-radius: 6px;
+    transition: width 0.6s ease;
+  }
+
+  .bar-fill-alt {
+    background: linear-gradient(90deg, #1b5e20, #43a047);
+  }
+
+  .bar-value {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-muted);
+    text-align: right;
+  }
+
+  /* Controls */
+  .controls {
+    margin-bottom: 1.5rem;
+  }
+
+  .search-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  #search {
+    flex: 1;
+    padding: 0.65rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  #search:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  }
+
+  .view-toggle {
+    display: flex;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .toggle-btn {
+    padding: 0.65rem 0.85rem;
+    border: none;
+    background: var(--color-surface);
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--color-muted);
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .toggle-btn.active {
+    background: var(--color-accent);
+    color: white;
+  }
+
+  .toggle-btn:hover:not(.active) {
+    background: var(--color-bg);
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  select {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    background: var(--color-surface);
+    cursor: pointer;
+    transition: border-color 0.2s;
+  }
+
+  select:focus {
+    border-color: var(--color-accent);
+    outline: none;
+  }
+
+  .reset-btn {
+    padding: 0.5rem 0.75rem;
+    border: none;
+    background: none;
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .reset-btn:hover {
+    text-decoration: underline;
+  }
+
+  .results-count {
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    margin-top: 0.5rem;
+  }
+
+  /* Grid visning */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .grid-item[hidden] {
+    display: none;
+  }
+
+  /* Tabellvisning */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+  }
+
+  th {
+    text-align: left;
+    padding: 0.75rem 0.75rem;
+    background: var(--color-surface);
+    border-bottom: 2px solid var(--color-border);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--color-muted);
+  }
+
+  td {
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  tr:hover td {
+    background: var(--color-bg);
+  }
+
+  tr[hidden] {
+    display: none;
+  }
+
+  .info-cell {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 1.75rem;
+    }
+    .stat-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .stat-charts {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .bar-row {
+      grid-template-columns: 80px 1fr 28px;
+    }
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    .search-row {
+      flex-direction: column;
+    }
+    .filters {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+</style>
+
+<script>
+  // Module scripts are deferred, so DOM is already ready
+  const search = document.getElementById("search") as HTMLInputElement;
+  const filterLand = document.getElementById("filter-land") as HTMLSelectElement;
+  const filterType = document.getElementById("filter-type") as HTMLSelectElement;
+  const filterFarge = document.getElementById("filter-farge") as HTMLSelectElement;
+  const filterTiaar = document.getElementById("filter-tiaar") as HTMLSelectElement;
+  const resetBtn = document.getElementById("reset-filters") as HTMLButtonElement;
+  const gridView = document.getElementById("grid") as HTMLElement;
+  const tableView = document.getElementById("table-view") as HTMLElement;
+  const gridItems = gridView?.querySelectorAll<HTMLElement>(".grid-item") ?? [];
+  const tableRows = tableView?.querySelectorAll<HTMLElement>(".table-row") ?? [];
+  const resultsCount = document.getElementById("results-count") as HTMLElement;
+  const toggleBtns = document.querySelectorAll<HTMLButtonElement>("[data-view]");
+
+  // Visningsveksler
+  toggleBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      toggleBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      if (btn.dataset.view === "table") {
+        gridView.style.display = "none";
+        tableView.style.display = "block";
+      } else {
+        gridView.style.display = "";
+        tableView.style.display = "none";
+      }
+    });
+  });
+
+  function applyFilters() {
+    const query = search.value.toLowerCase().trim();
+    const land = filterLand.value;
+    const type = filterType.value;
+    const farge = filterFarge.value.toLowerCase();
+    const tiaar = filterTiaar.value;
+    let visible = 0;
+
+    const hasFilters = !!(query || land || type || farge || tiaar);
+    resetBtn.hidden = !hasFilters;
+
+    function matchItem(el: HTMLElement) {
+      const matchSearch =
+        !query ||
+        el.dataset.navn?.includes(query) ||
+        el.dataset.land?.toLowerCase().includes(query) ||
+        el.dataset.farge?.includes(query) ||
+        el.dataset.aar?.includes(query);
+
+      const matchLand = !land || el.dataset.land === land;
+      const matchType = !type || el.dataset.type === type;
+      const matchFarge = !farge || el.dataset.farge?.includes(farge);
+      const matchTiaar = !tiaar || (el.dataset.aar || "").match(new RegExp(`${tiaar}\\d`));
+
+      return matchSearch && matchLand && matchType && matchFarge && matchTiaar;
+    }
+
+    gridItems.forEach((item) => {
+      const show = matchItem(item);
+      item.hidden = !show;
+      if (show) visible++;
+    });
+
+    tableRows.forEach((row) => {
+      const show = matchItem(row);
+      row.hidden = !show;
+    });
+
+    resultsCount.textContent = hasFilters
+      ? `Viser ${visible} av ${gridItems.length} drakter`
+      : "";
+  }
+
+  function resetFilters() {
+    search.value = "";
+    filterLand.value = "";
+    filterType.value = "";
+    filterFarge.value = "";
+    filterTiaar.value = "";
+    applyFilters();
+  }
+
+  search.addEventListener("input", applyFilters);
+  filterLand.addEventListener("change", applyFilters);
+  filterType.addEventListener("change", applyFilters);
+  filterFarge.addEventListener("change", applyFilters);
+  filterTiaar.addEventListener("change", applyFilters);
+  resetBtn.addEventListener("click", resetFilters);
+</script>
