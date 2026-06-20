@@ -79,7 +79,7 @@ const flagg = landskodeTilFlagg(drakt.landskode);
     {drakt.aar && <p class="card-year">{drakt.aar}</p>}
     <div class="card-meta">
       {drakt.land && <span class="tag">{flagg && <span class="flag">{flagg}</span>}{drakt.land}</span>}
-      {drakt.typeLag && <span class="tag tag-type">{drakt.typeLag}</span>}
+      {drakt.typeLag && <span class={`tag tag-${drakt.typeLag.toLowerCase()}`}>{drakt.typeLag}</span>}
     </div>
     {drakt.informasjon && <p class="card-info">{drakt.informasjon}</p>}
   </div>
@@ -182,6 +182,21 @@ const flagg = landskodeTilFlagg(drakt.landskode);
   .tag-type {
     background: #f0f5f1;
     color: #5f7a5f;
+  }
+
+  .tag-klubb {
+    background: #eff6ff;
+    color: #2563eb;
+  }
+
+  .tag-land {
+    background: #ecfdf5;
+    color: #047857;
+  }
+
+  .tag-fiksjon {
+    background: #f4f4f5;
+    color: #71717a;
   }
 
   .card-info {
