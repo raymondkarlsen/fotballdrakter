@@ -149,6 +149,7 @@ const flagg = landskodeTilFlagg(drakt.landskode);
   .flag {
     font-size: 0.85rem;
     margin-right: 0.2rem;
+    line-height: 1;
   }
 
   .card-year {
@@ -162,16 +163,20 @@ const flagg = landskodeTilFlagg(drakt.landskode);
     flex-wrap: wrap;
     gap: 0.3rem;
     margin-bottom: 0.4rem;
+    align-items: center;
   }
 
   .tag {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     font-size: 0.7rem;
     background: var(--color-accent-light, #e8f5e9);
     color: var(--color-accent);
-    padding: 0.1rem 0.45rem;
+    padding: 0.2rem 0.45rem;
     border-radius: 3px;
     font-weight: 500;
+    line-height: 1;
+    min-height: 1.3rem;
   }
 
   .tag-type {
