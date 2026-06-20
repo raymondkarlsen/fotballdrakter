@@ -1,5 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
+import Icon from "../../components/Icon.astro";
 import drakter from "../../data/drakter.json";
 import type { Drakt } from "../../types";
 
@@ -22,7 +23,7 @@ const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
       {hasImage ? (
         <img src={drakt.bildeUrl} alt={drakt.navn} />
       ) : (
-        <div class="placeholder">⚽</div>
+        <div class="placeholder"><Icon name="shirt" size={64} /></div>
       )}
     </div>
 

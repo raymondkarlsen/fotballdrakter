@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import DraktCard from "../components/DraktCard.astro";
+import Icon from "../components/Icon.astro";
 import drakter from "../data/drakter.json";
 import type { Drakt } from "../types";
 
@@ -59,22 +60,22 @@ const tiaar = [...new Set(
   <section class="stats">
     <div class="stat-cards">
       <div class="stat-card">
-        <span class="stat-icon">👕</span>
+        <span class="stat-icon"><Icon name="shirt" size={20} /></span>
         <span class="stat-number">{allDrakter.length}</span>
         <span class="stat-label">Drakter totalt</span>
       </div>
       <div class="stat-card">
-        <span class="stat-icon">🌍</span>
+        <span class="stat-icon"><Icon name="globe" size={20} /></span>
         <span class="stat-number">{antallLand}</span>
         <span class="stat-label">Land</span>
       </div>
       <div class="stat-card">
-        <span class="stat-icon">🛡️</span>
+        <span class="stat-icon"><Icon name="building-2" size={20} /></span>
         <span class="stat-number">{klubbdrakter}</span>
         <span class="stat-label">Klubbdrakter</span>
       </div>
       <div class="stat-card">
-        <span class="stat-icon">🏴</span>
+        <span class="stat-icon"><Icon name="calendar" size={20} /></span>
         <span class="stat-number">{landslagsdrakter}</span>
         <span class="stat-label">Landslagsdrakter</span>
       </div>
@@ -122,28 +123,40 @@ const tiaar = [...new Set(
         autocomplete="off"
       />
       <div class="view-toggle" id="view-toggle">
-        <button class="toggle-btn active" data-view="grid" title="Kortvisning">▦</button>
-        <button class="toggle-btn" data-view="table" title="Tabellvisning">☰</button>
+        <button class="toggle-btn active" data-view="grid" title="Kortvisning"><Icon name="layout-grid" size={14} /></button>
+        <button class="toggle-btn" data-view="table" title="Tabellvisning"><Icon name="list" size={14} /></button>
       </div>
     </div>
     <div class="filters">
-      <select id="filter-land">
-        <option value="">Alle land</option>
-        {land.map((l) => <option value={l}>{l}</option>)}
-      </select>
-      <select id="filter-type">
-        <option value="">Alle typer</option>
-        {typer.map((t) => <option value={t}>{t}</option>)}
-      </select>
-      <select id="filter-farge">
-        <option value="">Alle farger</option>
-        {farger.map((f) => <option value={f}>{f}</option>)}
-      </select>
-      <select id="filter-tiaar">
-        <option value="">Alle tiår</option>
-        {tiaar.map((t) => <option value={t}>{t}-tallet</option>)}
-      </select>
-      <button id="reset-filters" class="reset-btn" hidden>Nullstill</button>
+      <label class="filter-pill">
+        <span class="filter-icon"><Icon name="globe" size={14} /></span>
+        <select id="filter-land">
+          <option value="">Alle land</option>
+          {land.map((l) => <option value={l}>{l}</option>)}
+        </select>
+      </label>
+      <label class="filter-pill">
+        <span class="filter-icon"><Icon name="building-2" size={14} /></span>
+        <select id="filter-type">
+          <option value="">Alle typer</option>
+          {typer.map((t) => <option value={t}>{t}</option>)}
+        </select>
+      </label>
+      <label class="filter-pill">
+        <span class="filter-icon"><Icon name="palette" size={14} /></span>
+        <select id="filter-farge">
+          <option value="">Alle farger</option>
+          {farger.map((f) => <option value={f}>{f}</option>)}
+        </select>
+      </label>
+      <label class="filter-pill">
+        <span class="filter-icon"><Icon name="calendar" size={14} /></span>
+        <select id="filter-tiaar">
+          <option value="">Alle tiår</option>
+          {tiaar.map((t) => <option value={t}>{t}-tallet</option>)}
+        </select>
+      </label>
+      <button id="reset-filters" class="reset-btn" hidden><Icon name="x" size={12} /> Nullstill</button>
     </div>
     <p class="results-count" id="results-count"></p>
   </section>
@@ -251,9 +264,10 @@ const tiaar = [...new Set(
   }
 
   .stat-icon {
-    display: block;
-    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
     margin-bottom: 0.4rem;
+    color: var(--color-accent);
   }
 
   .stat-number {
@@ -392,29 +406,80 @@ const tiaar = [...new Set(
     align-items: center;
   }
 
-  select {
-    padding: 0.5rem 0.75rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    font-size: 0.85rem;
+  .filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
     background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.4rem 0.15rem 0.4rem 0.65rem;
     cursor: pointer;
-    transition: border-color 0.2s;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .filter-pill:hover {
+    border-color: var(--color-accent);
+  }
+
+  .filter-pill:has(select:focus) {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(45, 138, 78, 0.15);
+  }
+
+  .filter-pill:has(select option:checked:not([value=""])),
+  .filter-pill.active {
+    border-color: var(--color-accent);
+    background: var(--color-accent-light);
+  }
+
+  .filter-icon {
+    display: flex;
+    align-items: center;
+    color: var(--color-muted);
+    flex-shrink: 0;
+  }
+
+  .filter-pill.active .filter-icon,
+  .filter-pill:has(select option:checked:not([value=""])) .filter-icon {
+    color: var(--color-accent);
+  }
+
+  select {
+    padding: 0.3rem 0.5rem 0.3rem 0.15rem;
+    border: none;
+    border-radius: 0;
+    font-size: 0.85rem;
+    background: transparent;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    color: var(--color-text);
+    font-weight: 500;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23999'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.2rem center;
+    padding-right: 1rem;
   }
 
   select:focus {
-    border-color: var(--color-accent);
     outline: none;
   }
 
   .reset-btn {
-    padding: 0.5rem 0.75rem;
-    border: none;
-    background: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    background: var(--color-surface);
     color: var(--color-accent);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     cursor: pointer;
     font-weight: 500;
+    transition: background 0.2s, border-color 0.2s;
   }
 
   .reset-btn:hover {
@@ -508,8 +573,15 @@ const tiaar = [...new Set(
       flex-direction: column;
     }
     .filters {
-      flex-direction: column;
-      align-items: stretch;
+      gap: 0.4rem;
+    }
+    .filter-pill {
+      flex: 1 1 calc(50% - 0.2rem);
+      min-width: 0;
+    }
+    .filter-pill select {
+      flex: 1;
+      min-width: 0;
     }
   }
 
@@ -561,6 +633,12 @@ const tiaar = [...new Set(
 
     const hasFilters = !!(query || land || type || farge || tiaar);
     resetBtn.hidden = !hasFilters;
+
+    // Highlight active filter pills
+    document.querySelectorAll('.filter-pill').forEach((pill) => {
+      const sel = pill.querySelector('select') as HTMLSelectElement;
+      pill.classList.toggle('active', sel?.value !== '');
+    });
 
     function matchItem(el: HTMLElement) {
       const matchSearch =

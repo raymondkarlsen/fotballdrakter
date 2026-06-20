@@ -1,5 +1,6 @@
 ---
 import type { Drakt } from "../types";
+import Icon from "./Icon.astro";
 
 interface Props {
   drakt: Drakt;
@@ -70,7 +71,7 @@ const flagg = landskodeTilFlagg(drakt.landskode);
       <img src={drakt.bildeUrl} alt={drakt.navn} loading="lazy" />
     ) : (
       <div class="placeholder" style={`background: ${buildGradient(draktFarger)}`}>
-        <span class="placeholder-icon">👕</span>
+        <span class="placeholder-icon"><Icon name="shirt" size={40} /></span>
       </div>
     )}
   </div>
@@ -129,9 +130,9 @@ const flagg = landskodeTilFlagg(drakt.landskode);
   }
 
   .placeholder-icon {
-    font-size: 2.5rem;
-    opacity: 0.4;
-    filter: grayscale(1) drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+    opacity: 0.3;
+    color: rgba(0, 0, 0, 0.6);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
   }
 
   .card-body {
@@ -209,8 +210,9 @@ const flagg = landskodeTilFlagg(drakt.landskode);
       aspect-ratio: 3 / 2;
     }
 
-    .placeholder-icon {
-      font-size: 1.75rem;
+    .placeholder-icon :global(.icon) {
+      width: 28px;
+      height: 28px;
     }
 
     .card-body {
