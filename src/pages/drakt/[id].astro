@@ -12,7 +12,21 @@ export function getStaticPaths() {
 }
 
 const { drakt } = Astro.props as { drakt: Drakt };
-const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
+
+import { readdirSync } from 'fs';
+import { resolve } from 'path';
+const imageDir = resolve(process.cwd(), 'public/images/drakter');
+let localImagePath: string | null = null;
+try {
+  const files = readdirSync(imageDir);
+  const match = files.find(f => f.startsWith(drakt.id + '.'));
+  if (match) {
+    localImagePath = `${import.meta.env.BASE_URL}/images/drakter/${match}`;
+  }
+} catch {}
+
+const hasImage = localImagePath || (drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon"));
+const imageSrc = localImagePath || drakt.bildeUrl;
 ---
 
 <Base title={`${drakt.navn} – Fotballdrakter`}>
@@ -21,7 +35,7 @@ const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
   <article class="detail">
     <div class="detail-image">
       {hasImage ? (
-        <img src={drakt.bildeUrl} alt={drakt.navn} />
+        <img src={imageSrc} alt={drakt.navn} />
       ) : (
         <div class="placeholder"><Icon name="shirt" size={64} /></div>
       )}

@@ -7,7 +7,22 @@ interface Props {
 }
 
 const { drakt } = Astro.props;
-const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
+
+// Sjekk om lokalt bilde finnes (byggetid)
+import { readdirSync } from 'fs';
+import { resolve } from 'path';
+const imageDir = resolve(process.cwd(), 'public/images/drakter');
+let localImagePath: string | null = null;
+try {
+  const files = readdirSync(imageDir);
+  const match = files.find(f => f.startsWith(drakt.id + '.'));
+  if (match) {
+    localImagePath = `${import.meta.env.BASE_URL}/images/drakter/${match}`;
+  }
+} catch {}
+
+const hasImage = localImagePath || (drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon"));
+const imageSrc = localImagePath || drakt.bildeUrl;
 
 // Fargemapping til CSS-farger for placeholder
 const fargeMap: Record<string, string> = {
@@ -68,7 +83,7 @@ const flagg = landskodeTilFlagg(drakt.landskode);
 <a href={`${import.meta.env.BASE_URL}/drakt/${drakt.id}`} class="card">
   <div class="card-image">
     {hasImage ? (
-      <img src={drakt.bildeUrl} alt={drakt.navn} loading="lazy" />
+      <img src={imageSrc} alt={drakt.navn} loading="lazy" />
     ) : (
       <div class="placeholder" style={`background: ${buildGradient(draktFarger)}`}>
         <span class="placeholder-icon"><Icon name="shirt" size={40} /></span>

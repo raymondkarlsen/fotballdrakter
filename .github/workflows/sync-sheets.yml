@@ -1,0 +1,52 @@
+name: Sync fra Google Sheets
+
+on:
+  # Manuell trigger fra Actions-fanen
+  workflow_dispatch:
+  # Automatisk daglig kl. 06:00 UTC (08:00 norsk tid)
+  schedule:
+    - cron: '0 6 * * *'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Last ned CSV fra Google Sheets
+        run: |
+          curl -L -o drakter.csv \
+            "https://docs.google.com/spreadsheets/d/157myvKxHgMVEwgenxe7zmUv5StiP7p83PXMlBTrV8jg/export?format=csv&gid=0"
+
+      - name: Konverter CSV til JSON
+        run: node scripts/csv-to-json.mjs drakter.csv
+
+      - name: Sjekk om data er endret
+        id: check
+        run: |
+          if git diff --quiet src/data/drakter.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit og push endringer
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/drakter.json
+          git commit -m "data: oppdater drakter fra Google Sheets
+
+          Automatisk sync fra spreadsheet."
+          git push
+
+      - name: Ingen endringer
+        if: steps.check.outputs.changed == 'false'
+        run: echo "Ingen endringer i data – hopper over commit."
