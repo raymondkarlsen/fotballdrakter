@@ -7,6 +7,61 @@ interface Props {
 
 const { drakt } = Astro.props;
 const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
+
+// Fargemapping til CSS-farger for placeholder
+const fargeMap: Record<string, string> = {
+  blå: "#2563eb",
+  brun: "#78350f",
+  burgunder: "#7f1d1d",
+  grå: "#6b7280",
+  grønn: "#16a34a",
+  gul: "#eab308",
+  gull: "#d4a017",
+  hvit: "#f1f5f9",
+  lilla: "#7c3aed",
+  oransje: "#ea580c",
+  rosa: "#ec4899",
+  rød: "#dc2626",
+  svart: "#1f2937",
+};
+
+// Hent opptil 3 farger for gradient-placeholder
+const draktFarger = drakt.farge
+  .split(",")
+  .map((f) => f.trim())
+  .filter(Boolean)
+  .map((f) => fargeMap[f] || "#94a3b8")
+  .slice(0, 3);
+
+function buildGradient(farger: string[]): string {
+  if (farger.length === 0) return "#e2e8f0";
+  if (farger.length === 1) return farger[0];
+  return `linear-gradient(135deg, ${farger.join(", ")})`;
+}
+
+// Landskode til flaggemoji
+function landskodeTilFlagg(kode: string): string {
+  if (!kode) return "";
+  // Håndter sammensatte koder som gb-eng, gb-wls, gb-sct
+  const parts = kode.split("-");
+  if (parts[0] === "gb" && parts.length > 1) {
+    // For UK-subregioner bruker vi flagg-emojis via tag sequences
+    const subFlags: Record<string, string> = {
+      eng: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      wls: "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      sct: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+    };
+    return subFlags[parts[1]] || "🇬🇧";
+  }
+  // Standard landskode → flaggemoji via regional indicator symbols
+  const base = parts[0].toUpperCase();
+  if (base.length !== 2) return "";
+  return String.fromCodePoint(
+    ...base.split("").map((c) => 0x1f1e6 + c.charCodeAt(0) - 65)
+  );
+}
+
+const flagg = landskodeTilFlagg(drakt.landskode);
 ---
 
 <a href={`${import.meta.env.BASE_URL}/drakt/${drakt.id}`} class="card">
@@ -14,17 +69,21 @@ const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
     {hasImage ? (
       <img src={drakt.bildeUrl} alt={drakt.navn} loading="lazy" />
     ) : (
-      <div class="placeholder">⚽</div>
+      <div class="placeholder" style={`background: ${buildGradient(draktFarger)}`}>
+        <span class="placeholder-icon">👕</span>
+      </div>
     )}
   </div>
   <div class="card-body">
-    <h3 class="card-title">{drakt.navn}</h3>
+    <h3 class="card-title">
+      {flagg && <span class="flag">{flagg}</span>}
+      {drakt.navn}
+    </h3>
     {drakt.aar && <p class="card-year">{drakt.aar}</p>}
     <div class="card-meta">
       {drakt.land && <span class="tag">{drakt.land}</span>}
       {drakt.typeLag && <span class="tag tag-type">{drakt.typeLag}</span>}
     </div>
-    {drakt.farge && <p class="card-color">{drakt.farge}</p>}
     {drakt.informasjon && <p class="card-info">{drakt.informasjon}</p>}
   </div>
 </a>
@@ -64,8 +123,18 @@ const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
   }
 
   .placeholder {
-    font-size: 2rem;
-    opacity: 0.2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .placeholder-icon {
+    font-size: 2.5rem;
+    opacity: 0.5;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
   }
 
   .card-body {
@@ -78,6 +147,14 @@ const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
     font-weight: 700;
     margin-bottom: 0.15rem;
     line-height: 1.3;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .flag {
+    font-size: 1.1rem;
+    flex-shrink: 0;
   }
 
   .card-year {
@@ -106,11 +183,6 @@ const hasImage = drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon");
   .tag-type {
     background: #f0fdf4;
     color: #1b5e20;
-  }
-
-  .card-color {
-    font-size: 0.8rem;
-    color: var(--color-muted);
   }
 
   .card-info {
