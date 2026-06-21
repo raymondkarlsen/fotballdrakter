@@ -287,8 +287,8 @@
   },
   {
     "id": "atm-01",
-    "slug": "athletico-madrid-2014-2015-hvit",
-    "navn": "Athletico Madrid",
+    "slug": "atletico-madrid-2014-2015-hvit",
+    "navn": "Atletico Madrid",
     "aar": "2014, 2015",
     "landskode": "es",
     "land": "Spania",
@@ -1587,8 +1587,8 @@
   },
   {
     "id": "hud-01",
-    "slug": "huddersfield-2008-2009-bla",
-    "navn": "Huddersfield",
+    "slug": "huddersfield-town-2008-2009-bla",
+    "navn": "Huddersfield Town",
     "aar": "2008, 2009",
     "landskode": "gb-eng",
     "land": "England",
@@ -2069,7 +2069,7 @@
   {
     "id": "liv-07",
     "slug": "liverpool-2021-2022-rod",
-    "navn": "LIverpool",
+    "navn": "Liverpool",
     "aar": "2021, 2022",
     "landskode": "gb-eng",
     "land": "England",
