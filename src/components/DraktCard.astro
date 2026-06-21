@@ -8,14 +8,14 @@ interface Props {
 
 const { drakt } = Astro.props;
 
-// Sjekk om lokalt bilde finnes (byggetid)
+// Sjekk om lokalt bilde finnes (byggetid) – sjekker både kort ID og slug
 import { readdirSync } from 'fs';
 import { resolve } from 'path';
 const imageDir = resolve(process.cwd(), 'public/images/drakter');
 let localImagePath: string | null = null;
 try {
   const files = readdirSync(imageDir);
-  const match = files.find(f => f.startsWith(drakt.id + '.'));
+  const match = files.find(f => f.startsWith(drakt.id + '.') || f.startsWith(drakt.slug + '.'));
   if (match) {
     localImagePath = `${import.meta.env.BASE_URL}/images/drakter/${match}`;
   }

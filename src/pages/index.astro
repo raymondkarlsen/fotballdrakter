@@ -5,7 +5,7 @@ import Icon from "../components/Icon.astro";
 import drakter from "../data/drakter.json";
 import type { Drakt } from "../types";
 
-const allDrakter = drakter as Drakt[];
+const allDrakter = (drakter as Drakt[]).sort((a, b) => a.navn.localeCompare(b.navn, 'nb'));
 
 // Statistikk
 const antallLand = new Set(allDrakter.map((d) => d.land).filter(Boolean)).size;
