@@ -3,8 +3,10 @@ import Base from "../layouts/Base.astro";
 import DraktCard from "../components/DraktCard.astro";
 import Icon from "../components/Icon.astro";
 import drakter from "../data/drakter.json";
+import tekster from "../data/tekster.json";
 import type { Drakt } from "../types";
 
+const t = tekster.forside;
 const allDrakter = (drakter as Drakt[]).sort((a, b) => a.navn.localeCompare(b.navn, 'nb'));
 
 // Statistikk
@@ -50,10 +52,10 @@ const tiaar = [...new Set(
 )].sort();
 ---
 
-<Base title="Fotballdrakter – Min samling">
+<Base>
   <section class="hero">
-    <h1>Fotballdraktsamlingen min</h1>
-    <p class="hero-ingress">Her har jeg samlet alle fotballdraktene mine, slik at jeg har oversikt. Litt sært ja.</p>
+    <h1>{t.overskrift}</h1>
+    <p class="hero-ingress">{t.ingress}</p>
   </section>
 
   <!-- Statistikk -->
@@ -62,22 +64,22 @@ const tiaar = [...new Set(
       <div class="stat-card">
         <span class="stat-icon"><Icon name="shirt" size={20} /></span>
         <span class="stat-number">{allDrakter.length}</span>
-        <span class="stat-label">Drakter totalt</span>
+        <span class="stat-label">{t.statistikk.drakter}</span>
       </div>
       <div class="stat-card">
         <span class="stat-icon"><Icon name="globe" size={20} /></span>
         <span class="stat-number">{antallLand}</span>
-        <span class="stat-label">Land</span>
+        <span class="stat-label">{t.statistikk.land}</span>
       </div>
       <div class="stat-card">
         <span class="stat-icon"><Icon name="building-2" size={20} /></span>
         <span class="stat-number">{klubbdrakter}</span>
-        <span class="stat-label">Klubbdrakter</span>
+        <span class="stat-label">{t.statistikk.klubb}</span>
       </div>
       <div class="stat-card">
         <span class="stat-icon"><Icon name="calendar" size={20} /></span>
         <span class="stat-number">{landslagsdrakter}</span>
-        <span class="stat-label">Landslagsdrakter</span>
+        <span class="stat-label">{t.statistikk.landslag}</span>
       </div>
     </div>
 
@@ -119,7 +121,7 @@ const tiaar = [...new Set(
       <input
         type="search"
         id="search"
-        placeholder="Søk etter klubb, land, farge..."
+        placeholder={t.sok}
         autocomplete="off"
       />
       <div class="view-toggle" id="view-toggle">
@@ -131,32 +133,32 @@ const tiaar = [...new Set(
       <label class="filter-pill">
         <span class="filter-icon"><Icon name="globe" size={14} /></span>
         <select id="filter-land">
-          <option value="">Alle land</option>
+          <option value="">{t.filter.land}</option>
           {land.map((l) => <option value={l}>{l}</option>)}
         </select>
       </label>
       <label class="filter-pill">
         <span class="filter-icon"><Icon name="building-2" size={14} /></span>
         <select id="filter-type">
-          <option value="">Alle typer</option>
+          <option value="">{t.filter.type}</option>
           {typer.map((t) => <option value={t}>{t}</option>)}
         </select>
       </label>
       <label class="filter-pill">
         <span class="filter-icon"><Icon name="palette" size={14} /></span>
         <select id="filter-farge">
-          <option value="">Alle farger</option>
+          <option value="">{t.filter.farge}</option>
           {farger.map((f) => <option value={f}>{f}</option>)}
         </select>
       </label>
       <label class="filter-pill">
         <span class="filter-icon"><Icon name="calendar" size={14} /></span>
         <select id="filter-tiaar">
-          <option value="">Alle tiår</option>
+          <option value="">{t.filter.tiaar}</option>
           {tiaar.map((t) => <option value={t}>{t}-tallet</option>)}
         </select>
       </label>
-      <button id="reset-filters" class="reset-btn" hidden><Icon name="x" size={12} /> Nullstill</button>
+      <button id="reset-filters" class="reset-btn" hidden><Icon name="x" size={12} /> {t.filter.nullstill}</button>
     </div>
     <p class="results-count" id="results-count"></p>
   </section>
