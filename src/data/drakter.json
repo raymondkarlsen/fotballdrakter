@@ -235,7 +235,7 @@
     "land": "England",
     "typeLag": "Klubb",
     "farge": "blå",
-    "informasjon": "brukt i kamp, Nr 18",
+    "informasjon": "Brukt i kamp. Nr 18.",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -475,7 +475,7 @@
     "land": "England",
     "typeLag": "Klubb",
     "farge": "",
-    "informasjon": "keeper",
+    "informasjon": "Keeperdrakt",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -547,7 +547,7 @@
     "land": "Tyskland",
     "typeLag": "Klubb",
     "farge": "gul",
-    "informasjon": "",
+    "informasjon": "11 Reus",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -1447,7 +1447,7 @@
     "land": "Norge",
     "typeLag": "Klubb",
     "farge": "rød",
-    "informasjon": "Brukt i kamp. Nummer 4.",
+    "informasjon": "Nummer 4. Brukt i kamp. Av meg selv.",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -4183,7 +4183,7 @@
     "land": "Frankrike",
     "typeLag": "Klubb",
     "farge": "hvit, rød",
-    "informasjon": "",
+    "informasjon": "Nummer 9 Falcao",
     "kitArchiveUrl": "https://www.footballkitarchive.com/as-monaco-2018-19-home-kit/2701/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -4363,7 +4363,7 @@
     "land": "Colombia",
     "typeLag": "Land",
     "farge": "gul",
-    "informasjon": "",
+    "informasjon": "Nummer 7 Luis Diaz",
     "kitArchiveUrl": "https://www.footballkitarchive.com/colombia-2024-home-kit/234366/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -4399,7 +4399,7 @@
     "land": "Uruguay",
     "typeLag": "Land",
     "farge": "blå",
-    "informasjon": "",
+    "informasjon": "Nummer 9 Suarez",
     "kitArchiveUrl": "https://www.footballkitarchive.com/uruguay-2024-home-kit/261493/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -4435,7 +4435,7 @@
     "land": "England",
     "typeLag": "Klubb",
     "farge": "blå",
-    "informasjon": "",
+    "informasjon": "Nummer 23 Coleman",
     "kitArchiveUrl": "https://www.footballkitarchive.com/everton-fc-2024-25-home-kit/252064/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -4519,7 +4519,7 @@
     "land": "Georgia",
     "typeLag": "Land",
     "farge": "hvit, rød",
-    "informasjon": "",
+    "informasjon": "Nummer 7 Kvaratskhelia",
     "kitArchiveUrl": "https://www.footballkitarchive.com/georgia-2023-24-home-kit/132454/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -5088,14 +5088,26 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "norge-rod-2",
+    "id": "norge-2020-2021-rod",
     "navn": "Norge",
-    "aar": "",
+    "aar": "2020, 2021",
     "landskode": "no",
     "land": "Norge",
     "typeLag": "Land",
     "farge": "rød",
     "informasjon": "Signert av damelandslaget",
+    "kitArchiveUrl": "",
+    "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
+  },
+  {
+    "id": "norge-1997-1998-rod",
+    "navn": "Norge",
+    "aar": "1997, 1998",
+    "landskode": "no",
+    "land": "Norge",
+    "typeLag": "Land",
+    "farge": "rød",
+    "informasjon": "6 Solbakken",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   }
