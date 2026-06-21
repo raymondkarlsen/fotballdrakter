@@ -27,59 +27,74 @@ try {
 
 const hasImage = localImagePath || (drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon"));
 const imageSrc = localImagePath || drakt.bildeUrl;
+
+// Fargemapping for swatcher
+const fargeMap: Record<string, string> = {
+  blå: "#2563eb", brun: "#78350f", burgunder: "#7f1d1d", grå: "#6b7280",
+  grønn: "#16a34a", gul: "#eab308", gull: "#d4a017", hvit: "#f8fafc",
+  lilla: "#9333ea", oransje: "#f97316", rosa: "#ec4899", rød: "#dc2626",
+  svart: "#1e293b", turkis: "#06b6d4",
+};
+const draktFarger = drakt.farge.split(",").map(f => f.trim().toLowerCase());
+const cssColors = draktFarger.map(f => fargeMap[f] || "#94a3b8").slice(0, 3);
+
+// Flagg-emoji
+function toFlag(kode: string): string {
+  if (!kode) return '';
+  const sub: Record<string, string> = { 'gb-eng': '🏴󠁧󠁢󠁥󠁮󠁧󠁿', 'gb-wls': '🏴󠁧󠁢󠁷󠁬󠁳󠁿', 'gb-sct': '🏴󠁧󠁢󠁳󠁣󠁴󠁿' };
+  if (sub[kode]) return sub[kode];
+  return kode.toUpperCase().replace(/./g, c => String.fromCodePoint(c.charCodeAt(0) + 0x1F1A5));
+}
+const flagEmoji = toFlag(drakt.landskode);
 ---
 
 <Base title={`${drakt.navn} – Fotballdrakter`}>
-  <a href={import.meta.env.BASE_URL} class="back">← Tilbake til oversikten</a>
+  <a href={import.meta.env.BASE_URL} class="back"><Icon name="layout-grid" size={14} /> Tilbake til oversikten</a>
 
-  <article class="detail">
-    <div class="detail-image">
-      {hasImage ? (
-        <img src={imageSrc} alt={drakt.navn} />
-      ) : (
-        <div class="placeholder"><Icon name="shirt" size={64} /></div>
-      )}
+  <article class="detail" style={`background: linear-gradient(135deg, ${cssColors[0]}12, ${cssColors[1] || cssColors[0]}08, transparent)`}>
+    <div class="detail-card">
+      <div class="detail-image">
+        {hasImage ? (
+          <img src={imageSrc} alt={drakt.navn} />
+        ) : (
+          <div class="placeholder"><Icon name="shirt" size={64} /></div>
+        )}
+      </div>
     </div>
 
     <div class="detail-info">
-      <h1>{drakt.navn}</h1>
+      <h1 class="detail-title">{drakt.navn}</h1>
+      {drakt.aar && <p class="detail-year">{drakt.aar}</p>}
 
-      <dl class="meta">
-        {drakt.aar && (
-          <>
-            <dt>Sesong</dt>
-            <dd>{drakt.aar}</dd>
-          </>
-        )}
-        {drakt.land && (
-          <>
-            <dt>Land</dt>
-            <dd>{drakt.land}</dd>
-          </>
-        )}
-        {drakt.typeLag && (
-          <>
-            <dt>Type</dt>
-            <dd>{drakt.typeLag}</dd>
-          </>
-        )}
-        {drakt.farge && (
-          <>
-            <dt>Farge</dt>
-            <dd>{drakt.farge}</dd>
-          </>
-        )}
-        {drakt.informasjon && (
-          <>
-            <dt>Info</dt>
-            <dd>{drakt.informasjon}</dd>
-          </>
-        )}
-      </dl>
+      <div class="detail-tags">
+        {drakt.land && <span class="detail-tag tag-land">{flagEmoji && <span class="flag">{flagEmoji}</span>}{drakt.land}</span>}
+        {drakt.typeLag && <span class={`detail-tag tag-${drakt.typeLag.toLowerCase()}`}>{drakt.typeLag}</span>}
+      </div>
+
+      {draktFarger.length > 0 && (
+        <div class="detail-colors">
+          <span class="colors-label">Farger</span>
+          <div class="colors-row">
+            {cssColors.map((c, i) => (
+              <span class="color-item">
+                <span class="color-swatch" style={`background: ${c}; ${c === '#f8fafc' ? 'border: 1px solid #e2e8f0' : ''}`}></span>
+                <span class="color-name">{draktFarger[i]}</span>
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {drakt.informasjon && (
+        <div class="detail-info-text">
+          <span class="info-label">Info</span>
+          <p>{drakt.informasjon}</p>
+        </div>
+      )}
 
       {drakt.kitArchiveUrl && (
         <a href={drakt.kitArchiveUrl} target="_blank" rel="noopener" class="external-link">
-          Se på Football Kit Archive ↗
+          <Icon name="globe" size={14} /> Football Kit Archive ↗
         </a>
       )}
     </div>
@@ -88,7 +103,9 @@ const imageSrc = localImagePath || drakt.bildeUrl;
 
 <style>
   .back {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     margin-bottom: 1.5rem;
     font-size: 0.9rem;
     color: var(--color-muted);
@@ -99,20 +116,28 @@ const imageSrc = localImagePath || drakt.bildeUrl;
   }
 
   .detail {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--radius);
+  }
+
+  .detail-card {
+    width: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   }
 
   .detail-image {
-    background: #f0f0f0;
-    border-radius: var(--radius);
     aspect-ratio: 3 / 4;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #f0f0f0;
   }
 
   .detail-image img {
@@ -122,50 +147,146 @@ const imageSrc = localImagePath || drakt.bildeUrl;
   }
 
   .placeholder {
-    font-size: 5rem;
     opacity: 0.2;
-  }
-
-  .detail-info h1 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-  }
-
-  .meta {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.5rem 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .meta dt {
-    font-weight: 600;
     color: var(--color-muted);
-    font-size: 0.875rem;
   }
 
-  .meta dd {
+  .detail-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
+    max-width: 500px;
+  }
+
+  .detail-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .detail-year {
     font-size: 0.95rem;
+    color: var(--color-muted);
+    margin: 0;
+  }
+
+  .detail-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .detail-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .tag-land { background: #ecfdf5; }
+  .tag-klubb { background: #eff6ff; }
+  .tag-fiksjon { background: #f4f4f5; }
+
+  .flag { font-size: 0.9rem; }
+
+  .detail-colors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .colors-label {
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .colors-row {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .color-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .color-swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .color-name {
+    font-size: 0.65rem;
+    color: var(--color-muted);
+    text-transform: capitalize;
+  }
+
+  .detail-info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .info-label {
+    font-size: 0.7rem;
+    color: var(--color-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .detail-info-text p {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    margin: 0;
+    line-height: 1.5;
   }
 
   .external-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     padding: 0.5rem 1rem;
-    background: var(--color-accent);
-    color: white;
+    border: 1px solid var(--color-border);
     border-radius: var(--radius);
-    font-size: 0.875rem;
-    transition: opacity 0.2s;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: border-color 0.2s, color 0.2s;
   }
 
   .external-link:hover {
-    opacity: 0.85;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
     text-decoration: none;
   }
 
   @media (max-width: 700px) {
     .detail {
-      grid-template-columns: 1fr;
+      padding: 1.5rem 1rem;
+    }
+    .detail-card {
+      width: 220px;
+    }
+    .detail-title {
+      font-size: 1.3rem;
     }
   }
+</style>
 </style>
