@@ -1,11 +1,13 @@
 ---
 import Icon from "../components/Icon.astro";
+import tekster from "../data/tekster.json";
+import drakter from "../data/drakter.json";
 
 export interface Props {
-  title: string;
+  title?: string;
 }
 
-const { title } = Astro.props;
+const { title = tekster.nettsted.tittel } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,22 +15,22 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="En samling av over 400 fotballdrakter fra hele verden" />
+    <meta name="description" content={tekster.nettsted.beskrivelse} />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}/favicon.svg`} />
     <title>{title}</title>
   </head>
   <body>
     <header>
       <nav>
-        <a href={import.meta.env.BASE_URL} class="logo"><Icon name="shirt" size={18} /> Fotballdrakter</a>
-        <span class="count">425 drakter</span>
+        <a href={import.meta.env.BASE_URL} class="logo"><Icon name="shirt" size={18} /> {tekster.header.logo}</a>
+        <span class="count">{drakter.length} {tekster.forside.statistikk.drakter}</span>
       </nav>
     </header>
     <main>
       <slot />
     </main>
     <footer>
-      <p>En personlig samling av fotballdrakter fra hele verden.</p>
+      <p>{tekster.footer.tekst}</p>
     </footer>
   </body>
 </html>

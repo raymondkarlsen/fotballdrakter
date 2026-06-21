@@ -2,7 +2,10 @@
 import Base from "../../layouts/Base.astro";
 import Icon from "../../components/Icon.astro";
 import drakter from "../../data/drakter.json";
+import tekster from "../../data/tekster.json";
 import type { Drakt } from "../../types";
+
+const td = tekster.detalj;
 
 export function getStaticPaths() {
   return (drakter as Drakt[]).map((drakt) => ({
@@ -49,7 +52,7 @@ const flagEmoji = toFlag(drakt.landskode);
 ---
 
 <Base title={`${drakt.navn} – Fotballdrakter`}>
-  <a href={import.meta.env.BASE_URL} class="back"><Icon name="layout-grid" size={14} /> Tilbake til oversikten</a>
+  <a href={import.meta.env.BASE_URL} class="back"><Icon name="layout-grid" size={14} /> {td.tilbake}</a>
 
   <article class="detail" style={`background: linear-gradient(135deg, ${cssColors[0]}12, ${cssColors[1] || cssColors[0]}08, transparent)`}>
     <div class="detail-card">
@@ -73,7 +76,7 @@ const flagEmoji = toFlag(drakt.landskode);
 
       {draktFarger.length > 0 && (
         <div class="detail-colors">
-          <span class="colors-label">Farger</span>
+          <span class="colors-label">{td.farge}</span>
           <div class="colors-row">
             {cssColors.map((c, i) => (
               <span class="color-item">
@@ -87,14 +90,14 @@ const flagEmoji = toFlag(drakt.landskode);
 
       {drakt.informasjon && (
         <div class="detail-info-text">
-          <span class="info-label">Info</span>
+          <span class="info-label">{td.informasjon}</span>
           <p>{drakt.informasjon}</p>
         </div>
       )}
 
       {drakt.kitArchiveUrl && (
         <a href={drakt.kitArchiveUrl} target="_blank" rel="noopener" class="external-link">
-          <Icon name="globe" size={14} /> Football Kit Archive ↗
+          <Icon name="globe" size={14} /> {td.kitArchive} ↗
         </a>
       )}
     </div>
