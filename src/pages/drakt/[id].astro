@@ -19,7 +19,7 @@ const imageDir = resolve(process.cwd(), 'public/images/drakter');
 let localImagePath: string | null = null;
 try {
   const files = readdirSync(imageDir);
-  const match = files.find(f => f.startsWith(drakt.id + '.'));
+  const match = files.find(f => f.startsWith(drakt.id + '.') || f.startsWith(drakt.slug + '.'));
   if (match) {
     localImagePath = `${import.meta.env.BASE_URL}/images/drakter/${match}`;
   }

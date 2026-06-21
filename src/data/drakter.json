@@ -1,6 +1,7 @@
 [
   {
-    "id": "tsv-1860-munchen-1999-2000-bla",
+    "id": "t1m-01",
+    "slug": "tsv-1860-munchen-1999-2000-bla",
     "navn": "TSV 1860 Munchen",
     "aar": "1999, 2000",
     "landskode": "de",
@@ -12,7 +13,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "aalborg-2022-2023-gronn",
+    "id": "aal-01",
+    "slug": "aalborg-2022-2023-gronn",
     "navn": "Aalborg",
     "aar": "2022, 2023",
     "landskode": "dk",
@@ -24,7 +26,8 @@
     "bildeUrl": "https://fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/aalborg-2022-500x598.jpg"
   },
   {
-    "id": "aberbargoed-buds-bla-gul",
+    "id": "abb-01",
+    "slug": "aberbargoed-buds-bla-gul",
     "navn": "Aberbargoed Buds",
     "aar": "",
     "landskode": "gb-wls",
@@ -36,7 +39,8 @@
     "bildeUrl": "https://fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/Aberbargoed-Buds.jpg"
   },
   {
-    "id": "aek-athen-gul-svart",
+    "id": "aea-01",
+    "slug": "aek-athen-gul-svart",
     "navn": "AEK Athen",
     "aar": "",
     "landskode": "gr",
@@ -48,7 +52,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/aek-athen.jpg"
   },
   {
-    "id": "richmond-afc",
+    "id": "ric-01",
+    "slug": "richmond-afc",
     "navn": "Richmond AFC",
     "aar": "",
     "landskode": "pw",
@@ -60,7 +65,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "afc-wimbledon-2010-2011-2012-bla",
+    "id": "afw-01",
+    "slug": "afc-wimbledon-2010-2011-2012-bla",
     "navn": "AFC Wimbledon",
     "aar": "2010, 2011, 2012",
     "landskode": "gb-eng",
@@ -72,7 +78,8 @@
     "bildeUrl": "https://fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/afc-wimbledon.jpg"
   },
   {
-    "id": "ajax-2011-2012-bla",
+    "id": "aja-01",
+    "slug": "ajax-2011-2012-bla",
     "navn": "Ajax",
     "aar": "2011, 2012",
     "landskode": "nl",
@@ -84,7 +91,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/ajax.jpg"
   },
   {
-    "id": "al-wakrah-2009-2010-bla-hvit",
+    "id": "alw-01",
+    "slug": "al-wakrah-2009-2010-bla-hvit",
     "navn": "Al Wakrah",
     "aar": "2009, 2010",
     "landskode": "qa",
@@ -96,7 +104,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/al-wahkra.jpg"
   },
   {
-    "id": "al-arabi-2008-2009-hvit",
+    "id": "ala-01",
+    "slug": "al-arabi-2008-2009-hvit",
     "navn": "Al-Arabi",
     "aar": "2008, 2009",
     "landskode": "qa",
@@ -108,7 +117,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/al-arabi.jpg"
   },
   {
-    "id": "al-sadd-2009-2010-brun",
+    "id": "als-01",
+    "slug": "al-sadd-2009-2010-brun",
     "navn": "Al-Sadd",
     "aar": "2009, 2010",
     "landskode": "qa",
@@ -120,7 +130,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/al-sadd.jpg"
   },
   {
-    "id": "algeciras-hvit",
+    "id": "alc-01",
+    "slug": "algeciras-hvit",
     "navn": "Algeciras",
     "aar": "",
     "landskode": "es",
@@ -132,7 +143,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "algerie-2010-2011-2012-hvit",
+    "id": "alg-01",
+    "slug": "algerie-2010-2011-2012-hvit",
     "navn": "Algerie",
     "aar": "2010, 2011, 2012",
     "landskode": "dz",
@@ -144,7 +156,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "anderlecht-lilla",
+    "id": "and-01",
+    "slug": "anderlecht-lilla",
     "navn": "Anderlecht",
     "aar": "",
     "landskode": "be",
@@ -156,7 +169,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "antalyaspor",
+    "id": "ant-01",
+    "slug": "antalyaspor",
     "navn": "Antalyaspor",
     "aar": "",
     "landskode": "tr",
@@ -168,7 +182,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "argentina-2010-2011-2012-bla-hvit",
+    "id": "arg-01",
+    "slug": "argentina-2010-2011-2012-bla-hvit",
     "navn": "Argentina",
     "aar": "2010, 2011, 2012",
     "landskode": "ar",
@@ -180,7 +195,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "arsenal-2002-2003-2004-rod",
+    "id": "ars-01",
+    "slug": "arsenal-2002-2003-2004-rod",
     "navn": "Arsenal",
     "aar": "2002, 2003, 2004",
     "landskode": "gb-eng",
@@ -192,7 +208,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "arsenal-2004-2005-rod",
+    "id": "ars-02",
+    "slug": "arsenal-2004-2005-rod",
     "navn": "Arsenal",
     "aar": "2004, 2005",
     "landskode": "gb-eng",
@@ -204,7 +221,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "arsenal-2006-2007-2008-rod",
+    "id": "ars-03",
+    "slug": "arsenal-2006-2007-2008-rod",
     "navn": "Arsenal",
     "aar": "2006, 2007, 2008",
     "landskode": "gb-eng",
@@ -216,7 +234,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "arsenal-2002-2003-2004-rod-2",
+    "id": "ars-04",
+    "slug": "arsenal-2002-2003-2004-rod-2",
     "navn": "Arsenal",
     "aar": "2002, 2003, 2004",
     "landskode": "gb-eng",
@@ -228,19 +247,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ashford-borough-bla",
+    "id": "asb-01",
+    "slug": "ashford-borough-bla",
     "navn": "Ashford Borough",
     "aar": "",
     "landskode": "gb-eng",
     "land": "England",
     "typeLag": "Klubb",
     "farge": "blå",
-    "informasjon": "brukt i kamp, Nr 18",
+    "informasjon": "Brukt i kamp. Nr 18.",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "aston-villa-2009-2010-burgunder",
+    "id": "asv-01",
+    "slug": "aston-villa-2009-2010-burgunder",
     "navn": "Aston Villa",
     "aar": "2009, 2010",
     "landskode": "gb-eng",
@@ -252,7 +273,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "aston-villa-1997-1998-burgunder",
+    "id": "asv-02",
+    "slug": "aston-villa-1997-1998-burgunder",
     "navn": "Aston Villa",
     "aar": "1997, 1998",
     "landskode": "gb-eng",
@@ -264,7 +286,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "athletico-madrid-2014-2015-hvit",
+    "id": "atm-01",
+    "slug": "athletico-madrid-2014-2015-hvit",
     "navn": "Athletico Madrid",
     "aar": "2014, 2015",
     "landskode": "es",
@@ -276,7 +299,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "atletico-madrid",
+    "id": "atm-02",
+    "slug": "atletico-madrid",
     "navn": "Atletico Madrid",
     "aar": "",
     "landskode": "es",
@@ -288,7 +312,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "austria-wien-lilla",
+    "id": "auw-01",
+    "slug": "austria-wien-lilla",
     "navn": "Austria Wien",
     "aar": "",
     "landskode": "at",
@@ -300,7 +325,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bahrain-rod",
+    "id": "bah-01",
+    "slug": "bahrain-rod",
     "navn": "Bahrain",
     "aar": "",
     "landskode": "bh",
@@ -312,7 +338,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "barcelona-2002-2003-2004-bla",
+    "id": "bcn-01",
+    "slug": "barcelona-2002-2003-2004-bla",
     "navn": "Barcelona",
     "aar": "2002, 2003, 2004",
     "landskode": "es",
@@ -324,7 +351,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "barcelona-2005-2006-bla-rod",
+    "id": "bcn-02",
+    "slug": "barcelona-2005-2006-bla-rod",
     "navn": "Barcelona",
     "aar": "2005, 2006",
     "landskode": "es",
@@ -336,7 +364,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "barnsley-rod",
+    "id": "brn-01",
+    "slug": "barnsley-rod",
     "navn": "Barnsley",
     "aar": "",
     "landskode": "gb-eng",
@@ -348,7 +377,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "basel-bla-rod",
+    "id": "bas-01",
+    "slug": "basel-bla-rod",
     "navn": "Basel",
     "aar": "",
     "landskode": "ch",
@@ -360,7 +390,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bayer-leverkusen",
+    "id": "bal-01",
+    "slug": "bayer-leverkusen",
     "navn": "Bayer Leverkusen",
     "aar": "",
     "landskode": "de",
@@ -372,7 +403,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bayern-munchen-2002-2003-hvit",
+    "id": "bam-01",
+    "slug": "bayern-munchen-2002-2003-hvit",
     "navn": "Bayern Munchen",
     "aar": "2002, 2003",
     "landskode": "de",
@@ -384,7 +416,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "belgia-rod",
+    "id": "bel-01",
+    "slug": "belgia-rod",
     "navn": "Belgia",
     "aar": "",
     "landskode": "be",
@@ -396,7 +429,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "benfica-rod",
+    "id": "ben-01",
+    "slug": "benfica-rod",
     "navn": "Benfica",
     "aar": "",
     "landskode": "pt",
@@ -408,7 +442,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "besiktas",
+    "id": "bes-01",
+    "slug": "besiktas",
     "navn": "Besiktas",
     "aar": "",
     "landskode": "tr",
@@ -420,7 +455,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/besiktas.jpg"
   },
   {
-    "id": "birmingham-city-hvit-rod",
+    "id": "bir-01",
+    "slug": "birmingham-city-hvit-rod",
     "navn": "Birmingham City",
     "aar": "",
     "landskode": "gb-eng",
@@ -432,7 +468,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "birmingham-city-bla",
+    "id": "bir-02",
+    "slug": "birmingham-city-bla",
     "navn": "Birmingham City",
     "aar": "",
     "landskode": "gb-eng",
@@ -444,7 +481,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "blackburn-rod",
+    "id": "bla-01",
+    "slug": "blackburn-rod",
     "navn": "Blackburn",
     "aar": "",
     "landskode": "gb-eng",
@@ -456,7 +494,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "blackburn",
+    "id": "bla-02",
+    "slug": "blackburn",
     "navn": "Blackburn",
     "aar": "",
     "landskode": "gb-eng",
@@ -468,19 +507,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "blackpool-1998-1999",
+    "id": "blp-01",
+    "slug": "blackpool-1998-1999",
     "navn": "Blackpool",
     "aar": "1998, 1999",
     "landskode": "gb-eng",
     "land": "England",
     "typeLag": "Klubb",
     "farge": "",
-    "informasjon": "keeper",
+    "informasjon": "Keeperdrakt",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "blackpool",
+    "id": "blp-02",
+    "slug": "blackpool",
     "navn": "Blackpool",
     "aar": "",
     "landskode": "gb-eng",
@@ -492,7 +533,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bloemfontain-celtic-2007-2008-gronn-svart",
+    "id": "blc-01",
+    "slug": "bloemfontain-celtic-2007-2008-gronn-svart",
     "navn": "Bloemfontain Celtic",
     "aar": "2007, 2008",
     "landskode": "za",
@@ -504,7 +546,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bochum-1999-2000-gra",
+    "id": "boc-01",
+    "slug": "bochum-1999-2000-gra",
     "navn": "Bochum",
     "aar": "1999, 2000",
     "landskode": "de",
@@ -516,7 +559,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bolton-2007-2008-rod",
+    "id": "bol-01",
+    "slug": "bolton-2007-2008-rod",
     "navn": "Bolton",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -528,7 +572,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bordaux-2010-2011-lilla",
+    "id": "bor-01",
+    "slug": "bordaux-2010-2011-lilla",
     "navn": "Bordaux",
     "aar": "2010, 2011",
     "landskode": "fr",
@@ -540,19 +585,21 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/Bordeaux.jpg"
   },
   {
-    "id": "borussia-dortmund-gul",
+    "id": "bod-01",
+    "slug": "borussia-dortmund-gul",
     "navn": "Borussia Dortmund",
     "aar": "",
     "landskode": "de",
     "land": "Tyskland",
     "typeLag": "Klubb",
     "farge": "gul",
-    "informasjon": "",
+    "informasjon": "11 Reus",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bournemouth-2004-2005-2006-svart-rod",
+    "id": "bou-01",
+    "slug": "bournemouth-2004-2005-2006-svart-rod",
     "navn": "Bournemouth",
     "aar": "2004, 2005, 2006",
     "landskode": "gb-eng",
@@ -564,7 +611,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "brentford-2006-2007-svart",
+    "id": "bre-01",
+    "slug": "brentford-2006-2007-svart",
     "navn": "Brentford",
     "aar": "2006, 2007",
     "landskode": "gb-eng",
@@ -576,7 +624,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "brighton-hove-albion-2006-2007-bla-hvit",
+    "id": "b&h-01",
+    "slug": "brighton-hove-albion-2006-2007-bla-hvit",
     "navn": "Brighton & Hove Albion",
     "aar": "2006, 2007",
     "landskode": "gb-eng",
@@ -588,7 +637,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bristol-city-2005-2006-rod",
+    "id": "brc-01",
+    "slug": "bristol-city-2005-2006-rod",
     "navn": "Bristol City",
     "aar": "2005, 2006",
     "landskode": "gb-eng",
@@ -600,7 +650,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "bristol-rovers-2007-2008-bla",
+    "id": "brr-01",
+    "slug": "bristol-rovers-2007-2008-bla",
     "navn": "Bristol Rovers",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -612,7 +663,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "burford-oransje",
+    "id": "bfd-01",
+    "slug": "burford-oransje",
     "navn": "Burford",
     "aar": "",
     "landskode": "gb-eng",
@@ -624,7 +676,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "burnley",
+    "id": "bur-01",
+    "slug": "burnley",
     "navn": "Burnley",
     "aar": "",
     "landskode": "gb-eng",
@@ -636,7 +689,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "cadiz",
+    "id": "cad-01",
+    "slug": "cadiz",
     "navn": "Cadiz",
     "aar": "",
     "landskode": "es",
@@ -648,7 +702,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "canada-2023-rod",
+    "id": "can-01",
+    "slug": "canada-2023-rod",
     "navn": "Canada",
     "aar": "2023",
     "landskode": "ca",
@@ -660,7 +715,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/canada-women-2023.webp"
   },
   {
-    "id": "cardiff-bla",
+    "id": "cdf-01",
+    "slug": "cardiff-bla",
     "navn": "Cardiff",
     "aar": "",
     "landskode": "gb-eng",
@@ -672,7 +728,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "carlisle-2009-2010-bla",
+    "id": "car-01",
+    "slug": "carlisle-2009-2010-bla",
     "navn": "Carlisle",
     "aar": "2009, 2010",
     "landskode": "gb-eng",
@@ -684,7 +741,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "celtic-2001-2002-hvit",
+    "id": "cel-01",
+    "slug": "celtic-2001-2002-hvit",
     "navn": "Celtic",
     "aar": "2001, 2002",
     "landskode": "gb-sct",
@@ -696,7 +754,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "celtic-1999-2000-gronn-svart",
+    "id": "cel-02",
+    "slug": "celtic-1999-2000-gronn-svart",
     "navn": "Celtic",
     "aar": "1999, 2000",
     "landskode": "gb-sct",
@@ -708,7 +767,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "celtic-2003-2004-gronn",
+    "id": "cel-03",
+    "slug": "celtic-2003-2004-gronn",
     "navn": "Celtic",
     "aar": "2003, 2004",
     "landskode": "gb-sct",
@@ -720,7 +780,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "celtic-1998-1999-gronn-svart",
+    "id": "cel-04",
+    "slug": "celtic-1998-1999-gronn-svart",
     "navn": "Celtic",
     "aar": "1998, 1999",
     "landskode": "gb-sct",
@@ -732,7 +793,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "cerezo-osaka-2023-rosa-svart",
+    "id": "ceo-01",
+    "slug": "cerezo-osaka-2023-rosa-svart",
     "navn": "Cerezo Osaka",
     "aar": "2023",
     "landskode": "jp",
@@ -744,7 +806,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/cerezo-osaka-2023-special.jpg"
   },
   {
-    "id": "cesena-2007-2008-hvit",
+    "id": "ces-01",
+    "slug": "cesena-2007-2008-hvit",
     "navn": "Cesena",
     "aar": "2007, 2008",
     "landskode": "it",
@@ -756,7 +819,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "charlton-athletic-2003-2004-rod",
+    "id": "cha-01",
+    "slug": "charlton-athletic-2003-2004-rod",
     "navn": "Charlton Athletic",
     "aar": "2003, 2004",
     "landskode": "gb-eng",
@@ -768,7 +832,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "charlton-athletic-1998-1999-2000-rod",
+    "id": "cha-02",
+    "slug": "charlton-athletic-1998-1999-2000-rod",
     "navn": "Charlton Athletic",
     "aar": "1998, 1999, 2000",
     "landskode": "gb-eng",
@@ -780,7 +845,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "chelmsford-city-2007-2008-rod",
+    "id": "chc-01",
+    "slug": "chelmsford-city-2007-2008-rod",
     "navn": "Chelmsford City",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -792,7 +858,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "chelsea-2006-2007-2008-bla",
+    "id": "che-01",
+    "slug": "chelsea-2006-2007-2008-bla",
     "navn": "Chelsea",
     "aar": "2006, 2007, 2008",
     "landskode": "gb-eng",
@@ -804,7 +871,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "chesterfield-1998-1999-rod",
+    "id": "chf-01",
+    "slug": "chesterfield-1998-1999-rod",
     "navn": "Chesterfield",
     "aar": "1998, 1999",
     "landskode": "gb-eng",
@@ -816,7 +884,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "claydon",
+    "id": "cly-01",
+    "slug": "claydon",
     "navn": "Claydon",
     "aar": "",
     "landskode": "gb-eng",
@@ -828,7 +897,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "club-america-2008-2009-bla",
+    "id": "cam-01",
+    "slug": "club-america-2008-2009-bla",
     "navn": "Club America",
     "aar": "2008, 2009",
     "landskode": "mx",
@@ -840,7 +910,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "colchester-2004-2005-bla",
+    "id": "col-01",
+    "slug": "colchester-2004-2005-bla",
     "navn": "Colchester",
     "aar": "2004, 2005",
     "landskode": "gb-eng",
@@ -852,7 +923,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "colchester-united-2007-2008-bla",
+    "id": "cou-01",
+    "slug": "colchester-united-2007-2008-bla",
     "navn": "Colchester United",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -864,7 +936,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "colchester-united-bla",
+    "id": "cou-02",
+    "slug": "colchester-united-bla",
     "navn": "Colchester United",
     "aar": "",
     "landskode": "gb-eng",
@@ -876,7 +949,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "costa-rica-2006-2007-rod",
+    "id": "cor-01",
+    "slug": "costa-rica-2006-2007-rod",
     "navn": "Costa Rica",
     "aar": "2006, 2007",
     "landskode": "cr",
@@ -888,7 +962,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "coventry-city-2011-2012-bla",
+    "id": "coc-01",
+    "slug": "coventry-city-2011-2012-bla",
     "navn": "Coventry City",
     "aar": "2011, 2012",
     "landskode": "gb-eng",
@@ -900,7 +975,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "coventry-city-gronn",
+    "id": "coc-02",
+    "slug": "coventry-city-gronn",
     "navn": "Coventry City",
     "aar": "",
     "landskode": "gb-eng",
@@ -912,7 +988,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "coventry-city-2008-2009-svart",
+    "id": "coc-03",
+    "slug": "coventry-city-2008-2009-svart",
     "navn": "Coventry City",
     "aar": "2008, 2009",
     "landskode": "gb-eng",
@@ -924,7 +1001,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "crawley-town-rod",
+    "id": "crt-01",
+    "slug": "crawley-town-rod",
     "navn": "Crawley Town",
     "aar": "",
     "landskode": "gb-eng",
@@ -936,7 +1014,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "crosshill-thistle-afc-gronn",
+    "id": "cta-01",
+    "slug": "crosshill-thistle-afc-gronn",
     "navn": "Crosshill Thistle AFC",
     "aar": "",
     "landskode": "gb-sct",
@@ -948,7 +1027,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "crystal-palace-2013-2014-bla-rod",
+    "id": "crp-01",
+    "slug": "crystal-palace-2013-2014-bla-rod",
     "navn": "Crystal Palace",
     "aar": "2013, 2014",
     "landskode": "gb-eng",
@@ -960,7 +1040,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "dagenham-redbridge",
+    "id": "d&r-01",
+    "slug": "dagenham-redbridge",
     "navn": "Dagenham & Redbridge",
     "aar": "",
     "landskode": "gb-eng",
@@ -972,7 +1053,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "djurgarden",
+    "id": "dju-01",
+    "slug": "djurgarden",
     "navn": "Djurgården",
     "aar": "",
     "landskode": "se",
@@ -984,7 +1066,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "doncaster",
+    "id": "don-01",
+    "slug": "doncaster",
     "navn": "Doncaster",
     "aar": "",
     "landskode": "gb-eng",
@@ -996,7 +1079,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "dumbarton-2006-2007-gul",
+    "id": "dum-01",
+    "slug": "dumbarton-2006-2007-gul",
     "navn": "Dumbarton",
     "aar": "2006, 2007",
     "landskode": "gb-sct",
@@ -1008,7 +1092,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "dundee-fc",
+    "id": "dun-01",
+    "slug": "dundee-fc",
     "navn": "Dundee FC",
     "aar": "",
     "landskode": "gb-sct",
@@ -1020,7 +1105,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "eisenbahner-hvit",
+    "id": "eis-01",
+    "slug": "eisenbahner-hvit",
     "navn": "Eisenbahner",
     "aar": "",
     "landskode": "de",
@@ -1032,7 +1118,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "england-hvit",
+    "id": "eng-01",
+    "slug": "england-hvit",
     "navn": "England",
     "aar": "",
     "landskode": "gb-eng",
@@ -1044,7 +1131,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "england-1993-1994-hvit",
+    "id": "eng-02",
+    "slug": "england-1993-1994-hvit",
     "navn": "England",
     "aar": "1993, 1994",
     "landskode": "gb-eng",
@@ -1056,7 +1144,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "england-2001-2002-2003-hvit",
+    "id": "eng-03",
+    "slug": "england-2001-2002-2003-hvit",
     "navn": "England",
     "aar": "2001, 2002, 2003",
     "landskode": "gb-eng",
@@ -1068,7 +1157,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "england-rod",
+    "id": "eng-04",
+    "slug": "england-rod",
     "navn": "England",
     "aar": "",
     "landskode": "gb-eng",
@@ -1080,7 +1170,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "england-1996-hvit",
+    "id": "eng-05",
+    "slug": "england-1996-hvit",
     "navn": "England",
     "aar": "1996",
     "landskode": "gb-eng",
@@ -1092,7 +1183,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "england-hvit-2",
+    "id": "eng-06",
+    "slug": "england-hvit-2",
     "navn": "England",
     "aar": "",
     "landskode": "gb-eng",
@@ -1104,7 +1196,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "exeter-city",
+    "id": "exc-01",
+    "slug": "exeter-city",
     "navn": "Exeter City",
     "aar": "",
     "landskode": "gb-eng",
@@ -1116,7 +1209,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "falkirk",
+    "id": "fal-01",
+    "slug": "falkirk",
     "navn": "Falkirk",
     "aar": "",
     "landskode": "gb-sct",
@@ -1128,7 +1222,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fc-kobenhavn-2014-2015-hvit",
+    "id": "kob-01",
+    "slug": "fc-kobenhavn-2014-2015-hvit",
     "navn": "FC København",
     "aar": "2014, 2015",
     "landskode": "dk",
@@ -1140,7 +1235,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fenerbache-gul",
+    "id": "fen-01",
+    "slug": "fenerbache-gul",
     "navn": "Fenerbache",
     "aar": "",
     "landskode": "tr",
@@ -1152,7 +1248,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ferencvaros-2004-2005-2006",
+    "id": "fer-01",
+    "slug": "ferencvaros-2004-2005-2006",
     "navn": "Ferencvaros",
     "aar": "2004, 2005, 2006",
     "landskode": "hu",
@@ -1164,7 +1261,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fiorentina-2012-2013-lilla",
+    "id": "fio-01",
+    "slug": "fiorentina-2012-2013-lilla",
     "navn": "Fiorentina",
     "aar": "2012, 2013",
     "landskode": "it",
@@ -1176,7 +1274,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fluminense",
+    "id": "flu-01",
+    "slug": "fluminense",
     "navn": "Fluminense",
     "aar": "",
     "landskode": "br",
@@ -1188,7 +1287,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fortuna-d-sseldorf-rod",
+    "id": "fod-01",
+    "slug": "fortuna-d-sseldorf-rod",
     "navn": "Fortuna Düsseldorf",
     "aar": "",
     "landskode": "de",
@@ -1200,7 +1300,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/fortuna-dusseldorf.jpg"
   },
   {
-    "id": "frankrike-bla",
+    "id": "fra-01",
+    "slug": "frankrike-bla",
     "navn": "Frankrike",
     "aar": "",
     "landskode": "fr",
@@ -1212,7 +1313,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "frankrike",
+    "id": "fra-02",
+    "slug": "frankrike",
     "navn": "Frankrike",
     "aar": "",
     "landskode": "fr",
@@ -1224,7 +1326,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fulham",
+    "id": "ful-01",
+    "slug": "fulham",
     "navn": "Fulham",
     "aar": "",
     "landskode": "gb-eng",
@@ -1236,7 +1339,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "gateshead",
+    "id": "gat-01",
+    "slug": "gateshead",
     "navn": "Gateshead",
     "aar": "",
     "landskode": "gb-eng",
@@ -1248,7 +1352,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "getafe",
+    "id": "get-01",
+    "slug": "getafe",
     "navn": "Getafe",
     "aar": "",
     "landskode": "es",
@@ -1260,7 +1365,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ghana-2010-2011-2012-hvit",
+    "id": "gha-01",
+    "slug": "ghana-2010-2011-2012-hvit",
     "navn": "Ghana",
     "aar": "2010, 2011, 2012",
     "landskode": "gh",
@@ -1272,7 +1378,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "gibraltar-2010-2011-rod",
+    "id": "gib-01",
+    "slug": "gibraltar-2010-2011-rod",
     "navn": "Gibraltar",
     "aar": "2010, 2011",
     "landskode": "gi",
@@ -1284,7 +1391,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "glentoran-2008-2009-gronn-rod",
+    "id": "gle-01",
+    "slug": "glentoran-2008-2009-gronn-rod",
     "navn": "Glentoran",
     "aar": "2008, 2009",
     "landskode": "gb-nir",
@@ -1296,7 +1404,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "guernsey-2012-2013-gronn",
+    "id": "gue-01",
+    "slug": "guernsey-2012-2013-gronn",
     "navn": "Guernsey",
     "aar": "2012, 2013",
     "landskode": "gb-eng",
@@ -1308,7 +1417,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hajduk-split-2011",
+    "id": "haj-01",
+    "slug": "hajduk-split-2011",
     "navn": "Hajduk Split",
     "aar": "2011",
     "landskode": "hr",
@@ -1320,7 +1430,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hamilton-academical-2007-2008-rod",
+    "id": "haa-01",
+    "slug": "hamilton-academical-2007-2008-rod",
     "navn": "Hamilton Academical",
     "aar": "2007, 2008",
     "landskode": "gb-sct",
@@ -1332,7 +1443,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hannover-rod",
+    "id": "han-01",
+    "slug": "hannover-rod",
     "navn": "Hannover",
     "aar": "",
     "landskode": "de",
@@ -1344,7 +1456,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "harrogate-town-bla",
+    "id": "hat-01",
+    "slug": "harrogate-town-bla",
     "navn": "Harrogate Town",
     "aar": "",
     "landskode": "gb-eng",
@@ -1356,7 +1469,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "havant-waterlooville-2007-2008-2009",
+    "id": "h&w-01",
+    "slug": "havant-waterlooville-2007-2008-2009",
     "navn": "Havant & Waterlooville",
     "aar": "2007, 2008, 2009",
     "landskode": "gb-eng",
@@ -1368,7 +1482,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hearts-2008-2009-bla-hvit",
+    "id": "hea-01",
+    "slug": "hearts-2008-2009-bla-hvit",
     "navn": "Hearts",
     "aar": "2008, 2009",
     "landskode": "gb-sct",
@@ -1380,7 +1495,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hearts-2007-2008-rod",
+    "id": "hea-02",
+    "slug": "hearts-2007-2008-rod",
     "navn": "Hearts",
     "aar": "2007, 2008",
     "landskode": "gb-sct",
@@ -1392,7 +1508,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hellas-2004-bla",
+    "id": "hel-01",
+    "slug": "hellas-2004-bla",
     "navn": "Hellas",
     "aar": "2004",
     "landskode": "gr",
@@ -1404,7 +1521,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/hellas-2004.jpg"
   },
   {
-    "id": "hertha-berlin-2010-2011-bla",
+    "id": "heb-01",
+    "slug": "hertha-berlin-2010-2011-bla",
     "navn": "Hertha Berlin",
     "aar": "2010, 2011",
     "landskode": "de",
@@ -1416,7 +1534,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hibernian-2006-2007-2008-gronn",
+    "id": "hib-01",
+    "slug": "hibernian-2006-2007-2008-gronn",
     "navn": "Hibernian",
     "aar": "2006, 2007, 2008",
     "landskode": "gb-sct",
@@ -1428,7 +1547,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "histon-2003-rod-svart",
+    "id": "his-01",
+    "slug": "histon-2003-rod-svart",
     "navn": "Histon",
     "aar": "2003",
     "landskode": "gb-eng",
@@ -1440,19 +1560,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "holmlia-2000-2001-rod",
+    "id": "hol-01",
+    "slug": "holmlia-2000-2001-rod",
     "navn": "Holmlia",
     "aar": "2000, 2001",
     "landskode": "no",
     "land": "Norge",
     "typeLag": "Klubb",
     "farge": "rød",
-    "informasjon": "Brukt i kamp. Nummer 4.",
+    "informasjon": "Nummer 4. Brukt i kamp. Av meg selv.",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hong-kong-rod",
+    "id": "hok-01",
+    "slug": "hong-kong-rod",
     "navn": "Hong Kong",
     "aar": "",
     "landskode": "hk",
@@ -1464,7 +1586,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "huddersfield-2008-2009-bla",
+    "id": "hud-01",
+    "slug": "huddersfield-2008-2009-bla",
     "navn": "Huddersfield",
     "aar": "2008, 2009",
     "landskode": "gb-eng",
@@ -1476,7 +1599,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "huddersfield-town-1999-2000-2001-bla",
+    "id": "hud-02",
+    "slug": "huddersfield-town-1999-2000-2001-bla",
     "navn": "Huddersfield Town",
     "aar": "1999, 2000, 2001",
     "landskode": "gb-eng",
@@ -1488,7 +1612,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hull-2012-2012-oransje-svart",
+    "id": "hul-01",
+    "slug": "hull-2012-2012-oransje-svart",
     "navn": "Hull",
     "aar": "2012, 2012",
     "landskode": "gb-eng",
@@ -1500,7 +1625,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ipswich-town-2009-2010-2011-bla",
+    "id": "ipt-01",
+    "slug": "ipswich-town-2009-2010-2011-bla",
     "navn": "Ipswich Town",
     "aar": "2009, 2010, 2011",
     "landskode": "gb-eng",
@@ -1512,7 +1638,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "irland-2006-2007-2008-gronn",
+    "id": "irl-01",
+    "slug": "irland-2006-2007-2008-gronn",
     "navn": "Irland",
     "aar": "2006, 2007, 2008",
     "landskode": "ie",
@@ -1524,7 +1651,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "irland-2006-2007-2008-hvit",
+    "id": "irl-02",
+    "slug": "irland-2006-2007-2008-hvit",
     "navn": "Irland",
     "aar": "2006, 2007, 2008",
     "landskode": "ie",
@@ -1536,7 +1664,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "italia-bla",
+    "id": "ita-01",
+    "slug": "italia-bla",
     "navn": "Italia",
     "aar": "",
     "landskode": "it",
@@ -1548,7 +1677,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "italia-hvit",
+    "id": "ita-02",
+    "slug": "italia-hvit",
     "navn": "Italia",
     "aar": "",
     "landskode": "it",
@@ -1560,7 +1690,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "italia-bla-2",
+    "id": "ita-03",
+    "slug": "italia-bla-2",
     "navn": "Italia",
     "aar": "",
     "landskode": "it",
@@ -1572,7 +1703,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "japan-2006-bla",
+    "id": "jap-01",
+    "slug": "japan-2006-bla",
     "navn": "Japan",
     "aar": "2006",
     "landskode": "jp",
@@ -1584,7 +1716,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "jugoslavia-2002-bla",
+    "id": "jug-01",
+    "slug": "jugoslavia-2002-bla",
     "navn": "Jugoslavia",
     "aar": "2002",
     "landskode": "pw",
@@ -1596,7 +1729,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "juventus-hvit-svart",
+    "id": "juv-01",
+    "slug": "juventus-hvit-svart",
     "navn": "Juventus",
     "aar": "",
     "landskode": "it",
@@ -1608,7 +1742,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "juventus-hvit-svart-2",
+    "id": "juv-02",
+    "slug": "juventus-hvit-svart-2",
     "navn": "Juventus",
     "aar": "",
     "landskode": "it",
@@ -1620,7 +1755,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "juventus-bla",
+    "id": "juv-03",
+    "slug": "juventus-bla",
     "navn": "Juventus",
     "aar": "",
     "landskode": "it",
@@ -1632,7 +1768,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "juventus-hvit-svart-3",
+    "id": "juv-04",
+    "slug": "juventus-hvit-svart-3",
     "navn": "Juventus",
     "aar": "",
     "landskode": "it",
@@ -1644,7 +1781,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "kaizer-chiefs-gul-svart",
+    "id": "kac-01",
+    "slug": "kaizer-chiefs-gul-svart",
     "navn": "Kaizer Chiefs",
     "aar": "",
     "landskode": "za",
@@ -1656,7 +1794,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "kamin-thiele-gra",
+    "id": "kat-01",
+    "slug": "kamin-thiele-gra",
     "navn": "Kamin Thiele",
     "aar": "",
     "landskode": "de",
@@ -1668,7 +1807,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "kawasaki-frontale-bla-svart",
+    "id": "kaf-01",
+    "slug": "kawasaki-frontale-bla-svart",
     "navn": "Kawasaki Frontale",
     "aar": "",
     "landskode": "jp",
@@ -1680,7 +1820,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/kawasaki-frontale-limited-2023.webp"
   },
   {
-    "id": "korona-kielce-gul-svart",
+    "id": "kok-01",
+    "slug": "korona-kielce-gul-svart",
     "navn": "Korona Kielce",
     "aar": "",
     "landskode": "pl",
@@ -1692,7 +1833,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "kroatia-rod-hvit",
+    "id": "kro-01",
+    "slug": "kroatia-rod-hvit",
     "navn": "Kroatia",
     "aar": "",
     "landskode": "hr",
@@ -1704,7 +1846,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "koln-rod",
+    "id": "kol-01",
+    "slug": "koln-rod",
     "navn": "Køln",
     "aar": "",
     "landskode": "de",
@@ -1716,7 +1859,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "leeds-united-gul",
+    "id": "leu-01",
+    "slug": "leeds-united-gul",
     "navn": "Leeds United",
     "aar": "",
     "landskode": "gb-eng",
@@ -1728,7 +1872,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "leeds-united-hvit",
+    "id": "leu-02",
+    "slug": "leeds-united-hvit",
     "navn": "Leeds United",
     "aar": "",
     "landskode": "gb-eng",
@@ -1740,7 +1885,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "leek-town-bla",
+    "id": "let-01",
+    "slug": "leek-town-bla",
     "navn": "Leek Town",
     "aar": "",
     "landskode": "gb-eng",
@@ -1752,7 +1898,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "legia-gdansk-gronn-hvit",
+    "id": "leg-01",
+    "slug": "legia-gdansk-gronn-hvit",
     "navn": "Legia Gdansk",
     "aar": "",
     "landskode": "pl",
@@ -1764,7 +1911,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "legia-warsawa-hvit",
+    "id": "lew-01",
+    "slug": "legia-warsawa-hvit",
     "navn": "Legia Warsawa",
     "aar": "",
     "landskode": "pl",
@@ -1776,7 +1924,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "leicester-city-bla",
+    "id": "lec-01",
+    "slug": "leicester-city-bla",
     "navn": "Leicester City",
     "aar": "",
     "landskode": "gb-eng",
@@ -1788,7 +1937,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lens-gul",
+    "id": "len-01",
+    "slug": "lens-gul",
     "navn": "Lens",
     "aar": "",
     "landskode": "fr",
@@ -1800,7 +1950,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "leoloperne-rod",
+    "id": "leo-01",
+    "slug": "leoloperne-rod",
     "navn": "Leoløperne",
     "aar": "",
     "landskode": "pw",
@@ -1812,7 +1963,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lincoln-hvit-rod",
+    "id": "lnc-01",
+    "slug": "lincoln-hvit-rod",
     "navn": "Lincoln",
     "aar": "",
     "landskode": "gb-eng",
@@ -1824,7 +1976,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "linfield-hvit",
+    "id": "lin-01",
+    "slug": "linfield-hvit",
     "navn": "Linfield",
     "aar": "",
     "landskode": "gb-nir",
@@ -1836,7 +1989,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2022-2023-lilla",
+    "id": "liv-01",
+    "slug": "liverpool-2022-2023-lilla",
     "navn": "Liverpool",
     "aar": "2022, 2023",
     "landskode": "gb-eng",
@@ -1848,7 +2002,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/liverpool-2022-2023-keeper-lilla.jpg"
   },
   {
-    "id": "liverpool-2022-2023-gronn",
+    "id": "liv-02",
+    "slug": "liverpool-2022-2023-gronn",
     "navn": "Liverpool",
     "aar": "2022, 2023",
     "landskode": "gb-eng",
@@ -1860,7 +2015,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/liverpool-2022-2023-gronn-tredje.jpg"
   },
   {
-    "id": "liverpool-2022-2023-hvit",
+    "id": "liv-03",
+    "slug": "liverpool-2022-2023-hvit",
     "navn": "Liverpool",
     "aar": "2022, 2023",
     "landskode": "gb-eng",
@@ -1872,7 +2028,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/liverpool-2022-2023-hvit-borte.jpg"
   },
   {
-    "id": "liverpool-2022-2023-gul",
+    "id": "liv-04",
+    "slug": "liverpool-2022-2023-gul",
     "navn": "Liverpool",
     "aar": "2022, 2023",
     "landskode": "gb-eng",
@@ -1884,7 +2041,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/liverpool-2021-2022-gul.jpg"
   },
   {
-    "id": "liverpool-2021-2022-gronn",
+    "id": "liv-05",
+    "slug": "liverpool-2021-2022-gronn",
     "navn": "Liverpool",
     "aar": "2021, 2022",
     "landskode": "gb-eng",
@@ -1896,7 +2054,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2020-2021-rod",
+    "id": "liv-06",
+    "slug": "liverpool-2020-2021-rod",
     "navn": "Liverpool",
     "aar": "2020, 2021",
     "landskode": "gb-eng",
@@ -1908,7 +2067,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2021-2022-rod",
+    "id": "liv-07",
+    "slug": "liverpool-2021-2022-rod",
     "navn": "LIverpool",
     "aar": "2021, 2022",
     "landskode": "gb-eng",
@@ -1920,7 +2080,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2006-2007-2008-rod",
+    "id": "liv-08",
+    "slug": "liverpool-2006-2007-2008-rod",
     "navn": "Liverpool",
     "aar": "2006, 2007, 2008",
     "landskode": "gb-eng",
@@ -1932,7 +2093,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2006-2007-gul",
+    "id": "liv-09",
+    "slug": "liverpool-2006-2007-gul",
     "navn": "Liverpool",
     "aar": "2006, 2007",
     "landskode": "gb-eng",
@@ -1944,7 +2106,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2008-2009-gronn",
+    "id": "liv-10",
+    "slug": "liverpool-2008-2009-gronn",
     "navn": "Liverpool",
     "aar": "2008, 2009",
     "landskode": "gb-eng",
@@ -1956,7 +2119,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2004-2005-gul",
+    "id": "liv-11",
+    "slug": "liverpool-2004-2005-gul",
     "navn": "Liverpool",
     "aar": "2004, 2005",
     "landskode": "gb-eng",
@@ -1968,7 +2132,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2007-2008-svart",
+    "id": "liv-12",
+    "slug": "liverpool-2007-2008-svart",
     "navn": "Liverpool",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -1980,7 +2145,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2011-2012-svart",
+    "id": "liv-13",
+    "slug": "liverpool-2011-2012-svart",
     "navn": "Liverpool",
     "aar": "2011, 2012",
     "landskode": "gb-eng",
@@ -1992,7 +2158,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2009-2010-svart",
+    "id": "liv-14",
+    "slug": "liverpool-2009-2010-svart",
     "navn": "Liverpool",
     "aar": "2009, 2010",
     "landskode": "gb-eng",
@@ -2004,7 +2171,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2005-2006-hvit",
+    "id": "liv-15",
+    "slug": "liverpool-2005-2006-hvit",
     "navn": "Liverpool",
     "aar": "2005, 2006",
     "landskode": "gb-eng",
@@ -2016,7 +2184,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2004-2005-2006-rod",
+    "id": "liv-16",
+    "slug": "liverpool-2004-2005-2006-rod",
     "navn": "Liverpool",
     "aar": "2004, 2005, 2006",
     "landskode": "gb-eng",
@@ -2028,7 +2197,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2002-2003-2004-rod",
+    "id": "liv-17",
+    "slug": "liverpool-2002-2003-2004-rod",
     "navn": "Liverpool",
     "aar": "2002, 2003, 2004",
     "landskode": "gb-eng",
@@ -2040,7 +2210,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2001-2002-hvit",
+    "id": "liv-18",
+    "slug": "liverpool-2001-2002-hvit",
     "navn": "Liverpool",
     "aar": "2001, 2002",
     "landskode": "gb-eng",
@@ -2052,7 +2223,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-1999-2000-gronn",
+    "id": "liv-19",
+    "slug": "liverpool-1999-2000-gronn",
     "navn": "Liverpool",
     "aar": "1999, 2000",
     "landskode": "gb-eng",
@@ -2064,7 +2236,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-1998-1999-2000-rod",
+    "id": "liv-20",
+    "slug": "liverpool-1998-1999-2000-rod",
     "navn": "Liverpool",
     "aar": "1998, 1999, 2000",
     "landskode": "gb-eng",
@@ -2076,7 +2249,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-1996-1997-1998-rod",
+    "id": "liv-21",
+    "slug": "liverpool-1996-1997-1998-rod",
     "navn": "Liverpool",
     "aar": "1996, 1997, 1998",
     "landskode": "gb-eng",
@@ -2088,7 +2262,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-1996-1997-hvit",
+    "id": "liv-22",
+    "slug": "liverpool-1996-1997-hvit",
     "navn": "Liverpool",
     "aar": "1996, 1997",
     "landskode": "gb-eng",
@@ -2100,7 +2275,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-2012-2013-lilla",
+    "id": "liv-23",
+    "slug": "liverpool-2012-2013-lilla",
     "navn": "Liverpool",
     "aar": "2012, 2013",
     "landskode": "gb-eng",
@@ -2112,7 +2288,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "liverpool-1996-1997-hvit-2",
+    "id": "liv-24",
+    "slug": "liverpool-1996-1997-hvit-2",
     "navn": "Liverpool",
     "aar": "1996, 1997",
     "landskode": "gb-eng",
@@ -2124,7 +2301,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "livingston-2001-2002-gull",
+    "id": "lvs-01",
+    "slug": "livingston-2001-2002-gull",
     "navn": "Livingston",
     "aar": "2001, 2002",
     "landskode": "gb-sct",
@@ -2136,7 +2314,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "livingston-1996-1997-svart",
+    "id": "lvs-02",
+    "slug": "livingston-1996-1997-svart",
     "navn": "Livingston",
     "aar": "1996, 1997",
     "landskode": "gb-sct",
@@ -2148,7 +2327,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "livorno-2007-2008-rod",
+    "id": "lvo-01",
+    "slug": "livorno-2007-2008-rod",
     "navn": "Livorno",
     "aar": "2007, 2008",
     "landskode": "it",
@@ -2160,7 +2340,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "los-angeles-galaxy-hvit",
+    "id": "lag-01",
+    "slug": "los-angeles-galaxy-hvit",
     "navn": "Los Angeles Galaxy",
     "aar": "",
     "landskode": "us",
@@ -2172,7 +2353,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "luton-oransje",
+    "id": "lut-01",
+    "slug": "luton-oransje",
     "navn": "Luton",
     "aar": "",
     "landskode": "gb-eng",
@@ -2184,7 +2366,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2006-rod-hvit",
+    "id": "lyn-01",
+    "slug": "lyn-2006-rod-hvit",
     "navn": "Lyn",
     "aar": "2006",
     "landskode": "no",
@@ -2196,7 +2379,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2007-rod-hvit",
+    "id": "lyn-02",
+    "slug": "lyn-2007-rod-hvit",
     "navn": "Lyn",
     "aar": "2007",
     "landskode": "no",
@@ -2208,7 +2392,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2011-rod-hvit",
+    "id": "lyn-03",
+    "slug": "lyn-2011-rod-hvit",
     "navn": "Lyn",
     "aar": "2011",
     "landskode": "no",
@@ -2220,7 +2405,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2004-2005-rod-hvit",
+    "id": "lyn-04",
+    "slug": "lyn-2004-2005-rod-hvit",
     "navn": "Lyn",
     "aar": "2004, 2005",
     "landskode": "no",
@@ -2232,7 +2418,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2006-bla",
+    "id": "lyn-05",
+    "slug": "lyn-2006-bla",
     "navn": "Lyn",
     "aar": "2006",
     "landskode": "no",
@@ -2244,7 +2431,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2008-hvit",
+    "id": "lyn-06",
+    "slug": "lyn-2008-hvit",
     "navn": "Lyn",
     "aar": "2008",
     "landskode": "no",
@@ -2256,7 +2444,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2009-hvit",
+    "id": "lyn-07",
+    "slug": "lyn-2009-hvit",
     "navn": "Lyn",
     "aar": "2009",
     "landskode": "no",
@@ -2268,7 +2457,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2010-rod",
+    "id": "lyn-08",
+    "slug": "lyn-2010-rod",
     "navn": "Lyn",
     "aar": "2010",
     "landskode": "no",
@@ -2280,7 +2470,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "maastrich-2009-2010-bla",
+    "id": "maa-01",
+    "slug": "maastrich-2009-2010-bla",
     "navn": "Maastrich",
     "aar": "2009, 2010",
     "landskode": "nl",
@@ -2292,7 +2483,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/maastricht.jpg"
   },
   {
-    "id": "maccabi-haifa-2023-gronn",
+    "id": "mah-01",
+    "slug": "maccabi-haifa-2023-gronn",
     "navn": "Maccabi Haifa",
     "aar": "2023",
     "landskode": "il",
@@ -2304,7 +2496,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "manchester-city-2011-2012-rod-svart",
+    "id": "mac-01",
+    "slug": "manchester-city-2011-2012-rod-svart",
     "navn": "Manchester City",
     "aar": "2011, 2012",
     "landskode": "gb-eng",
@@ -2316,7 +2509,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "manchester-united-2009-2010-rod",
+    "id": "mun-01",
+    "slug": "manchester-united-2009-2010-rod",
     "navn": "Manchester United",
     "aar": "2009, 2010",
     "landskode": "gb-eng",
@@ -2328,7 +2522,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "manchester-united-svart",
+    "id": "mun-02",
+    "slug": "manchester-united-svart",
     "navn": "Manchester United",
     "aar": "",
     "landskode": "gb-eng",
@@ -2340,7 +2535,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "mansfield-town-gul",
+    "id": "mat-01",
+    "slug": "mansfield-town-gul",
     "navn": "Mansfield Town",
     "aar": "",
     "landskode": "gb-eng",
@@ -2352,7 +2548,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "maribor-nk-2005-2006-2007-gul",
+    "id": "man-01",
+    "slug": "maribor-nk-2005-2006-2007-gul",
     "navn": "Maribor NK",
     "aar": "2005, 2006, 2007",
     "landskode": "si",
@@ -2364,7 +2561,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "marseille-2014-2015-svart",
+    "id": "mar-01",
+    "slug": "marseille-2014-2015-svart",
     "navn": "Marseille",
     "aar": "2014, 2015",
     "landskode": "fr",
@@ -2376,7 +2574,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "messina-2005-bla",
+    "id": "mes-01",
+    "slug": "messina-2005-bla",
     "navn": "Messina",
     "aar": "2005",
     "landskode": "it",
@@ -2388,7 +2587,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "middlesbrough-2005-2006-bla",
+    "id": "mid-01",
+    "slug": "middlesbrough-2005-2006-bla",
     "navn": "Middlesbrough",
     "aar": "2005, 2006",
     "landskode": "gb-eng",
@@ -2400,7 +2600,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "middlesbrough-rod",
+    "id": "mid-02",
+    "slug": "middlesbrough-rod",
     "navn": "Middlesbrough",
     "aar": "",
     "landskode": "gb-eng",
@@ -2412,7 +2613,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "middlesbrough-rod-2",
+    "id": "mid-03",
+    "slug": "middlesbrough-rod-2",
     "navn": "Middlesbrough",
     "aar": "",
     "landskode": "gb-eng",
@@ -2424,7 +2626,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "milan-2012-2013-rod-svart",
+    "id": "mil-01",
+    "slug": "milan-2012-2013-rod-svart",
     "navn": "Milan",
     "aar": "2012, 2013",
     "landskode": "it",
@@ -2436,7 +2639,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "milton-keynes-dons-hvit",
+    "id": "mkd-01",
+    "slug": "milton-keynes-dons-hvit",
     "navn": "Milton Keynes Dons",
     "aar": "",
     "landskode": "gb-eng",
@@ -2448,7 +2652,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "muang-thong-2011-rod",
+    "id": "mut-01",
+    "slug": "muang-thong-2011-rod",
     "navn": "Muang Thong",
     "aar": "2011",
     "landskode": "th",
@@ -2460,7 +2665,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "namibia-2012-rod",
+    "id": "nam-01",
+    "slug": "namibia-2012-rod",
     "navn": "Namibia",
     "aar": "2012",
     "landskode": "na",
@@ -2472,7 +2678,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "napoli-2007-2008-hvit",
+    "id": "nap-01",
+    "slug": "napoli-2007-2008-hvit",
     "navn": "Napoli",
     "aar": "2007, 2008",
     "landskode": "it",
@@ -2484,7 +2691,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nea-salamis-famagusta-2011-hvit-rod",
+    "id": "nsf-01",
+    "slug": "nea-salamis-famagusta-2011-hvit-rod",
     "navn": "Nea Salamis Famagusta",
     "aar": "2011",
     "landskode": "cy",
@@ -2496,7 +2704,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nederland-2008-oransje",
+    "id": "ned-01",
+    "slug": "nederland-2008-oransje",
     "navn": "Nederland",
     "aar": "2008",
     "landskode": "nl",
@@ -2508,7 +2717,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/nederland.jpg"
   },
   {
-    "id": "nederland-2006-hvit",
+    "id": "ned-02",
+    "slug": "nederland-2006-hvit",
     "navn": "Nederland",
     "aar": "2006",
     "landskode": "nl",
@@ -2520,7 +2730,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nenndorf-1995-1996-bla",
+    "id": "nen-01",
+    "slug": "nenndorf-1995-1996-bla",
     "navn": "Nenndorf",
     "aar": "1995, 1996",
     "landskode": "de",
@@ -2532,7 +2743,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/Nederland-2006.jpg"
   },
   {
-    "id": "nesodden-1999-2000-2001-hvit",
+    "id": "nes-01",
+    "slug": "nesodden-1999-2000-2001-hvit",
     "navn": "Nesodden",
     "aar": "1999, 2000, 2001",
     "landskode": "no",
@@ -2544,7 +2756,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "new-amsterdam-fc-2021-gronn",
+    "id": "nea-01",
+    "slug": "new-amsterdam-fc-2021-gronn",
     "navn": "New Amsterdam FC",
     "aar": "2021",
     "landskode": "us",
@@ -2556,7 +2769,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "newcastle-1995-1996-hvit-svart",
+    "id": "new-01",
+    "slug": "newcastle-1995-1996-hvit-svart",
     "navn": "Newcastle",
     "aar": "1995, 1996",
     "landskode": "gb-eng",
@@ -2568,7 +2782,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nice-2011-2012-rod-svart",
+    "id": "nic-01",
+    "slug": "nice-2011-2012-rod-svart",
     "navn": "Nice",
     "aar": "2011, 2012",
     "landskode": "fr",
@@ -2580,7 +2795,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nord-irland-2012-2013-gronn",
+    "id": "noi-01",
+    "slug": "nord-irland-2012-2013-gronn",
     "navn": "Nord-Irland",
     "aar": "2012, 2013",
     "landskode": "gb-nir",
@@ -2592,7 +2808,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nordsjalland-2013-2014-bla",
+    "id": "nds-01",
+    "slug": "nordsjalland-2013-2014-bla",
     "navn": "Nordsjælland",
     "aar": "2013, 2014",
     "landskode": "dk",
@@ -2604,7 +2821,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "norge-hvit",
+    "id": "nor-01",
+    "slug": "norge-hvit",
     "navn": "Norge",
     "aar": "",
     "landskode": "no",
@@ -2616,7 +2834,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "norwich-2005-2006-gul",
+    "id": "nrw-01",
+    "slug": "norwich-2005-2006-gul",
     "navn": "Norwich",
     "aar": "2005, 2006",
     "landskode": "gb-eng",
@@ -2628,7 +2847,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nottingham-forest-bla",
+    "id": "nof-01",
+    "slug": "nottingham-forest-bla",
     "navn": "Nottingham Forest",
     "aar": "",
     "landskode": "gb-eng",
@@ -2640,7 +2860,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nottingham-forest-rod",
+    "id": "nof-02",
+    "slug": "nottingham-forest-rod",
     "navn": "Nottingham Forest",
     "aar": "",
     "landskode": "gb-eng",
@@ -2652,7 +2873,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nottingham-forest-gul",
+    "id": "nof-03",
+    "slug": "nottingham-forest-gul",
     "navn": "Nottingham Forest",
     "aar": "",
     "landskode": "gb-eng",
@@ -2664,7 +2886,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "notts-county-hvit-svart",
+    "id": "noc-01",
+    "slug": "notts-county-hvit-svart",
     "navn": "Notts County",
     "aar": "",
     "landskode": "gb-eng",
@@ -2676,7 +2899,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "oldham-2008-2009-2010-bla",
+    "id": "old-01",
+    "slug": "oldham-2008-2009-2010-bla",
     "navn": "Oldham",
     "aar": "2008, 2009, 2010",
     "landskode": "gb-eng",
@@ -2688,7 +2912,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "olympiakos-2004-2005-hvit-rod",
+    "id": "oly-01",
+    "slug": "olympiakos-2004-2005-hvit-rod",
     "navn": "Olympiakos",
     "aar": "2004, 2005",
     "landskode": "gr",
@@ -2700,7 +2925,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/olympiakos.jpg"
   },
   {
-    "id": "pachuca-2023-bla-hvit",
+    "id": "pac-01",
+    "slug": "pachuca-2023-bla-hvit",
     "navn": "Pachuca",
     "aar": "2023",
     "landskode": "mx",
@@ -2712,7 +2938,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/pachuca-home-2023.jpg"
   },
   {
-    "id": "palermo-2007-rosa",
+    "id": "pal-01",
+    "slug": "palermo-2007-rosa",
     "navn": "Palermo",
     "aar": "2007",
     "landskode": "it",
@@ -2724,7 +2951,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "palermo-2011-2012-svart",
+    "id": "pal-02",
+    "slug": "palermo-2011-2012-svart",
     "navn": "Palermo",
     "aar": "2011, 2012",
     "landskode": "it",
@@ -2736,7 +2964,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "paraguay-2006-hvit-rod",
+    "id": "par-01",
+    "slug": "paraguay-2006-hvit-rod",
     "navn": "Paraguay",
     "aar": "2006",
     "landskode": "py",
@@ -2748,7 +2977,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "paris-saint-germain-2004-2005-rod",
+    "id": "psg-01",
+    "slug": "paris-saint-germain-2004-2005-rod",
     "navn": "Paris Saint Germain",
     "aar": "2004, 2005",
     "landskode": "fr",
@@ -2760,7 +2990,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "park-celtic-bla",
+    "id": "pkc-01",
+    "slug": "park-celtic-bla",
     "navn": "Park Celtic",
     "aar": "",
     "landskode": "gb-eng",
@@ -2772,7 +3003,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "pisa-bla-svart",
+    "id": "pis-01",
+    "slug": "pisa-bla-svart",
     "navn": "Pisa",
     "aar": "",
     "landskode": "it",
@@ -2784,7 +3016,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "plymouth-argyle-2009-2010-hvit",
+    "id": "pla-01",
+    "slug": "plymouth-argyle-2009-2010-hvit",
     "navn": "Plymouth Argyle",
     "aar": "2009, 2010",
     "landskode": "gb-eng",
@@ -2796,7 +3029,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "plymouth-argyle-2007-2008-2009-gronn",
+    "id": "pla-02",
+    "slug": "plymouth-argyle-2007-2008-2009-gronn",
     "navn": "Plymouth Argyle",
     "aar": "2007, 2008, 2009",
     "landskode": "gb-eng",
@@ -2808,7 +3042,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "polen",
+    "id": "pol-01",
+    "slug": "polen",
     "navn": "Polen",
     "aar": "",
     "landskode": "pl",
@@ -2820,7 +3055,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "port-vale-2000-2001-gul",
+    "id": "pov-01",
+    "slug": "port-vale-2000-2001-gul",
     "navn": "Port Vale",
     "aar": "2000, 2001",
     "landskode": "gb-eng",
@@ -2832,7 +3068,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "portsmouth-2005-2006-bla",
+    "id": "por-01",
+    "slug": "portsmouth-2005-2006-bla",
     "navn": "Portsmouth",
     "aar": "2005, 2006",
     "landskode": "gb-eng",
@@ -2844,7 +3081,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "portsmouth-2008-2009-svart",
+    "id": "por-02",
+    "slug": "portsmouth-2008-2009-svart",
     "navn": "Portsmouth",
     "aar": "2008, 2009",
     "landskode": "gb-eng",
@@ -2856,7 +3094,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "portugal-rod",
+    "id": "prt-01",
+    "slug": "portugal-rod",
     "navn": "Portugal",
     "aar": "",
     "landskode": "pt",
@@ -2868,7 +3107,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "portugal-rod-2",
+    "id": "prt-02",
+    "slug": "portugal-rod-2",
     "navn": "Portugal",
     "aar": "",
     "landskode": "pt",
@@ -2880,7 +3120,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "preston-north-end-2005-2006-gul",
+    "id": "pne-01",
+    "slug": "preston-north-end-2005-2006-gul",
     "navn": "Preston North End",
     "aar": "2005, 2006",
     "landskode": "gb-eng",
@@ -2892,7 +3133,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "psv-eiendhoven-2006-hvit-rod",
+    "id": "pse-01",
+    "slug": "psv-eiendhoven-2006-hvit-rod",
     "navn": "PSV Eiendhoven",
     "aar": "2006",
     "landskode": "nl",
@@ -2904,7 +3146,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/PSV-Eiendhoven.jpg"
   },
   {
-    "id": "pumas-hvit-svart",
+    "id": "pum-01",
+    "slug": "pumas-hvit-svart",
     "navn": "Pumas",
     "aar": "",
     "landskode": "mx",
@@ -2916,7 +3159,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/pumas.jpg"
   },
   {
-    "id": "qatar-2008-2009",
+    "id": "qat-01",
+    "slug": "qatar-2008-2009",
     "navn": "Qatar",
     "aar": "2008, 2009",
     "landskode": "qa",
@@ -2928,7 +3172,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/qatar.jpg"
   },
   {
-    "id": "queens-park-rangers-2006-2007-bla-hvit",
+    "id": "qpr-01",
+    "slug": "queens-park-rangers-2006-2007-bla-hvit",
     "navn": "Queens Park Rangers",
     "aar": "2006, 2007",
     "landskode": "gb-eng",
@@ -2940,7 +3185,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rangers-1999-2000-2001-bla",
+    "id": "ran-01",
+    "slug": "rangers-1999-2000-2001-bla",
     "navn": "Rangers",
     "aar": "1999, 2000, 2001",
     "landskode": "gb-sct",
@@ -2952,7 +3198,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rangers-rod",
+    "id": "ran-02",
+    "slug": "rangers-rod",
     "navn": "Rangers",
     "aar": "",
     "landskode": "gb-sct",
@@ -2964,7 +3211,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "reading-2006-2007-gra-svart",
+    "id": "rea-01",
+    "slug": "reading-2006-2007-gra-svart",
     "navn": "Reading",
     "aar": "2006, 2007",
     "landskode": "gb-eng",
@@ -2976,7 +3224,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "real-madrid-2006-2007-hvit",
+    "id": "rem-01",
+    "slug": "real-madrid-2006-2007-hvit",
     "navn": "Real Madrid",
     "aar": "2006, 2007",
     "landskode": "es",
@@ -2988,7 +3237,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "real-madrid-2006-2007-lilla",
+    "id": "rem-02",
+    "slug": "real-madrid-2006-2007-lilla",
     "navn": "Real Madrid",
     "aar": "2006, 2007",
     "landskode": "es",
@@ -3000,7 +3250,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "real-madrid-2003-2004-2005-hvit",
+    "id": "rem-03",
+    "slug": "real-madrid-2003-2004-2005-hvit",
     "navn": "Real Madrid",
     "aar": "2003, 2004, 2005",
     "landskode": "es",
@@ -3012,7 +3263,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "real-madrid-2001-2002-hvit",
+    "id": "rem-04",
+    "slug": "real-madrid-2001-2002-hvit",
     "navn": "Real Madrid",
     "aar": "2001, 2002",
     "landskode": "es",
@@ -3024,7 +3276,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "real-sociedad-2003-2004-rod",
+    "id": "res-01",
+    "slug": "real-sociedad-2003-2004-rod",
     "navn": "Real Sociedad",
     "aar": "2003, 2004",
     "landskode": "es",
@@ -3036,7 +3289,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rhos-aelwyd-bla",
+    "id": "rha-01",
+    "slug": "rhos-aelwyd-bla",
     "navn": "Rhos Aelwyd",
     "aar": "",
     "landskode": "gb-wls",
@@ -3048,7 +3302,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "romania-2008-gul",
+    "id": "rom-01",
+    "slug": "romania-2008-gul",
     "navn": "Romania",
     "aar": "2008",
     "landskode": "ro",
@@ -3060,7 +3315,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rosenborg-2013-hvit",
+    "id": "ros-01",
+    "slug": "rosenborg-2013-hvit",
     "navn": "Rosenborg",
     "aar": "2013",
     "landskode": "no",
@@ -3072,7 +3328,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rushden-diamonds-2002-2003-2004-rod",
+    "id": "r&d-01",
+    "slug": "rushden-diamonds-2002-2003-2004-rod",
     "navn": "Rushden & Diamonds",
     "aar": "2002, 2003, 2004",
     "landskode": "gb-eng",
@@ -3084,7 +3341,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rushden-diamonds-2009-2010-2011-gul",
+    "id": "r&d-02",
+    "slug": "rushden-diamonds-2009-2010-2011-gul",
     "navn": "Rushden & Diamonds",
     "aar": "2009, 2010, 2011",
     "landskode": "gb-eng",
@@ -3096,7 +3354,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "russland-rod",
+    "id": "rus-01",
+    "slug": "russland-rod",
     "navn": "Russland",
     "aar": "",
     "landskode": "ru",
@@ -3108,7 +3367,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rode-stjerne-beograd-2012-2013-rod",
+    "id": "rsb-01",
+    "slug": "rode-stjerne-beograd-2012-2013-rod",
     "navn": "Røde Stjerne Beograd",
     "aar": "2012, 2013",
     "landskode": "rs",
@@ -3120,7 +3380,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rode-stjerne-beograd-2012-2013-rod-2",
+    "id": "rsb-02",
+    "slug": "rode-stjerne-beograd-2012-2013-rod-2",
     "navn": "Røde Stjerne Beograd",
     "aar": "2012, 2013",
     "landskode": "rs",
@@ -3132,7 +3393,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sagan-tosu-2023-bla-rosa",
+    "id": "sat-01",
+    "slug": "sagan-tosu-2023-bla-rosa",
     "navn": "Sagan Tosu",
     "aar": "2023",
     "landskode": "jp",
@@ -3144,7 +3406,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/sagan-tosu-home-2023.webp"
   },
   {
-    "id": "saint-etienne-2002-2003-gronn-hvit",
+    "id": "sae-01",
+    "slug": "saint-etienne-2002-2003-gronn-hvit",
     "navn": "Saint Etienne",
     "aar": "2002, 2003",
     "landskode": "fr",
@@ -3156,7 +3419,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "scarborough-2004-2005-rod",
+    "id": "sca-01",
+    "slug": "scarborough-2004-2005-rod",
     "navn": "Scarborough",
     "aar": "2004, 2005",
     "landskode": "gb-eng",
@@ -3168,7 +3432,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "schonnebeck-1988-1989-1990-gronn",
+    "id": "sch-01",
+    "slug": "schonnebeck-1988-1989-1990-gronn",
     "navn": "Schonnebeck",
     "aar": "1988, 1989, 1990",
     "landskode": "de",
@@ -3180,7 +3445,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "schreinerei-lilla",
+    "id": "scr-01",
+    "slug": "schreinerei-lilla",
     "navn": "Schreinerei",
     "aar": "",
     "landskode": "de",
@@ -3192,7 +3458,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "seattle-sounders-gronn",
+    "id": "ses-01",
+    "slug": "seattle-sounders-gronn",
     "navn": "Seattle Sounders",
     "aar": "",
     "landskode": "us",
@@ -3204,7 +3471,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/seattlesounders.jpg"
   },
   {
-    "id": "seoul-fc-2023-rod-svart",
+    "id": "seo-01",
+    "slug": "seoul-fc-2023-rod-svart",
     "navn": "Seoul FC",
     "aar": "2023",
     "landskode": "kr",
@@ -3216,7 +3484,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/seoul-2023.jpeg"
   },
   {
-    "id": "serbia-2005-bla",
+    "id": "ser-01",
+    "slug": "serbia-2005-bla",
     "navn": "Serbia",
     "aar": "2005",
     "landskode": "rs",
@@ -3228,7 +3497,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sevilla-2011-2012-hvit",
+    "id": "sev-01",
+    "slug": "sevilla-2011-2012-hvit",
     "navn": "Sevilla",
     "aar": "2011, 2012",
     "landskode": "es",
@@ -3240,7 +3510,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "shaktar-donetsk-2023-oransje",
+    "id": "shd-01",
+    "slug": "shaktar-donetsk-2023-oransje",
     "navn": "Shaktar Donetsk",
     "aar": "2023",
     "landskode": "ua",
@@ -3252,7 +3523,8 @@
     "bildeUrl": "https://fotballdrakter.raymondkarlsen.no/wp-content/uploads/2024/07/shakhtar-donetsk-2023.jpg"
   },
   {
-    "id": "sheffield-united-2007-2008-gul",
+    "id": "shu-01",
+    "slug": "sheffield-united-2007-2008-gul",
     "navn": "Sheffield United",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -3264,7 +3536,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sheffield-united-2007-2008-gul-2",
+    "id": "shu-02",
+    "slug": "sheffield-united-2007-2008-gul-2",
     "navn": "Sheffield United",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -3276,7 +3549,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sheffield-wednesday-bla",
+    "id": "shw-01",
+    "slug": "sheffield-wednesday-bla",
     "navn": "Sheffield Wednesday",
     "aar": "",
     "landskode": "gb-eng",
@@ -3288,7 +3562,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "siena-2008-2009-hvit-svart",
+    "id": "sie-01",
+    "slug": "siena-2008-2009-hvit-svart",
     "navn": "Siena",
     "aar": "2008, 2009",
     "landskode": "it",
@@ -3300,7 +3575,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "slovan-bratislava",
+    "id": "slb-01",
+    "slug": "slovan-bratislava",
     "navn": "Slovan Bratislava",
     "aar": "",
     "landskode": "si",
@@ -3312,7 +3588,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sochaux-montb-liard",
+    "id": "som-01",
+    "slug": "sochaux-montb-liard",
     "navn": "Sochaux-Montbéliard",
     "aar": "",
     "landskode": "fr",
@@ -3324,7 +3601,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "southampton-2003-2004-2005",
+    "id": "sou-01",
+    "slug": "southampton-2003-2004-2005",
     "navn": "Southampton",
     "aar": "2003, 2004, 2005",
     "landskode": "gb-eng",
@@ -3336,7 +3614,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "southampton",
+    "id": "sou-02",
+    "slug": "southampton",
     "navn": "Southampton",
     "aar": "",
     "landskode": "gb-eng",
@@ -3348,7 +3627,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "spania-2012",
+    "id": "spa-01",
+    "slug": "spania-2012",
     "navn": "Spania",
     "aar": "2012",
     "landskode": "es",
@@ -3360,7 +3640,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "spania-2004",
+    "id": "spa-02",
+    "slug": "spania-2004",
     "navn": "Spania",
     "aar": "2004",
     "landskode": "es",
@@ -3372,7 +3653,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sparta-praha-2005-2006-rod",
+    "id": "spp-01",
+    "slug": "sparta-praha-2005-2006-rod",
     "navn": "Sparta Praha",
     "aar": "2005, 2006",
     "landskode": "cz",
@@ -3384,7 +3666,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "spartak-moskva-rod",
+    "id": "spm-01",
+    "slug": "spartak-moskva-rod",
     "navn": "Spartak Moskva",
     "aar": "",
     "landskode": "ru",
@@ -3396,7 +3679,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "steaua-bucharesti-bla-rod",
+    "id": "stb-01",
+    "slug": "steaua-bucharesti-bla-rod",
     "navn": "Steaua Bucharesti",
     "aar": "",
     "landskode": "ro",
@@ -3408,7 +3692,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "stevenage-2002-2003-2004-rod",
+    "id": "ste-01",
+    "slug": "stevenage-2002-2003-2004-rod",
     "navn": "Stevenage",
     "aar": "2002, 2003, 2004",
     "landskode": "gb-eng",
@@ -3420,7 +3705,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "stoke-2008-hvit-rod",
+    "id": "sto-01",
+    "slug": "stoke-2008-hvit-rod",
     "navn": "Stoke",
     "aar": "2008",
     "landskode": "gb-eng",
@@ -3432,7 +3718,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "stuttgart-gronn",
+    "id": "stu-01",
+    "slug": "stuttgart-gronn",
     "navn": "Stuttgart",
     "aar": "",
     "landskode": "de",
@@ -3444,7 +3731,8 @@
     "bildeUrl": "https://usercontent.one/wp/fotballdrakter.raymondkarlsen.no/wp-content/uploads/2023/07/stuttgart.jpg"
   },
   {
-    "id": "sunderland-2010-2011-hvit-rod",
+    "id": "sun-01",
+    "slug": "sunderland-2010-2011-hvit-rod",
     "navn": "Sunderland",
     "aar": "2010, 2011",
     "landskode": "gb-eng",
@@ -3456,7 +3744,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sunderland-2004-2005-hvit-rod",
+    "id": "sun-02",
+    "slug": "sunderland-2004-2005-hvit-rod",
     "navn": "Sunderland",
     "aar": "2004, 2005",
     "landskode": "gb-eng",
@@ -3468,7 +3757,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sveits-2006-rod",
+    "id": "sve-01",
+    "slug": "sveits-2006-rod",
     "navn": "Sveits",
     "aar": "2006",
     "landskode": "ch",
@@ -3480,7 +3770,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sveits-2008-rod",
+    "id": "sve-02",
+    "slug": "sveits-2008-rod",
     "navn": "Sveits",
     "aar": "2008",
     "landskode": "ch",
@@ -3492,7 +3783,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sor-korea-rod",
+    "id": "sok-01",
+    "slug": "sor-korea-rod",
     "navn": "Sør-Korea",
     "aar": "",
     "landskode": "kr",
@@ -3504,7 +3796,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tabajara-2005-2006-gul-lilla",
+    "id": "tab-01",
+    "slug": "tabajara-2005-2006-gul-lilla",
     "navn": "Tabajara",
     "aar": "2005, 2006",
     "landskode": "pw",
@@ -3516,7 +3809,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tamworth-2004-2005-2006-rod",
+    "id": "tam-01",
+    "slug": "tamworth-2004-2005-2006-rod",
     "navn": "Tamworth",
     "aar": "2004, 2005, 2006",
     "landskode": "gb-eng",
@@ -3528,7 +3822,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tottenham-1999-2000-2001-hvit",
+    "id": "tot-01",
+    "slug": "tottenham-1999-2000-2001-hvit",
     "navn": "Tottenham",
     "aar": "1999, 2000, 2001",
     "landskode": "gb-eng",
@@ -3540,7 +3835,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tottenham-1997-1998-1999-hvit",
+    "id": "tot-02",
+    "slug": "tottenham-1997-1998-1999-hvit",
     "navn": "Tottenham",
     "aar": "1997, 1998, 1999",
     "landskode": "gb-eng",
@@ -3552,7 +3848,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tottenham-1998-1999-lilla",
+    "id": "tot-03",
+    "slug": "tottenham-1998-1999-lilla",
     "navn": "Tottenham",
     "aar": "1998, 1999",
     "landskode": "gb-eng",
@@ -3564,7 +3861,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tottenham-1995-1996-1997-gul",
+    "id": "tot-04",
+    "slug": "tottenham-1995-1996-1997-gul",
     "navn": "Tottenham",
     "aar": "1995, 1996, 1997",
     "landskode": "gb-eng",
@@ -3576,7 +3874,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "toulouse-rod",
+    "id": "tou-01",
+    "slug": "toulouse-rod",
     "navn": "Toulouse",
     "aar": "",
     "landskode": "fr",
@@ -3588,7 +3887,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "treviso-2006-hvit",
+    "id": "tre-01",
+    "slug": "treviso-2006-hvit",
     "navn": "Treviso",
     "aar": "2006",
     "landskode": "it",
@@ -3600,7 +3900,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tromso-2015-rod",
+    "id": "tro-01",
+    "slug": "tromso-2015-rod",
     "navn": "Tromsø",
     "aar": "2015",
     "landskode": "no",
@@ -3612,7 +3913,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tsjekkia-2011-rod",
+    "id": "tsj-01",
+    "slug": "tsjekkia-2011-rod",
     "navn": "Tsjekkia",
     "aar": "2011",
     "landskode": "cz",
@@ -3624,7 +3926,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tunisia-2010-2011-2012-hvit",
+    "id": "tun-01",
+    "slug": "tunisia-2010-2011-2012-hvit",
     "navn": "Tunisia",
     "aar": "2010, 2011, 2012",
     "landskode": "tn",
@@ -3636,7 +3939,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tyrkia-rod",
+    "id": "tyr-01",
+    "slug": "tyrkia-rod",
     "navn": "Tyrkia",
     "aar": "",
     "landskode": "tr",
@@ -3648,7 +3952,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tyskland-2012-hvit",
+    "id": "tys-01",
+    "slug": "tyskland-2012-hvit",
     "navn": "Tyskland",
     "aar": "2012",
     "landskode": "de",
@@ -3660,7 +3965,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "udinese-hvit-svart",
+    "id": "udi-01",
+    "slug": "udinese-hvit-svart",
     "navn": "Udinese",
     "aar": "",
     "landskode": "it",
@@ -3672,7 +3978,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "valencia-oransje",
+    "id": "val-01",
+    "slug": "valencia-oransje",
     "navn": "Valencia",
     "aar": "",
     "landskode": "es",
@@ -3684,7 +3991,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "valetta-2013-2014-rod",
+    "id": "vlt-01",
+    "slug": "valetta-2013-2014-rod",
     "navn": "Valetta",
     "aar": "2013, 2014",
     "landskode": "mt",
@@ -3696,7 +4004,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "vasco-da-gama-hvit",
+    "id": "vdg-01",
+    "slug": "vasco-da-gama-hvit",
     "navn": "Vasco da Gama",
     "aar": "",
     "landskode": "br",
@@ -3708,7 +4017,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "viking-bla",
+    "id": "vik-01",
+    "slug": "viking-bla",
     "navn": "Viking",
     "aar": "",
     "landskode": "no",
@@ -3720,7 +4030,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "weitmar-1996-1997-1998-bla",
+    "id": "wei-01",
+    "slug": "weitmar-1996-1997-1998-bla",
     "navn": "Weitmar",
     "aar": "1996, 1997, 1998",
     "landskode": "de",
@@ -3732,7 +4043,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "west-ham-2004-2005-2006-bla",
+    "id": "weh-01",
+    "slug": "west-ham-2004-2005-2006-bla",
     "navn": "West Ham",
     "aar": "2004, 2005, 2006",
     "landskode": "gb-eng",
@@ -3744,7 +4056,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "wimbledon-1995-1996-bla",
+    "id": "wim-01",
+    "slug": "wimbledon-1995-1996-bla",
     "navn": "Wimbledon",
     "aar": "1995, 1996",
     "landskode": "gb-eng",
@@ -3756,7 +4069,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "wimbledon-1996-1997-bla",
+    "id": "wim-02",
+    "slug": "wimbledon-1996-1997-bla",
     "navn": "Wimbledon",
     "aar": "1996, 1997",
     "landskode": "gb-eng",
@@ -3768,7 +4082,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "wisla-krakow-rod",
+    "id": "wik-01",
+    "slug": "wisla-krakow-rod",
     "navn": "Wisla Krakow",
     "aar": "",
     "landskode": "pl",
@@ -3780,7 +4095,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "woking-gul",
+    "id": "wok-01",
+    "slug": "woking-gul",
     "navn": "Woking",
     "aar": "",
     "landskode": "gb-eng",
@@ -3792,7 +4108,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "wolverhampton-oransje",
+    "id": "wol-01",
+    "slug": "wolverhampton-oransje",
     "navn": "Wolverhampton",
     "aar": "",
     "landskode": "gb-eng",
@@ -3804,7 +4121,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "yeovil-town-gronn-hvit",
+    "id": "yet-01",
+    "slug": "yeovil-town-gronn-hvit",
     "navn": "Yeovil Town",
     "aar": "",
     "landskode": "gb-eng",
@@ -3816,7 +4134,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "zamalek-hvit",
+    "id": "zam-01",
+    "slug": "zamalek-hvit",
     "navn": "Zamalek",
     "aar": "",
     "landskode": "eg",
@@ -3828,7 +4147,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "osterrike-rod",
+    "id": "ost-01",
+    "slug": "osterrike-rod",
     "navn": "Østerrike",
     "aar": "",
     "landskode": "at",
@@ -3840,7 +4160,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "osterrike-2020-rod",
+    "id": "ost-02",
+    "slug": "osterrike-2020-rod",
     "navn": "Østerrike",
     "aar": "2020",
     "landskode": "at",
@@ -3852,7 +4173,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lyn-2024-rosa",
+    "id": "lyn-09",
+    "slug": "lyn-2024-rosa",
     "navn": "Lyn",
     "aar": "2024",
     "landskode": "no",
@@ -3864,7 +4186,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/lyn-tunes.jpg"
   },
   {
-    "id": "norge-2025-rod",
+    "id": "nor-02",
+    "slug": "norge-2025-rod",
     "navn": "Norge",
     "aar": "2025",
     "landskode": "no",
@@ -3876,7 +4199,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "norge-2025-rod-2",
+    "id": "nor-03",
+    "slug": "norge-2025-rod-2",
     "navn": "Norge",
     "aar": "2025",
     "landskode": "no",
@@ -3888,7 +4212,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "mexico-gronn",
+    "id": "mex-01",
+    "slug": "mexico-gronn",
     "navn": "Mexico",
     "aar": "",
     "landskode": "mx",
@@ -3900,7 +4225,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/mexico.jpg"
   },
   {
-    "id": "ecuador-gul",
+    "id": "ecu-01",
+    "slug": "ecuador-gul",
     "navn": "Ecuador",
     "aar": "",
     "landskode": "ec",
@@ -3912,7 +4238,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/ecuador.jpg"
   },
   {
-    "id": "ethiopia-rod",
+    "id": "eth-01",
+    "slug": "ethiopia-rod",
     "navn": "Ethiopia",
     "aar": "",
     "landskode": "et",
@@ -3924,7 +4251,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2025/04/ethiopia.jpg"
   },
   {
-    "id": "mysen-hvit",
+    "id": "mys-01",
+    "slug": "mysen-hvit",
     "navn": "Mysen",
     "aar": "",
     "landskode": "no",
@@ -3936,7 +4264,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "st-cken-ffc-rod",
+    "id": "stf-01",
+    "slug": "st-cken-ffc-rod",
     "navn": "Stöcken FFC",
     "aar": "",
     "landskode": "de",
@@ -3948,7 +4277,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ukjent-tysk-1-lilla",
+    "id": "ut1-01",
+    "slug": "ukjent-tysk-1-lilla",
     "navn": "Ukjent tysk 1",
     "aar": "",
     "landskode": "de",
@@ -3960,7 +4290,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "kirchehrenbach-tsv-rod-lilla",
+    "id": "kit-01",
+    "slug": "kirchehrenbach-tsv-rod-lilla",
     "navn": "Kirchehrenbach TSV",
     "aar": "",
     "landskode": "de",
@@ -3972,7 +4303,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lok-seddin-esv-hvit-rod",
+    "id": "lse-01",
+    "slug": "lok-seddin-esv-hvit-rod",
     "navn": "Lok Seddin ESV",
     "aar": "",
     "landskode": "de",
@@ -3984,7 +4316,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "norge-rod",
+    "id": "nor-04",
+    "slug": "norge-rod",
     "navn": "Norge",
     "aar": "",
     "landskode": "no",
@@ -3996,7 +4329,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tottenham-hvit",
+    "id": "tot-05",
+    "slug": "tottenham-hvit",
     "navn": "Tottenham",
     "aar": "",
     "landskode": "gb-eng",
@@ -4008,7 +4342,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hucknall-town-2003-2004-gul",
+    "id": "huc-01",
+    "slug": "hucknall-town-2003-2004-gul",
     "navn": "Hucknall Town",
     "aar": "2003, 2004",
     "landskode": "gb-eng",
@@ -4020,7 +4355,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "stotzheim-rod",
+    "id": "stz-01",
+    "slug": "stotzheim-rod",
     "navn": "Stotzheim",
     "aar": "",
     "landskode": "de",
@@ -4032,7 +4368,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "blackburn-2007-2008-bla-hvit",
+    "id": "bla-03",
+    "slug": "blackburn-2007-2008-bla-hvit",
     "navn": "Blackburn",
     "aar": "2007, 2008",
     "landskode": "gb-eng",
@@ -4044,7 +4381,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "blackburn-bla-hvit",
+    "id": "bla-04",
+    "slug": "blackburn-bla-hvit",
     "navn": "Blackburn",
     "aar": "",
     "landskode": "gb-eng",
@@ -4056,7 +4394,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "holmlia-1999-2000-rod",
+    "id": "hol-02",
+    "slug": "holmlia-1999-2000-rod",
     "navn": "Holmlia",
     "aar": "1999, 2000",
     "landskode": "no",
@@ -4068,7 +4407,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nottingham-forest-rod-2",
+    "id": "nof-04",
+    "slug": "nottingham-forest-rod-2",
     "navn": "Nottingham Forest",
     "aar": "",
     "landskode": "gb-eng",
@@ -4080,7 +4420,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "nottingham-forest-rod-3",
+    "id": "nof-05",
+    "slug": "nottingham-forest-rod-3",
     "navn": "Nottingham Forest",
     "aar": "",
     "landskode": "gb-eng",
@@ -4092,7 +4433,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "portugal-2012-hvit",
+    "id": "prt-03",
+    "slug": "portugal-2012-hvit",
     "navn": "Portugal",
     "aar": "2012",
     "landskode": "pt",
@@ -4104,7 +4446,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "manchester-united-1995-1996-rod",
+    "id": "mun-03",
+    "slug": "manchester-united-1995-1996-rod",
     "navn": "Manchester United",
     "aar": "1995, 1996",
     "landskode": "gb-eng",
@@ -4116,7 +4459,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "manchester-united-rod",
+    "id": "mun-04",
+    "slug": "manchester-united-rod",
     "navn": "Manchester United",
     "aar": "",
     "landskode": "gb-eng",
@@ -4128,7 +4472,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "celtic-hvit-gronn",
+    "id": "cel-05",
+    "slug": "celtic-hvit-gronn",
     "navn": "Celtic",
     "aar": "",
     "landskode": "gb-sct",
@@ -4140,7 +4485,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "celtic-hvit-gronn-2",
+    "id": "cel-06",
+    "slug": "celtic-hvit-gronn-2",
     "navn": "Celtic",
     "aar": "",
     "landskode": "gb-sct",
@@ -4152,7 +4498,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "avaldsnes-2018-gull",
+    "id": "ava-01",
+    "slug": "avaldsnes-2018-gull",
     "navn": "Avaldsnes",
     "aar": "2018",
     "landskode": "no",
@@ -4164,7 +4511,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "kamerun-2010-2011-gul",
+    "id": "kam-01",
+    "slug": "kamerun-2010-2011-gul",
     "navn": "Kamerun",
     "aar": "2010, 2011",
     "landskode": "cm",
@@ -4176,19 +4524,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "monaco-2018-2019-hvit-rod",
+    "id": "mon-01",
+    "slug": "monaco-2018-2019-hvit-rod",
     "navn": "Monaco",
     "aar": "2018, 2019",
     "landskode": "fr",
     "land": "Frankrike",
     "typeLag": "Klubb",
     "farge": "hvit, rød",
-    "informasjon": "",
+    "informasjon": "Nummer 9 Falcao",
     "kitArchiveUrl": "https://www.footballkitarchive.com/as-monaco-2018-19-home-kit/2701/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "club-brugge-2010-2011-bla-svart",
+    "id": "clb-01",
+    "slug": "club-brugge-2010-2011-bla-svart",
     "navn": "Club Brugge",
     "aar": "2010, 2011",
     "landskode": "be",
@@ -4200,7 +4550,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "al-ahly-sc-2019-2020-rod",
+    "id": "aas-01",
+    "slug": "al-ahly-sc-2019-2020-rod",
     "navn": "Al-Ahly SC",
     "aar": "2019, 2020",
     "landskode": "eg",
@@ -4212,7 +4563,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "mali-2022-gronn",
+    "id": "mal-01",
+    "slug": "mali-2022-gronn",
     "navn": "Mali",
     "aar": "2022",
     "landskode": "ml",
@@ -4224,7 +4576,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ankarag-c-2023-2024-gul",
+    "id": "ank-01",
+    "slug": "ankarag-c-2023-2024-gul",
     "navn": "Ankaragücü",
     "aar": "2023, 2024",
     "landskode": "tr",
@@ -4236,7 +4589,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "uruguay-2014-bla",
+    "id": "uru-01",
+    "slug": "uruguay-2014-bla",
     "navn": "Uruguay",
     "aar": "2014",
     "landskode": "uy",
@@ -4248,7 +4602,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "slovakia-2016-hvit",
+    "id": "slo-01",
+    "slug": "slovakia-2016-hvit",
     "navn": "Slovakia",
     "aar": "2016",
     "landskode": "sk",
@@ -4260,7 +4615,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "usa-2012-rod-hvit",
+    "id": "usa-01",
+    "slug": "usa-2012-rod-hvit",
     "navn": "USA",
     "aar": "2012",
     "landskode": "us",
@@ -4272,7 +4628,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "real-betis",
+    "id": "reb-01",
+    "slug": "real-betis",
     "navn": "Real Betis",
     "aar": "",
     "landskode": "es",
@@ -4284,7 +4641,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "schalke-04-2025-2026-bla",
+    "id": "sc0-01",
+    "slug": "schalke-04-2025-2026-bla",
     "navn": "Schalke 04",
     "aar": "2025, 2026",
     "landskode": "de",
@@ -4296,7 +4654,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "borussia-m-nchengladbach-2025-2026-gronn",
+    "id": "bom-01",
+    "slug": "borussia-m-nchengladbach-2025-2026-gronn",
     "navn": "Borussia Mönchengladbach",
     "aar": "2025, 2026",
     "landskode": "de",
@@ -4308,7 +4667,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "jamaica-2023-gul",
+    "id": "jam-01",
+    "slug": "jamaica-2023-gul",
     "navn": "Jamaica",
     "aar": "2023",
     "landskode": "jm",
@@ -4320,7 +4680,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "catania-2020-2021-hvit",
+    "id": "cat-01",
+    "slug": "catania-2020-2021-hvit",
     "navn": "Catania",
     "aar": "2020, 2021",
     "landskode": "it",
@@ -4332,7 +4693,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "senegal-2024-2025-hvit",
+    "id": "sen-01",
+    "slug": "senegal-2024-2025-hvit",
     "navn": "Senegal",
     "aar": "2024, 2025",
     "landskode": "sn",
@@ -4344,7 +4706,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "boca-juniors-2025-2026-bla-gul",
+    "id": "boj-01",
+    "slug": "boca-juniors-2025-2026-bla-gul",
     "navn": "Boca Juniors",
     "aar": "2025, 2026",
     "landskode": "ar",
@@ -4356,19 +4719,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "colombia-2024-2025-gul",
+    "id": "cmb-01",
+    "slug": "colombia-2024-2025-gul",
     "navn": "Colombia",
     "aar": "2024, 2025",
     "landskode": "co",
     "land": "Colombia",
     "typeLag": "Land",
     "farge": "gul",
-    "informasjon": "",
+    "informasjon": "Nummer 7 Luis Diaz",
     "kitArchiveUrl": "https://www.footballkitarchive.com/colombia-2024-home-kit/234366/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "venezuela-2024-2025-burgunder",
+    "id": "ven-01",
+    "slug": "venezuela-2024-2025-burgunder",
     "navn": "Venezuela",
     "aar": "2024, 2025",
     "landskode": "ve",
@@ -4380,7 +4745,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "chile-2024-2025-rod",
+    "id": "chi-01",
+    "slug": "chile-2024-2025-rod",
     "navn": "Chile",
     "aar": "2024, 2025",
     "landskode": "cl",
@@ -4392,19 +4758,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "uruguay-2024-2025-bla",
+    "id": "uru-02",
+    "slug": "uruguay-2024-2025-bla",
     "navn": "Uruguay",
     "aar": "2024, 2025",
     "landskode": "uy",
     "land": "Uruguay",
     "typeLag": "Land",
     "farge": "blå",
-    "informasjon": "",
+    "informasjon": "Nummer 9 Suarez",
     "kitArchiveUrl": "https://www.footballkitarchive.com/uruguay-2024-home-kit/261493/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "mallorca-2025-2026-rod",
+    "id": "mlc-01",
+    "slug": "mallorca-2025-2026-rod",
     "navn": "Mallorca",
     "aar": "2025, 2026",
     "landskode": "es",
@@ -4416,7 +4784,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "kamerun-2025-rod",
+    "id": "kam-02",
+    "slug": "kamerun-2025-rod",
     "navn": "Kamerun",
     "aar": "2025",
     "landskode": "cm",
@@ -4428,19 +4797,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "everton-2024-2025-bla",
+    "id": "eve-01",
+    "slug": "everton-2024-2025-bla",
     "navn": "Everton",
     "aar": "2024, 2025",
     "landskode": "gb-eng",
     "land": "England",
     "typeLag": "Klubb",
     "farge": "blå",
-    "informasjon": "",
+    "informasjon": "Nummer 23 Coleman",
     "kitArchiveUrl": "https://www.footballkitarchive.com/everton-fc-2024-25-home-kit/252064/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "odd-2006-hvit",
+    "id": "odd-01",
+    "slug": "odd-2006-hvit",
     "navn": "Odd",
     "aar": "2006",
     "landskode": "no",
@@ -4452,7 +4823,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "elfenbenskysten-2025-oransje",
+    "id": "elf-01",
+    "slug": "elfenbenskysten-2025-oransje",
     "navn": "Elfenbenskysten",
     "aar": "2025",
     "landskode": "ci",
@@ -4464,7 +4836,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "australia-2025-gronn-gul",
+    "id": "aus-01",
+    "slug": "australia-2025-gronn-gul",
     "navn": "Australia",
     "aar": "2025",
     "landskode": "au",
@@ -4476,7 +4849,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "peru-2024-2025-hvit",
+    "id": "per-01",
+    "slug": "peru-2024-2025-hvit",
     "navn": "Peru",
     "aar": "2024, 2025",
     "landskode": "pe",
@@ -4488,7 +4862,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "finland-2025-hvit-bla",
+    "id": "fin-01",
+    "slug": "finland-2025-hvit-bla",
     "navn": "Finland",
     "aar": "2025",
     "landskode": "fi",
@@ -4500,7 +4875,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "albania-2023-2024-rod",
+    "id": "alb-01",
+    "slug": "albania-2023-2024-rod",
     "navn": "Albania",
     "aar": "2023, 2024",
     "landskode": "al",
@@ -4512,19 +4888,21 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "georgia-2023-2024-hvit-rod",
+    "id": "geo-01",
+    "slug": "georgia-2023-2024-hvit-rod",
     "navn": "Georgia",
     "aar": "2023, 2024",
     "landskode": "ge",
     "land": "Georgia",
     "typeLag": "Land",
     "farge": "hvit, rød",
-    "informasjon": "",
+    "informasjon": "Nummer 7 Kvaratskhelia",
     "kitArchiveUrl": "https://www.footballkitarchive.com/georgia-2023-24-home-kit/132454/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "al-ittihad-2023-2024-svart-gul",
+    "id": "ait-01",
+    "slug": "al-ittihad-2023-2024-svart-gul",
     "navn": "Al-Ittihad",
     "aar": "2023, 2024",
     "landskode": "sa",
@@ -4536,7 +4914,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "rayo-vallecano-2023-2024-hvit-rod",
+    "id": "rav-01",
+    "slug": "rayo-vallecano-2023-2024-hvit-rod",
     "navn": "Rayo Vallecano",
     "aar": "2023, 2024",
     "landskode": "es",
@@ -4548,7 +4927,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "township-rollers-2022-2023-bla-oransje",
+    "id": "tor-01",
+    "slug": "township-rollers-2022-2023-bla-oransje",
     "navn": "Township Rollers",
     "aar": "2022, 2023",
     "landskode": "bw",
@@ -4560,7 +4940,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "raja-casablanca-2022-2023-hvit-gronn",
+    "id": "rac-01",
+    "slug": "raja-casablanca-2022-2023-hvit-gronn",
     "navn": "Raja Casablanca",
     "aar": "2022, 2023",
     "landskode": "ma",
@@ -4572,7 +4953,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "afc-leopards-2020-2021-bla",
+    "id": "afl-01",
+    "slug": "afc-leopards-2020-2021-bla",
     "navn": "AFC Leopards",
     "aar": "2020, 2021",
     "landskode": "ke",
@@ -4584,7 +4966,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "vietnam-2023-2024-rod",
+    "id": "vie-01",
+    "slug": "vietnam-2023-2024-rod",
     "navn": "Vietnam",
     "aar": "2023, 2024",
     "landskode": "vn",
@@ -4596,7 +4979,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "cd-olimpia-2023-2024-rod",
+    "id": "cdo-01",
+    "slug": "cd-olimpia-2023-2024-rod",
     "navn": "CD Olimpia",
     "aar": "2023, 2024",
     "landskode": "hn",
@@ -4608,7 +4992,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "lesotho-correctional-services-2022-2023-gronn-bla",
+    "id": "lcs-01",
+    "slug": "lesotho-correctional-services-2022-2023-gronn-bla",
     "navn": "Lesotho Correctional Services",
     "aar": "2022, 2023",
     "landskode": "ls",
@@ -4620,7 +5005,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "alianza-2023-2024-rosa",
+    "id": "alz-01",
+    "slug": "alianza-2023-2024-rosa",
     "navn": "Alianza",
     "aar": "2023, 2024",
     "landskode": "sv",
@@ -4632,7 +5018,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "township-rollers-2021-2022-bla",
+    "id": "tor-02",
+    "slug": "township-rollers-2021-2022-bla",
     "navn": "Township Rollers",
     "aar": "2021, 2022",
     "landskode": "bw",
@@ -4644,7 +5031,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "clube-ferroviario-da-beira-2022-gul",
+    "id": "cfd-01",
+    "slug": "clube-ferroviario-da-beira-2022-gul",
     "navn": "Clube Ferroviario da Beira",
     "aar": "2022",
     "landskode": "mz",
@@ -4656,7 +5044,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "chennaiyin-fc-2024-2025-bla",
+    "id": "chn-01",
+    "slug": "chennaiyin-fc-2024-2025-bla",
     "navn": "Chennaiyin FC",
     "aar": "2024, 2025",
     "landskode": "in",
@@ -4668,7 +5057,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "biratnagar-city-2024-2025-rod",
+    "id": "bnc-01",
+    "slug": "biratnagar-city-2024-2025-rod",
     "navn": "Biratnagar City",
     "aar": "2024, 2025",
     "landskode": "np",
@@ -4680,7 +5070,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "trinidad-and-tobago-2022-2023-hvit",
+    "id": "tat-01",
+    "slug": "trinidad-and-tobago-2022-2023-hvit",
     "navn": "Trinidad and Tobago",
     "aar": "2022, 2023",
     "landskode": "tt",
@@ -4692,7 +5083,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "qaradag-lokbatan-2016-2017-rod",
+    "id": "qal-01",
+    "slug": "qaradag-lokbatan-2016-2017-rod",
     "navn": "Qaradag Lokbatan",
     "aar": "2016, 2017",
     "landskode": "az",
@@ -4704,7 +5096,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "as-pjsk-2021-2022-gul",
+    "id": "asp-01",
+    "slug": "as-pjsk-2021-2022-gul",
     "navn": "AS PJSK",
     "aar": "2021, 2022",
     "landskode": "cd",
@@ -4716,7 +5109,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "filippinene-2023-2024-svart",
+    "id": "fil-01",
+    "slug": "filippinene-2023-2024-svart",
     "navn": "Filippinene",
     "aar": "2023, 2024",
     "landskode": "ph",
@@ -4728,7 +5122,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "dpmm-fc-2012-rod-svart",
+    "id": "dpm-01",
+    "slug": "dpmm-fc-2012-rod-svart",
     "navn": "DPMM FC",
     "aar": "2012",
     "landskode": "sg",
@@ -4740,7 +5135,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sor-sudan-2020-2021-hvit-rod",
+    "id": "sos-01",
+    "slug": "sor-sudan-2020-2021-hvit-rod",
     "navn": "Sør-Sudan",
     "aar": "2020, 2021",
     "landskode": "ss",
@@ -4752,7 +5148,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "madagaskar-2019-2020-rod",
+    "id": "mad-01",
+    "slug": "madagaskar-2019-2020-rod",
     "navn": "Madagaskar",
     "aar": "2019, 2020",
     "landskode": "mg",
@@ -4764,7 +5161,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "mauritius-2023-2024-rod",
+    "id": "mau-01",
+    "slug": "mauritius-2023-2024-rod",
     "navn": "Mauritius",
     "aar": "2023, 2024",
     "landskode": "mu",
@@ -4776,7 +5174,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "uganda-2019-2020-rod",
+    "id": "uga-01",
+    "slug": "uganda-2019-2020-rod",
     "navn": "Uganda",
     "aar": "2019, 2020",
     "landskode": "ug",
@@ -4788,7 +5187,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sierra-leone-2019-bla",
+    "id": "sil-01",
+    "slug": "sierra-leone-2019-bla",
     "navn": "Sierra Leone",
     "aar": "2019",
     "landskode": "sl",
@@ -4800,7 +5200,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sudeva-delhi-2022-2023-rod",
+    "id": "sud-01",
+    "slug": "sudeva-delhi-2022-2023-rod",
     "navn": "Sudeva Delhi",
     "aar": "2022, 2023",
     "landskode": "in",
@@ -4812,7 +5213,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "afghanistan-2023-2024-rod",
+    "id": "afg-01",
+    "slug": "afghanistan-2023-2024-rod",
     "navn": "Afghanistan",
     "aar": "2023, 2024",
     "landskode": "af",
@@ -4824,7 +5226,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "psds-deli-serdang-2023-2024-bla",
+    "id": "pds-01",
+    "slug": "psds-deli-serdang-2023-2024-bla",
     "navn": "PSDS Deli Serdang",
     "aar": "2023, 2024",
     "landskode": "id",
@@ -4836,7 +5239,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "simba-sc-2022-2023-rod",
+    "id": "sis-01",
+    "slug": "simba-sc-2022-2023-rod",
     "navn": "Simba SC",
     "aar": "2022, 2023",
     "landskode": "tz",
@@ -4848,7 +5252,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "csd-municipal-2023-2024-rod",
+    "id": "csm-01",
+    "slug": "csd-municipal-2023-2024-rod",
     "navn": "CSD Municipal",
     "aar": "2023, 2024",
     "landskode": "gt",
@@ -4860,7 +5265,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fc-johansen-2021-2022-bla",
+    "id": "joh-01",
+    "slug": "fc-johansen-2021-2022-bla",
     "navn": "FC Johansen",
     "aar": "2021, 2022",
     "landskode": "sl",
@@ -4872,7 +5278,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "hamitkoy-shsk-2020-2021-rod",
+    "id": "ham-01",
+    "slug": "hamitkoy-shsk-2020-2021-rod",
     "navn": "Hamitkoy SHSK",
     "aar": "2020, 2021",
     "landskode": "",
@@ -4884,7 +5291,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sporting-clube-de-cabinda-2021-2022-gronn-hvit",
+    "id": "scd-01",
+    "slug": "sporting-clube-de-cabinda-2021-2022-gronn-hvit",
     "navn": "Sporting Clube de Cabinda",
     "aar": "2021, 2022",
     "landskode": "ao",
@@ -4896,7 +5304,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "avenir-foot-n-zerekore-2020-2021-gronn-gul",
+    "id": "afn-01",
+    "slug": "avenir-foot-n-zerekore-2020-2021-gronn-gul",
     "navn": "Avenir Foot N'zerekore",
     "aar": "2020, 2021",
     "landskode": "gn",
@@ -4908,7 +5317,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "guandong-south-china-tiger-2019-rod",
+    "id": "gsc-01",
+    "slug": "guandong-south-china-tiger-2019-rod",
     "navn": "Guandong South China Tiger",
     "aar": "2019",
     "landskode": "cn",
@@ -4920,7 +5330,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fc-lauingen-gul",
+    "id": "lau-01",
+    "slug": "fc-lauingen-gul",
     "navn": "FC Lauingen",
     "aar": "",
     "landskode": "de",
@@ -4932,7 +5343,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "fc-lauingen-gul-2",
+    "id": "lau-02",
+    "slug": "fc-lauingen-gul-2",
     "navn": "FC Lauingen",
     "aar": "",
     "landskode": "de",
@@ -4944,7 +5356,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ukjent-tysk-2-svart-rod",
+    "id": "ut2-01",
+    "slug": "ukjent-tysk-2-svart-rod",
     "navn": "Ukjent tysk 2",
     "aar": "",
     "landskode": "de",
@@ -4956,7 +5369,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "djk-vfl-billerbeck-bla",
+    "id": "dvb-01",
+    "slug": "djk-vfl-billerbeck-bla",
     "navn": "DJK-VfL Billerbeck",
     "aar": "",
     "landskode": "de",
@@ -4968,7 +5382,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tsv-dorfen-hvit",
+    "id": "tsd-01",
+    "slug": "tsv-dorfen-hvit",
     "navn": "TSV Dorfen",
     "aar": "",
     "landskode": "de",
@@ -4980,7 +5395,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ukjent-tysk-3-bla",
+    "id": "ut3-01",
+    "slug": "ukjent-tysk-3-bla",
     "navn": "Ukjent tysk 3",
     "aar": "",
     "landskode": "de",
@@ -4992,7 +5408,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ukjent-tysk-4-bla",
+    "id": "ut4-01",
+    "slug": "ukjent-tysk-4-bla",
     "navn": "Ukjent tysk 4",
     "aar": "",
     "landskode": "de",
@@ -5004,7 +5421,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "vfl-alfter-svart",
+    "id": "vfa-01",
+    "slug": "vfl-alfter-svart",
     "navn": "VfL Alfter",
     "aar": "",
     "landskode": "de",
@@ -5016,7 +5434,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sv-blau-wei-wertherbruch-bla",
+    "id": "sbw-01",
+    "slug": "sv-blau-wei-wertherbruch-bla",
     "navn": "SV Blau-Weiß Wertherbruch",
     "aar": "",
     "landskode": "de",
@@ -5028,7 +5447,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tus-mechtersheim-hvit",
+    "id": "tum-01",
+    "slug": "tus-mechtersheim-hvit",
     "navn": "TuS Mechtersheim",
     "aar": "",
     "landskode": "de",
@@ -5040,7 +5460,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sv-scharenstetten-gronn",
+    "id": "svs-01",
+    "slug": "sv-scharenstetten-gronn",
     "navn": "SV Scharenstetten",
     "aar": "",
     "landskode": "de",
@@ -5052,7 +5473,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "sv-scharenstetten-gronn-2",
+    "id": "svs-02",
+    "slug": "sv-scharenstetten-gronn-2",
     "navn": "SV Scharenstetten",
     "aar": "",
     "landskode": "de",
@@ -5064,7 +5486,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "tsv-rheinhausen-gul-gronn",
+    "id": "tsr-01",
+    "slug": "tsv-rheinhausen-gul-gronn",
     "navn": "TSV Rheinhausen",
     "aar": "",
     "landskode": "de",
@@ -5076,7 +5499,8 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "ukjent-tysk-5-bla",
+    "id": "ut5-01",
+    "slug": "ukjent-tysk-5-bla",
     "navn": "Ukjent tysk 5",
     "aar": "",
     "landskode": "de",
@@ -5088,14 +5512,28 @@
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
   {
-    "id": "norge-rod-2",
+    "id": "nor-05",
+    "slug": "norge-2020-2021-rod",
     "navn": "Norge",
-    "aar": "",
+    "aar": "2020, 2021",
     "landskode": "no",
     "land": "Norge",
     "typeLag": "Land",
     "farge": "rød",
     "informasjon": "Signert av damelandslaget",
+    "kitArchiveUrl": "",
+    "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
+  },
+  {
+    "id": "nor-06",
+    "slug": "norge-1997-1998-rod",
+    "navn": "Norge",
+    "aar": "1997, 1998",
+    "landskode": "no",
+    "land": "Norge",
+    "typeLag": "Land",
+    "farge": "rød",
+    "informasjon": "6 Solbakken",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   }

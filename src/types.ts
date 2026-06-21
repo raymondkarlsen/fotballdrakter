@@ -1,5 +1,6 @@
 export interface Drakt {
   id: string;
+  slug: string;
   navn: string;
   aar: string;
   landskode: string;
