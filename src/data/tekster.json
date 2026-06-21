@@ -1,13 +1,13 @@
 {
   "nettsted": {
-    "tittel": "Fotballdrakter – Min samling",
+    "tittel": "Fotballdrakter – Raymond Karlsens samling",
     "beskrivelse": "En samling av over 400 fotballdrakter fra hele verden"
   },
   "header": {
     "logo": "Fotballdrakter"
   },
   "forside": {
-    "overskrift": "Fotballdraktsamlingen min",
+    "overskrift": "Draktsamlingen min",
     "ingress": "Her har jeg samlet alle fotballdraktene mine, slik at jeg har oversikt. Litt sært ja.",
     "statistikk": {
       "drakter": "drakter",
@@ -26,7 +26,7 @@
     "ingenTreff": "Ingen drakter matcher søket ditt. Prøv å endre filtrene."
   },
   "footer": {
-    "tekst": "En personlig samling av fotballdrakter fra hele verden."
+    "tekst": "Min helt egne samling av fotballdrakter fra hele verden."
   },
   "detalj": {
     "tilbake": "← Tilbake til oversikten",
