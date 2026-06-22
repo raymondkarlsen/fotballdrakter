@@ -4948,7 +4948,7 @@
     "land": "Marokko",
     "typeLag": "Klubb",
     "farge": "hvit, grønn",
-    "informasjon": "",
+    "informasjon": "Keeperdrakt.",
     "kitArchiveUrl": "https://www.footballkitarchive.com/raja-club-athletic-2022-23-gk-4-kit/356641/",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -5318,8 +5318,8 @@
   },
   {
     "id": "gsc-01",
-    "slug": "guandong-south-china-tiger-2019-rod",
-    "navn": "Guandong South China Tiger",
+    "slug": "guangdong-south-china-tiger-2019-rod",
+    "navn": "Guangdong South China Tiger",
     "aar": "2019",
     "landskode": "cn",
     "land": "Kina",
