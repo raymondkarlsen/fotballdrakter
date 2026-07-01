@@ -5536,5 +5536,18 @@
     "informasjon": "6 Solbakken",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
+  },
+  {
+    "id": "nor-07",
+    "slug": "norge-2026-2027-hvit",
+    "navn": "Norge",
+    "aar": "2026, 2027",
+    "landskode": "no",
+    "land": "Norge",
+    "typeLag": "Land",
+    "farge": "hvit",
+    "informasjon": "2 Thorsby",
+    "kitArchiveUrl": "",
+    "bildeUrl": ""
   }
 ]
