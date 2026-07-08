@@ -5533,7 +5533,7 @@
     "land": "Norge",
     "typeLag": "Land",
     "farge": "rød",
-    "informasjon": "6 Solbakken",
+    "informasjon": "6 Solbakken. VM-drakta fra 1998.",
     "kitArchiveUrl": "",
     "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   },
@@ -5546,8 +5546,21 @@
     "land": "Norge",
     "typeLag": "Land",
     "farge": "hvit",
-    "informasjon": "2 Thorsby",
+    "informasjon": "2 Thorsby. VM-drakta!",
     "kitArchiveUrl": "",
-    "bildeUrl": ""
+    "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
+  },
+  {
+    "id": "kav-01",
+    "slug": "kapp-verde-2026-bla",
+    "navn": "Kapp Verde",
+    "aar": "2026",
+    "landskode": "",
+    "land": "Kapp Verde",
+    "typeLag": "Land",
+    "farge": "blå",
+    "informasjon": "VM-drakta fra året de VM-debuterte, spilte 4 uavgjort og likevel røk ut.",
+    "kitArchiveUrl": "",
+    "bildeUrl": "https://www.raymondkarlsen.no/wp-content/uploads/2024/07/fotballdrakt-illustrasjon.webp"
   }
 ]
