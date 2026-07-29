@@ -1,13 +1,17 @@
 export interface Drakt {
   id: string;
-  slug: string;
   navn: string;
-  aar: string;
-  landskode: string;
+  type: string;
   land: string;
-  typeLag: string;
-  farge: string;
-  informasjon: string;
+  landskode: string;
+  sesongStart: string;
+  sesongSlutt: string;
+  sesong: string;
+  drakttype: string;
+  farger: string[];
+  produsent: string;
+  spiller: string;
+  notat: string;
   kitArchiveUrl: string;
-  bildeUrl: string;
+  bilde: string;
 }

@@ -11,8 +11,8 @@ const allDrakter = (drakter as Drakt[]).sort((a, b) => a.navn.localeCompare(b.na
 
 // Statistikk
 const antallLand = new Set(allDrakter.map((d) => d.land).filter(Boolean)).size;
-const klubbdrakter = allDrakter.filter((d) => d.typeLag === "Klubb").length;
-const landslagsdrakter = allDrakter.filter((d) => d.typeLag === "Land").length;
+const klubbdrakter = allDrakter.filter((d) => d.type === "klubb").length;
+const landslagsdrakter = allDrakter.filter((d) => d.type === "landslag").length;
 
 // Topp 5 land
 const landCount = allDrakter.reduce((acc, d) => {
@@ -36,19 +36,17 @@ const maxKlubb = topp5Klubber[0]?.[1] || 1;
 
 // Filteralternativer
 const land = [...new Set(allDrakter.map((d) => d.land).filter(Boolean))].sort();
-const typer = [...new Set(allDrakter.map((d) => d.typeLag).filter(Boolean))].sort();
+const typer = [...new Set(allDrakter.map((d) => d.type).filter(Boolean))].sort();
 const farger = [...new Set(
-  allDrakter.flatMap((d) => d.farge.split(",").map((f) => f.trim())).filter(Boolean)
+  allDrakter.flatMap((d) => d.farger).filter(Boolean)
 )].sort();
 
-// Tiår
+// Tiår (utledet fra sesong-årstall)
 const tiaar = [...new Set(
   allDrakter
-    .flatMap((d) => {
-      const years = d.aar.match(/\d{4}/g);
-      return years ? years.map((y) => `${Math.floor(parseInt(y) / 10) * 10}`) : [];
-    })
+    .flatMap((d) => [d.sesongStart, d.sesongSlutt])
     .filter(Boolean)
+    .map((y) => `${Math.floor(parseInt(y) / 10) * 10}`)
 )].sort();
 ---
 
@@ -143,7 +141,7 @@ const tiaar = [...new Set(
         <span class="filter-icon"><Icon name="building-2" size={14} /></span>
         <select id="filter-type">
           <option value="">{t.filter.type}</option>
-          {typer.map((t) => <option value={t}>{t}</option>)}
+          {typer.map((ty) => <option value={ty}>{ty.charAt(0).toUpperCase() + ty.slice(1)}</option>)}
         </select>
       </label>
       <label class="filter-pill">
@@ -172,9 +170,9 @@ const tiaar = [...new Set(
         class="grid-item"
         data-navn={drakt.navn.toLowerCase()}
         data-land={drakt.land}
-        data-type={drakt.typeLag}
-        data-farge={drakt.farge.toLowerCase()}
-        data-aar={drakt.aar}
+        data-type={drakt.type}
+        data-farge={drakt.farger.join(", ").toLowerCase()}
+        data-aar={drakt.sesong}
       >
         <DraktCard drakt={drakt} />
       </div>
@@ -190,7 +188,7 @@ const tiaar = [...new Set(
           <th>Sesong</th>
           <th>Land</th>
           <th>Type</th>
-          <th>Farge</th>
+          <th>Farger</th>
           <th>Info</th>
         </tr>
       </thead>
@@ -200,16 +198,16 @@ const tiaar = [...new Set(
             class="table-row"
             data-navn={drakt.navn.toLowerCase()}
             data-land={drakt.land}
-            data-type={drakt.typeLag}
-            data-farge={drakt.farge.toLowerCase()}
-            data-aar={drakt.aar}
+            data-type={drakt.type}
+            data-farge={drakt.farger.join(", ").toLowerCase()}
+            data-aar={drakt.sesong}
           >
             <td><a href={`${import.meta.env.BASE_URL}/drakt/${drakt.id}`}>{drakt.navn}</a></td>
-            <td>{drakt.aar}</td>
+            <td>{drakt.sesong}</td>
             <td>{drakt.land}</td>
-            <td>{drakt.typeLag}</td>
-            <td>{drakt.farge}</td>
-            <td class="info-cell">{drakt.informasjon}</td>
+            <td class="type-cell">{drakt.type}</td>
+            <td>{drakt.farger.join(", ")}</td>
+            <td class="info-cell">{drakt.notat}</td>
           </tr>
         ))}
       </tbody>
@@ -576,6 +574,10 @@ const tiaar = [...new Set(
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .type-cell {
+    text-transform: capitalize;
   }
 
   @media (max-width: 768px) {
