@@ -48,6 +48,65 @@ const tiaar = [...new Set(
     .filter(Boolean)
     .map((y) => `${Math.floor(parseInt(y) / 10) * 10}`)
 )].sort();
+
+// --- Data for modalvisning ---
+const td = tekster.detalj;
+const BASE = import.meta.env.BASE_URL;
+
+const fargeMap: Record<string, string> = {
+  blå: "#2563eb", brun: "#78350f", burgunder: "#7f1d1d", grå: "#6b7280",
+  grønn: "#16a34a", gul: "#eab308", gull: "#d4a017", hvit: "#f8fafc",
+  lilla: "#9333ea", oransje: "#f97316", rosa: "#ec4899", rød: "#dc2626",
+  svart: "#1e293b", turkis: "#06b6d4",
+};
+
+function toFlag(kode: string): string {
+  if (!kode) return "";
+  const sub: Record<string, string> = {
+    "gb-eng": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "gb-wls": "🏴󠁧󠁢󠁷󠁬󠁳󠁿", "gb-sct": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+  };
+  if (sub[kode]) return sub[kode];
+  const base = kode.split("-")[0].toUpperCase();
+  if (base.length !== 2) return "";
+  return String.fromCodePoint(
+    ...base.split("").map((c) => 0x1f1e6 + c.charCodeAt(0) - 65)
+  );
+}
+
+const modalData = Object.fromEntries(
+  allDrakter.map((d) => [
+    d.id,
+    {
+      navn: d.navn,
+      sesong: d.sesong,
+      land: d.land,
+      type: d.type,
+      drakttype: d.drakttype,
+      produsent: d.produsent,
+      spiller: d.spiller,
+      notat: d.notat,
+      kitArchiveUrl: d.kitArchiveUrl,
+      bilde: d.bilde ? `${BASE}/images/drakter/${d.bilde}` : "",
+      flagg: toFlag(d.landskode),
+      farger: d.farger.map((f) => ({
+        navn: f,
+        css: fargeMap[f.toLowerCase()] || "#94a3b8",
+      })),
+    },
+  ])
+);
+
+const modalPayload = {
+  drakter: modalData,
+  labels: {
+    farge: td.farge,
+    informasjon: td.informasjon,
+    kitArchive: td.kitArchive,
+    produsent: "Produsent",
+    spiller: "Spiller",
+    lukk: "Lukk",
+  },
+};
 ---
 
 <Base>
@@ -168,6 +227,7 @@ const tiaar = [...new Set(
     {allDrakter.map((drakt) => (
       <div
         class="grid-item"
+        data-id={drakt.id}
         data-navn={drakt.navn.toLowerCase()}
         data-land={drakt.land}
         data-type={drakt.type}
@@ -213,6 +273,19 @@ const tiaar = [...new Set(
       </tbody>
     </table>
   </div>
+
+  <!-- Modal for draktdetaljer -->
+  <div id="drakt-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" data-close aria-label="Lukk">
+        <Icon name="x" size={20} />
+      </button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script type="application/json" id="modal-data" set:html={JSON.stringify(modalPayload)} is:inline></script>
 </Base>
 
 <style>
@@ -622,6 +695,174 @@ const tiaar = [...new Set(
       gap: 0.4rem;
     }
   }
+
+  /* Modal */
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .modal[hidden] {
+    display: none;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 20, 10, 0.55);
+    backdrop-filter: blur(2px);
+    animation: modal-fade 0.15s ease;
+  }
+
+  .modal-dialog {
+    position: relative;
+    background: var(--color-surface);
+    border-radius: 14px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.25);
+    max-width: 560px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: modal-pop 0.18s ease;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--color-text);
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .modal-close:hover {
+    background: #fff;
+    color: var(--color-accent);
+  }
+
+  @keyframes modal-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes modal-pop {
+    from { opacity: 0; transform: translateY(8px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @media (max-width: 700px) {
+    .modal {
+      padding: 0;
+      align-items: flex-end;
+    }
+    .modal-dialog {
+      max-width: 100%;
+      max-height: 92vh;
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .modal-backdrop,
+    .modal-dialog {
+      animation: none;
+    }
+  }
+</style>
+
+<style is:global>
+  body.modal-open { overflow: hidden; }
+
+  .m-media {
+    aspect-ratio: 4 / 3;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+  }
+  .m-media img { width: 100%; height: 100%; object-fit: cover; }
+  .m-media .m-placeholder { opacity: 0.2; color: #64748b; font-size: 3.5rem; }
+
+  .m-body {
+    padding: 1.5rem 1.75rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .m-title { font-size: 1.7rem; font-weight: 800; line-height: 1.2; }
+  .m-sesong { font-size: 1rem; color: #64748b; margin: -0.4rem 0 0; }
+
+  .m-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: stretch; }
+  .m-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a2e1a;
+  }
+  .m-tag-type, .m-tag-drakttype { text-transform: capitalize; }
+  .m-tag-land { background: #ecfdf5; }
+  .m-tag-type { background: #eff6ff; }
+  .m-tag-drakttype { background: #fef3c7; }
+  .m-flag { font-size: 1.4rem; line-height: 1; }
+
+  .m-facts { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .m-fact { display: flex; flex-direction: column; gap: 0.15rem; font-size: 0.95rem; }
+  .m-fact-label,
+  .m-colors-label,
+  .m-notat-label {
+    font-size: 0.68rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .m-colors { display: flex; flex-direction: column; gap: 0.5rem; }
+  .m-colors-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .m-color { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; }
+  .m-swatch { width: 30px; height: 30px; border-radius: 50%; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+  .m-color-name { font-size: 0.7rem; color: #64748b; text-transform: capitalize; }
+
+  .m-notat { display: flex; flex-direction: column; gap: 0.25rem; }
+  .m-notat p { font-size: 0.95rem; color: #475569; line-height: 1.5; margin: 0; }
+
+  .m-kit {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    align-self: flex-start;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a2e1a;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .m-kit:hover { border-color: var(--color-accent); color: var(--color-accent); }
 </style>
 
 <script>
@@ -682,7 +923,7 @@ const tiaar = [...new Set(
       const matchLand = !land || el.dataset.land === land;
       const matchType = !type || el.dataset.type === type;
       const matchFarge = !farge || el.dataset.farge?.includes(farge);
-      const matchTiaar = !tiaar || (el.dataset.aar || "").match(new RegExp(`${tiaar}\\d`));
+      const matchTiaar = !tiaar || (el.dataset.aar || "").match(new RegExp(`${tiaar.slice(0, 3)}\\d`));
 
       return matchSearch && matchLand && matchType && matchFarge && matchTiaar;
     }
@@ -718,4 +959,123 @@ const tiaar = [...new Set(
   filterFarge.addEventListener("change", applyFilters);
   filterTiaar.addEventListener("change", applyFilters);
   resetBtn.addEventListener("click", resetFilters);
+
+  // --- Modal ---
+  interface ModalFarge { navn: string; css: string; }
+  interface ModalDrakt {
+    navn: string; sesong: string; land: string; type: string; drakttype: string;
+    produsent: string; spiller: string; notat: string; kitArchiveUrl: string;
+    bilde: string; flagg: string; farger: ModalFarge[];
+  }
+  interface ModalPayload {
+    drakter: Record<string, ModalDrakt>;
+    labels: Record<string, string>;
+  }
+
+  const dataEl = document.getElementById("modal-data");
+  const payload: ModalPayload = dataEl ? JSON.parse(dataEl.textContent || "{}") : { drakter: {}, labels: {} };
+  const modal = document.getElementById("drakt-modal") as HTMLElement;
+  const modalContent = document.getElementById("modal-content") as HTMLElement;
+  const labels = payload.labels;
+  let lastFocused: HTMLElement | null = null;
+
+  function esc(s: string): string {
+    const d = document.createElement("div");
+    d.textContent = s ?? "";
+    return d.innerHTML;
+  }
+
+  function cap(s: string): string {
+    return s ? s.charAt(0).toUpperCase() + s.slice(1) : s;
+  }
+
+  function buildModal(d: ModalDrakt): string {
+    const media = d.bilde
+      ? `<div class="m-media"><img src="${esc(d.bilde)}" alt="${esc(d.navn)}"></div>`
+      : `<div class="m-media"><span class="m-placeholder">👕</span></div>`;
+
+    const tags: string[] = [];
+    if (d.land) tags.push(`<span class="m-tag m-tag-land">${d.flagg ? `<span class="m-flag">${d.flagg}</span>` : ""}${esc(d.land)}</span>`);
+    if (d.type) tags.push(`<span class="m-tag m-tag-type">${esc(cap(d.type))}</span>`);
+    if (d.drakttype) tags.push(`<span class="m-tag m-tag-drakttype">${esc(cap(d.drakttype))}</span>`);
+
+    const facts: string[] = [];
+    if (d.produsent) facts.push(`<span class="m-fact"><span class="m-fact-label">${esc(labels.produsent)}</span>${esc(d.produsent)}</span>`);
+    if (d.spiller) facts.push(`<span class="m-fact"><span class="m-fact-label">${esc(labels.spiller)}</span>${esc(d.spiller)}</span>`);
+
+    const colors = d.farger.length
+      ? `<div class="m-colors"><span class="m-colors-label">${esc(labels.farge)}</span><div class="m-colors-row">${d.farger
+          .map((f) => `<span class="m-color"><span class="m-swatch" style="background:${esc(f.css)};${f.css === "#f8fafc" ? "border:1px solid #e2e8f0" : ""}"></span><span class="m-color-name">${esc(f.navn)}</span></span>`)
+          .join("")}</div></div>`
+      : "";
+
+    const notat = d.notat
+      ? `<div class="m-notat"><span class="m-notat-label">${esc(labels.informasjon)}</span><p>${esc(d.notat)}</p></div>`
+      : "";
+
+    const kit = d.kitArchiveUrl
+      ? `<a class="m-kit" href="${esc(d.kitArchiveUrl)}" target="_blank" rel="noopener">${esc(labels.kitArchive)} ↗</a>`
+      : "";
+
+    return `${media}<div class="m-body"><h2 id="modal-title" class="m-title">${esc(d.navn)}</h2>${
+      d.sesong ? `<p class="m-sesong">${esc(d.sesong)}</p>` : ""
+    }${tags.length ? `<div class="m-tags">${tags.join("")}</div>` : ""}${
+      facts.length ? `<div class="m-facts">${facts.join("")}</div>` : ""
+    }${colors}${notat}${kit}</div>`;
+  }
+
+  function openModal(id: string, trigger: HTMLElement) {
+    const d = payload.drakter[id];
+    if (!d) return;
+    lastFocused = trigger;
+    modalContent.innerHTML = buildModal(d);
+    modal.hidden = false;
+    document.body.classList.add("modal-open");
+    const closeBtn = modal.querySelector(".modal-close") as HTMLElement | null;
+    closeBtn?.focus();
+  }
+
+  function closeModal() {
+    if (modal.hidden) return;
+    modal.hidden = true;
+    document.body.classList.remove("modal-open");
+    modalContent.innerHTML = "";
+    lastFocused?.focus();
+    lastFocused = null;
+  }
+
+  function idFromHref(href: string | null): string | null {
+    const m = href?.match(/\/drakt\/([^/]+)\/?$/);
+    return m ? m[1] : null;
+  }
+
+  // Fang opp klikk paa kort- og tabell-lenker
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    const link = target.closest('a[href*="/drakt/"]') as HTMLAnchorElement | null;
+    if (link) {
+      const id = idFromHref(link.getAttribute("href"));
+      if (id && payload.drakter[id]) {
+        e.preventDefault();
+        openModal(id, link);
+      }
+      return;
+    }
+    if (target.closest("[data-close]")) closeModal();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+</script>
+
+<script>
+  // Lukk modal ved tilbake-navigasjon om den er aapen (ryddig for hash-endringer)
+  window.addEventListener("pageshow", () => {
+    const m = document.getElementById("drakt-modal");
+    if (m && !m.hidden) {
+      m.hidden = true;
+      document.body.classList.remove("modal-open");
+    }
+  });
 </script>
