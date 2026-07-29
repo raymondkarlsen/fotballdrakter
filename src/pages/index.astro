@@ -923,7 +923,7 @@ const modalPayload = {
       const matchLand = !land || el.dataset.land === land;
       const matchType = !type || el.dataset.type === type;
       const matchFarge = !farge || el.dataset.farge?.includes(farge);
-      const matchTiaar = !tiaar || (el.dataset.aar || "").match(new RegExp(`${tiaar}\\d`));
+      const matchTiaar = !tiaar || (el.dataset.aar || "").match(new RegExp(`${tiaar.slice(0, 3)}\\d`));
 
       return matchSearch && matchLand && matchType && matchFarge && matchTiaar;
     }
