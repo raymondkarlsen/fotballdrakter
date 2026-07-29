@@ -1,6 +1,10 @@
 /**
- * Konverterer CSV-eksporten fra Google Sheets til JSON.
+ * Konverterer CSV-eksporten fra Google Sheets (fanen `drakter_v2`) til JSON.
  * Kjør: node scripts/csv-to-json.mjs <sti-til-csv>
+ *
+ * Ny kolonnestruktur (leses på header-navn, ikke posisjon):
+ *   id, klubb, type, land, landskode, sesong_start, sesong_slutt,
+ *   drakttype, farger, produsent, spiller, notat, kitarchive_url, bilde
  */
 import { readFileSync, writeFileSync } from "fs";
 import { resolve, dirname } from "path";
@@ -16,149 +20,176 @@ if (!csvPath) {
 
 const raw = readFileSync(resolve(csvPath), "utf-8");
 
-function parseCSVLine(line) {
-  const fields = [];
-  let current = "";
+/** Parser hele CSV-en (håndterer siterte felt og linjeskift inni felt). */
+function parseCSV(text) {
+  const rows = [];
+  let row = [];
+  let field = "";
   let inQuotes = false;
 
-  for (let i = 0; i < line.length; i++) {
-    const ch = line[i];
-    if (ch === '"') {
-      if (inQuotes && line[i + 1] === '"') {
-        current += '"';
-        i++;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        if (text[i + 1] === '"') {
+          field += '"';
+          i++;
+        } else {
+          inQuotes = false;
+        }
       } else {
-        inQuotes = !inQuotes;
+        field += ch;
       }
-    } else if (ch === "," && !inQuotes) {
-      fields.push(current.trim());
-      current = "";
+    } else if (ch === '"') {
+      inQuotes = true;
+    } else if (ch === ",") {
+      row.push(field);
+      field = "";
+    } else if (ch === "\n") {
+      row.push(field);
+      rows.push(row);
+      row = [];
+      field = "";
+    } else if (ch === "\r") {
+      // ignorer – håndteres av \n
     } else {
-      current += ch;
+      field += ch;
     }
   }
-  fields.push(current.trim());
-  return fields;
-}
-
-function parseLand(raw) {
-  if (!raw) return { landskode: "", land: "" };
-  const match = raw.match(/^:([a-z-]+):\s*(.+)$/);
-  if (match) {
-    return { landskode: match[1], land: match[2] };
+  // siste felt/rad
+  if (field.length > 0 || row.length > 0) {
+    row.push(field);
+    rows.push(row);
   }
-  return { landskode: "", land: raw };
+  return rows;
 }
 
-function parseBildeUrl(raw) {
-  if (!raw) return "";
-  const match = raw.match(/\!\[.*?\]\((.*?)\)/);
-  return match ? match[1] : "";
+/** Bygger en lesbar sesong-streng fra start/slutt-årstall. */
+function formatSesong(start, slutt) {
+  if (!start) return "";
+  if (!slutt || slutt === start) return start;
+  return `${start}–${slutt}`;
 }
 
-function slugify(text) {
-  return text
-    .toLowerCase()
-    .replace(/[æå]/g, "a")
-    .replace(/ø/g, "o")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
+const rows = parseCSV(raw).filter((r) => r.some((c) => c.trim() !== ""));
+if (rows.length === 0) {
+  console.error("Fant ingen rader i CSV-en.");
+  process.exit(1);
 }
 
-// Korte klubbkoder for ID-generering
-const manualCodes = {
-  'Algeciras': 'alc', 'Algerie': 'alg',
-  'Athletico Madrid': 'atm', 'Atletico Madrid': 'atm',
-  'Barcelona': 'bcn', 'Barnsley': 'brn',
-  'Birmingham City': 'bir', 'Biratnagar City': 'bnc',
-  'Blackburn': 'bla', 'Blackpool': 'blp',
-  'Bristol City': 'brc',
-  'Burford': 'bfd', 'Burnley': 'bur',
-  'Cardiff': 'cdf', 'Carlisle': 'car',
-  'Chelsea': 'che', 'Chesterfield': 'chf', 'Chennaiyin FC': 'chn',
-  'Claydon': 'cly', 'Club America': 'cam',
-  'Colchester': 'col', 'Colombia': 'cmb',
-  'Hajduk Split': 'haj', 'Hamitkoy SHSK': 'ham',
-  'Huddersfield': 'hud', 'Huddersfield Town': 'hud',
-  'Hucknall Town': 'huc',
-  'Lincoln': 'lnc', 'Linfield': 'lin',
-  'Liverpool': 'liv', 'LIverpool': 'liv',
-  'Livingston': 'lvs', 'Livorno': 'lvo',
-  'Manchester United': 'mun', 'Mauritius': 'mau',
-  'Nordsjælland': 'nds', 'Norge': 'nor', 'Norwich': 'nrw',
-  'Pachuca': 'pac', 'Park Celtic': 'pkc',
-  'Portsmouth': 'por', 'Portugal': 'prt',
-  'Schonnebeck': 'sch', 'Schreinerei': 'scr',
-  'Stoke': 'sto', 'Stotzheim': 'stz',
-  'Valencia': 'val', 'Valetta': 'vlt',
-  'Mali': 'mal', 'Mallorca': 'mlc',
-  'Al-Ittihad': 'ait', 'Alianza': 'alz',
-  'Richmond AFC': 'ric',
+const headers = rows[0].map((h) => h.trim());
+const col = (name) => headers.indexOf(name);
+
+const required = ["id", "klubb", "type", "land", "landskode"];
+const missing = required.filter((c) => col(c) === -1);
+if (missing.length > 0) {
+  console.error(`Mangler forventede kolonner: ${missing.join(", ")}`);
+  process.exit(1);
+}
+
+const idx = {
+  id: col("id"),
+  klubb: col("klubb"),
+  type: col("type"),
+  land: col("land"),
+  landskode: col("landskode"),
+  sesongStart: col("sesong_start"),
+  sesongSlutt: col("sesong_slutt"),
+  drakttype: col("drakttype"),
+  farger: col("farger"),
+  produsent: col("produsent"),
+  spiller: col("spiller"),
+  notat: col("notat"),
+  kitArchiveUrl: col("kitarchive_url"),
+  bilde: col("bilde"),
 };
 
-function clubCode(name) {
-  if (manualCodes[name]) return manualCodes[name];
-  const n = name.toLowerCase()
-    .replace(/[æå]/g, 'a').replace(/ø/g, 'o')
-    .replace(/^(fc|fk|if|bk|sk|ik) /, '').replace(/ (fc|fk|if|bk|sk|ik)$/, '')
-    .trim();
-  const words = n.split(/[\s-]+/).filter(w => w.length > 0);
-  if (words.length >= 3) return words.slice(0, 3).map(w => w[0]).join('');
-  if (words.length === 2) return (words[0].slice(0, 2) + words[1].slice(0, 1));
-  return n.slice(0, 3);
-}
-
-const lines = raw.split("\n").filter((l) => l.trim());
-const headers = parseCSVLine(lines[0]);
+const get = (row, key) => (idx[key] >= 0 ? (row[idx[key]] ?? "").trim() : "");
 
 const drakter = [];
-const slugCount = {};
-const idCount = {};
+const seenIds = new Set();
+const landTilKoder = new Map(); // land -> Set(landskode)
+const kodeTilLand = new Map(); // landskode -> Set(land)
 
-for (let i = 1; i < lines.length; i++) {
-  const fields = parseCSVLine(lines[i]);
-  const navn = fields[0] || "";
-  const aar = fields[1] || "";
-  const landRaw = fields[2] || "";
-  const typeLag = fields[3] || "";
-  const farge = fields[4] || "";
-  const informasjon = fields[5] || "";
-  const kitArchiveUrl = fields[6] || "";
-  const bildeRaw = fields[7] || "";
-  const kommentar = fields[10] || "";
+for (let i = 1; i < rows.length; i++) {
+  const row = rows[i];
+  const id = get(row, "id");
+  if (!id) {
+    console.warn(`⚠ Rad ${i + 1}: mangler id – hoppes over.`);
+    continue;
+  }
+  if (seenIds.has(id)) {
+    console.warn(`⚠ Rad ${i + 1}: duplikat id "${id}" – hoppes over.`);
+    continue;
+  }
+  seenIds.add(id);
 
-  // Kort ID (f.eks. liv-01, ars-02)
-  const code = clubCode(navn);
-  idCount[code] = (idCount[code] || 0) + 1;
-  const id = code + "-" + String(idCount[code]).padStart(2, "0");
+  const start = get(row, "sesongStart");
+  const slutt = get(row, "sesongSlutt");
+  const land = get(row, "land");
+  const landskode = get(row, "landskode");
 
-  // Lang slug beholdes for bakoverkompatibilitet med eksisterende bilder
-  let baseSlug = slugify(navn);
-  if (aar) baseSlug += "-" + slugify(aar);
-  if (farge) baseSlug += "-" + slugify(farge);
-  slugCount[baseSlug] = (slugCount[baseSlug] || 0) + 1;
-  const slug =
-    slugCount[baseSlug] > 1
-      ? `${baseSlug}-${slugCount[baseSlug]}`
-      : baseSlug;
-
-  const { landskode, land } = parseLand(landRaw);
+  // Samle for konsistenssjekk
+  if (land && landskode) {
+    if (!landTilKoder.has(land)) landTilKoder.set(land, new Set());
+    landTilKoder.get(land).add(landskode);
+    if (!kodeTilLand.has(landskode)) kodeTilLand.set(landskode, new Set());
+    kodeTilLand.get(landskode).add(land);
+  }
 
   drakter.push({
     id,
-    slug,
-    navn,
-    aar,
-    landskode,
+    navn: get(row, "klubb"),
+    type: get(row, "type").toLowerCase(),
     land,
-    typeLag,
-    farge,
-    informasjon,
-    kitArchiveUrl: kitArchiveUrl && kitArchiveUrl !== "-" ? kitArchiveUrl : "",
-    bildeUrl: parseBildeUrl(bildeRaw),
+    landskode,
+    sesongStart: start,
+    sesongSlutt: slutt,
+    sesong: formatSesong(start, slutt),
+    drakttype: get(row, "drakttype").toLowerCase(),
+    farger: get(row, "farger")
+      .split(";")
+      .map((f) => f.trim())
+      .filter(Boolean),
+    produsent: get(row, "produsent"),
+    spiller: get(row, "spiller"),
+    notat: get(row, "notat"),
+    kitArchiveUrl: (() => {
+      const v = get(row, "kitArchiveUrl");
+      return v && v !== "-" ? v : "";
+    })(),
+    bilde: get(row, "bilde"),
   });
+}
+
+// --- Konsistenssjekk: land ↔ landskode ---
+let advarsler = 0;
+for (const [land, koder] of landTilKoder) {
+  if (koder.size > 1) {
+    advarsler++;
+    console.warn(
+      `⚠ Konsistens: land "${land}" er koblet til flere landskoder: ${[...koder]
+        .map((k) => `"${k}"`)
+        .join(", ")}`
+    );
+  }
+}
+for (const [kode, land] of kodeTilLand) {
+  if (land.size > 1) {
+    advarsler++;
+    console.warn(
+      `⚠ Konsistens: landskode "${kode}" er koblet til flere land: ${[...land]
+        .map((l) => `"${l}"`)
+        .join(", ")}`
+    );
+  }
 }
 
 const outputPath = resolve(__dirname, "../src/data/drakter.json");
 writeFileSync(outputPath, JSON.stringify(drakter, null, 2), "utf-8");
 console.log(`✓ ${drakter.length} drakter skrevet til ${outputPath}`);
+if (advarsler > 0) {
+  console.warn(
+    `⚠ ${advarsler} konsistensadvarsel(er) i land/landskode – sjekk arket.`
+  );
+}

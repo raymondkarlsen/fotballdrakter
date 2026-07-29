@@ -16,20 +16,11 @@ export function getStaticPaths() {
 
 const { drakt } = Astro.props as { drakt: Drakt };
 
-import { readdirSync } from 'fs';
-import { resolve } from 'path';
-const imageDir = resolve(process.cwd(), 'public/images/drakter');
-let localImagePath: string | null = null;
-try {
-  const files = readdirSync(imageDir);
-  const match = files.find(f => f.startsWith(drakt.id + '.') || f.startsWith(drakt.slug + '.'));
-  if (match) {
-    localImagePath = `${import.meta.env.BASE_URL}/images/drakter/${match}`;
-  }
-} catch {}
-
-const hasImage = localImagePath || (drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon"));
-const imageSrc = localImagePath || drakt.bildeUrl;
+// Bildet refereres direkte via filnavn fra datakilden
+const hasImage = Boolean(drakt.bilde);
+const imageSrc = hasImage
+  ? `${import.meta.env.BASE_URL}/images/drakter/${drakt.bilde}`
+  : "";
 
 // Fargemapping for swatcher
 const fargeMap: Record<string, string> = {
@@ -38,7 +29,7 @@ const fargeMap: Record<string, string> = {
   lilla: "#9333ea", oransje: "#f97316", rosa: "#ec4899", rød: "#dc2626",
   svart: "#1e293b", turkis: "#06b6d4",
 };
-const draktFarger = drakt.farge.split(",").map(f => f.trim().toLowerCase());
+const draktFarger = drakt.farger.map((f) => f.toLowerCase());
 const cssColors = draktFarger.map(f => fargeMap[f] || "#94a3b8").slice(0, 3);
 
 // Flagg-emoji
@@ -67,12 +58,20 @@ const flagEmoji = toFlag(drakt.landskode);
 
     <div class="detail-info">
       <h1 class="detail-title">{drakt.navn}</h1>
-      {drakt.aar && <p class="detail-year">{drakt.aar}</p>}
+      {drakt.sesong && <p class="detail-year">{drakt.sesong}</p>}
 
       <div class="detail-tags">
-        {drakt.land && <span class="detail-tag tag-land">{flagEmoji && <span class="flag">{flagEmoji}</span>}{drakt.land}</span>}
-        {drakt.typeLag && <span class={`detail-tag tag-${drakt.typeLag.toLowerCase()}`}>{drakt.typeLag}</span>}
+        {drakt.land && <span class="detail-tag tag-landslag">{flagEmoji && <span class="flag">{flagEmoji}</span>}{drakt.land}</span>}
+        {drakt.type && <span class={`detail-tag tag-${drakt.type}`}>{drakt.type}</span>}
+        {drakt.drakttype && <span class="detail-tag tag-drakttype">{drakt.drakttype}</span>}
       </div>
+
+      {(drakt.produsent || drakt.spiller) && (
+        <div class="detail-facts">
+          {drakt.produsent && <span class="fact"><span class="fact-label">Produsent</span>{drakt.produsent}</span>}
+          {drakt.spiller && <span class="fact"><span class="fact-label">Spiller</span>{drakt.spiller}</span>}
+        </div>
+      )}
 
       {draktFarger.length > 0 && (
         <div class="detail-colors">
@@ -88,10 +87,10 @@ const flagEmoji = toFlag(drakt.landskode);
         </div>
       )}
 
-      {drakt.informasjon && (
+      {drakt.notat && (
         <div class="detail-info-text">
           <span class="info-label">{td.informasjon}</span>
-          <p>{drakt.informasjon}</p>
+          <p>{drakt.notat}</p>
         </div>
       )}
 
@@ -193,9 +192,35 @@ const flagEmoji = toFlag(drakt.landskode);
     color: var(--color-text);
   }
 
-  .tag-land { background: #ecfdf5; }
+  .tag-landslag { background: #ecfdf5; }
   .tag-klubb { background: #eff6ff; }
   .tag-fiksjon { background: #f4f4f5; }
+  .tag-drakttype { background: #fef3c7; }
+  .tag-klubb, .tag-landslag, .tag-fiksjon, .tag-drakttype { text-transform: capitalize; }
+
+  .detail-facts {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .fact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    font-size: 0.9rem;
+    color: var(--color-text);
+  }
+
+  .fact-label {
+    font-size: 0.65rem;
+    color: var(--color-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
 
   .flag { font-size: 0.9rem; }
 

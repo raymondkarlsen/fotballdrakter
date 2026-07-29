@@ -22,7 +22,7 @@ jobs:
       - name: Last ned CSV fra Google Sheets
         run: |
           curl -L -o drakter.csv \
-            "https://docs.google.com/spreadsheets/d/157myvKxHgMVEwgenxe7zmUv5StiP7p83PXMlBTrV8jg/export?format=csv&gid=0"
+            "https://docs.google.com/spreadsheets/d/157myvKxHgMVEwgenxe7zmUv5StiP7p83PXMlBTrV8jg/gviz/tq?tqx=out:csv&sheet=drakter_v2"
 
       - name: Konverter CSV til JSON
         run: node scripts/csv-to-json.mjs drakter.csv

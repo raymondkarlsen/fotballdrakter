@@ -8,21 +8,11 @@ interface Props {
 
 const { drakt } = Astro.props;
 
-// Sjekk om lokalt bilde finnes (byggetid) – sjekker både kort ID og slug
-import { readdirSync } from 'fs';
-import { resolve } from 'path';
-const imageDir = resolve(process.cwd(), 'public/images/drakter');
-let localImagePath: string | null = null;
-try {
-  const files = readdirSync(imageDir);
-  const match = files.find(f => f.startsWith(drakt.id + '.') || f.startsWith(drakt.slug + '.'));
-  if (match) {
-    localImagePath = `${import.meta.env.BASE_URL}/images/drakter/${match}`;
-  }
-} catch {}
-
-const hasImage = localImagePath || (drakt.bildeUrl && !drakt.bildeUrl.includes("illustrasjon"));
-const imageSrc = localImagePath || drakt.bildeUrl;
+// Bildet refereres direkte via filnavn fra datakilden
+const hasImage = Boolean(drakt.bilde);
+const imageSrc = hasImage
+  ? `${import.meta.env.BASE_URL}/images/drakter/${drakt.bilde}`
+  : "";
 
 // Fargemapping til CSS-farger for placeholder
 const fargeMap: Record<string, string> = {
@@ -42,10 +32,7 @@ const fargeMap: Record<string, string> = {
 };
 
 // Hent opptil 3 farger for gradient-placeholder
-const draktFarger = drakt.farge
-  .split(",")
-  .map((f) => f.trim())
-  .filter(Boolean)
+const draktFarger = drakt.farger
   .map((f) => fargeMap[f] || "#94a3b8")
   .slice(0, 3);
 
@@ -92,12 +79,12 @@ const flagg = landskodeTilFlagg(drakt.landskode);
   </div>
   <div class="card-body">
     <h3 class="card-title">{drakt.navn}</h3>
-    {drakt.aar && <p class="card-year">{drakt.aar}</p>}
+    {drakt.sesong && <p class="card-year">{drakt.sesong}</p>}
     <div class="card-meta">
       {drakt.land && <span class="tag">{flagg && <span class="flag">{flagg}</span>}{drakt.land}</span>}
-      {drakt.typeLag && <span class={`tag tag-${drakt.typeLag.toLowerCase()}`}>{drakt.typeLag}</span>}
+      {drakt.type && <span class={`tag tag-${drakt.type}`}>{drakt.type}</span>}
     </div>
-    {drakt.informasjon && <p class="card-info">{drakt.informasjon}</p>}
+    {drakt.notat && <p class="card-info">{drakt.notat}</p>}
   </div>
 </a>
 
@@ -199,11 +186,17 @@ const flagg = landskodeTilFlagg(drakt.landskode);
     background: #f0f5f1;
   }
 
+  .tag-klubb,
+  .tag-landslag,
+  .tag-fiksjon {
+    text-transform: capitalize;
+  }
+
   .tag-klubb {
     background: #eff6ff;
   }
 
-  .tag-land {
+  .tag-landslag {
     background: #ecfdf5;
   }
 
