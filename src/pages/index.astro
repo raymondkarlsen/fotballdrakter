@@ -184,8 +184,8 @@ const modalPayload = {
         autocomplete="off"
       />
       <div class="view-toggle" id="view-toggle">
-        <button class="toggle-btn active" data-view="grid" title="Kortvisning"><Icon name="layout-grid" size={14} /></button>
-        <button class="toggle-btn" data-view="table" title="Tabellvisning"><Icon name="list" size={14} /></button>
+        <button class="toggle-btn active" data-view="grid" title="Rutenett"><Icon name="layout-grid" size={16} /><span class="toggle-label">Rutenett</span></button>
+        <button class="toggle-btn" data-view="table" title="Liste"><Icon name="list" size={16} /><span class="toggle-label">Liste</span></button>
       </div>
     </div>
     <div class="filters">
@@ -292,7 +292,7 @@ const modalPayload = {
   .hero {
     text-align: center;
     margin: -2rem -2rem 2.5rem;
-    min-height: 340px;
+    min-height: 240px;
     background-size: cover;
     background-position: center 40%;
     display: flex;
@@ -304,18 +304,17 @@ const modalPayload = {
   .hero-overlay {
     background: linear-gradient(
       180deg,
-      rgba(10, 30, 10, 0.82) 0%,
-      rgba(10, 30, 10, 0.7) 60%,
-      rgba(10, 30, 10, 0.82) 100%
+      rgba(10, 30, 10, 0.55) 0%,
+      rgba(10, 30, 10, 0.38) 55%,
+      rgba(10, 30, 10, 0.6) 100%
     );
     width: 100%;
-    min-height: 340px;
+    min-height: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3.5rem 2rem;
-    backdrop-filter: blur(1px);
+    padding: 2.5rem 2rem;
   }
 
   .hero h1 {
@@ -457,11 +456,11 @@ const modalPayload = {
   }
 
   #search {
-    flex: 1;
-    padding: 0.65rem 1rem;
+    flex: 0 1 520px;
+    padding: 0.85rem 1.1rem;
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
-    font-size: 0.95rem;
+    font-size: 1rem;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
@@ -476,16 +475,25 @@ const modalPayload = {
     border: 1px solid var(--color-border);
     border-radius: var(--radius);
     overflow: hidden;
+    margin-left: auto;
   }
 
   .toggle-btn {
-    padding: 0.65rem 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1rem;
     border: none;
     background: var(--color-surface);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
     color: var(--color-muted);
     transition: background 0.15s, color 0.15s;
+  }
+
+  .toggle-label {
+    line-height: 1;
   }
 
   .toggle-btn.active {
@@ -654,8 +662,8 @@ const modalPayload = {
   }
 
   @media (max-width: 768px) {
-    .hero { min-height: 260px; }
-    .hero-overlay { min-height: 260px; padding: 2.5rem 1.5rem; }
+    .hero { min-height: 200px; }
+    .hero-overlay { min-height: 200px; padding: 2rem 1.5rem; }
     .hero h1 {
       font-size: 1.75rem;
     }
@@ -675,6 +683,16 @@ const modalPayload = {
     }
     .search-row {
       flex-direction: column;
+    }
+    #search {
+      flex: 1 1 auto;
+    }
+    .view-toggle {
+      margin-left: 0;
+    }
+    .toggle-btn {
+      flex: 1;
+      justify-content: center;
     }
     .filters {
       gap: 0.4rem;
