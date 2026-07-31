@@ -12,7 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^6.4.7"
+    "astro": "^6.4.7",
+    "jsvectormap": "^1.7.0"
   },
   "allowScripts": {
     "esbuild@0.27.7": true,
