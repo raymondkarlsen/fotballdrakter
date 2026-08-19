@@ -34,6 +34,63 @@ const topp5Klubber = Object.entries(klubbCount)
   .slice(0, 5);
 const maxKlubb = topp5Klubber[0]?.[1] || 1;
 
+// Bredde: antall unike lag
+const antallLag = Object.keys(klubbCount).length;
+
+// Fargefordeling (topp 6, med hex fra fargeMap lenger nede)
+const fargeStatMap: Record<string, string> = {
+  blå: "#2563eb", brun: "#78350f", burgunder: "#7f1d1d", grå: "#6b7280",
+  grønn: "#16a34a", gul: "#eab308", gull: "#d4a017", hvit: "#f8fafc",
+  lilla: "#9333ea", oransje: "#f97316", rosa: "#ec4899", rød: "#dc2626",
+  svart: "#1e293b", turkis: "#06b6d4",
+};
+const fargeCount = allDrakter.reduce((acc, d) => {
+  (d.farger || []).forEach((f) => {
+    const key = f.toLowerCase();
+    acc[key] = (acc[key] || 0) + 1;
+  });
+  return acc;
+}, {} as Record<string, number>);
+const topp6Farger = Object.entries(fargeCount)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 6);
+const maxFarge = topp6Farger[0]?.[1] || 1;
+
+// Drakter per tiår (utledet fra sesongStart)
+const tiaarCount = allDrakter.reduce((acc, d) => {
+  const y = parseInt(d.sesongStart);
+  if (!isNaN(y)) {
+    const dec = `${Math.floor(y / 10) * 10}`;
+    acc[dec] = (acc[dec] || 0) + 1;
+  }
+  return acc;
+}, {} as Record<string, number>);
+const tiaarStat = Object.entries(tiaarCount).sort((a, b) => a[0].localeCompare(b[0]));
+const maxTiaar = Math.max(...tiaarStat.map(([, c]) => c), 1);
+
+// Verdenskart: ISO-koder (gb-eng/sct/wls/nir -> GB), antall og etikett per land
+function toMapCode(landskode: string, land: string): string {
+  const c = (landskode || "").trim().toLowerCase();
+  if (c.startsWith("gb")) return "GB";
+  if (c.length >= 2) return c.slice(0, 2).toUpperCase();
+  if (land === "Kapp Verde") return "CV";
+  return "";
+}
+const mapCounts: Record<string, number> = {};
+const mapLands: Record<string, Set<string>> = {};
+allDrakter.forEach((d) => {
+  const code = toMapCode(d.landskode, d.land);
+  if (!code) return;
+  mapCounts[code] = (mapCounts[code] || 0) + 1;
+  (mapLands[code] ||= new Set<string>()).add(d.land);
+});
+const mapLabels: Record<string, string> = {};
+for (const code in mapLands) {
+  const names = [...mapLands[code]];
+  mapLabels[code] = code === "GB" ? "Storbritannia" : names.length === 1 ? names[0] : names.join("/");
+}
+const kartPayload = { counts: mapCounts, labels: mapLabels };
+
 // Filteralternativer
 const land = [...new Set(allDrakter.map((d) => d.land).filter(Boolean))].sort();
 const typer = [...new Set(allDrakter.map((d) => d.type).filter(Boolean))].sort();
@@ -142,6 +199,11 @@ const modalPayload = {
       </div>
     </div>
 
+    <button type="button" class="stat-bredde" id="open-kart">
+      <span><strong>{antallLag}</strong> unike lag fra <strong>{antallLand}</strong> land</span>
+      <span class="stat-bredde-cta"><Icon name="globe" size={15} /> Se på kart</span>
+    </button>
+
     <div class="stat-charts">
       <div class="chart">
         <h3>Topp 5 land</h3>
@@ -165,6 +227,40 @@ const modalPayload = {
               <span class="bar-label">{name}</span>
               <div class="bar-track">
                 <div class="bar-fill bar-fill-alt" style={`width: ${(count / maxKlubb) * 100}%`}></div>
+              </div>
+              <span class="bar-value">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="chart">
+        <h3>Vanligste farger</h3>
+        <div class="bar-chart">
+          {topp6Farger.map(([name, count]) => (
+            <div class="bar-row">
+              <span class="bar-label bar-label-farge">
+                <span class="farge-dot" style={`background: ${fargeStatMap[name] || "#94a3b8"}`}></span>
+                <span class="farge-navn">{name}</span>
+              </span>
+              <div class="bar-track">
+                <div
+                  class="bar-fill bar-fill-farge"
+                  style={`width: ${(count / maxFarge) * 100}%; --farge: ${fargeStatMap[name] || "#94a3b8"}`}
+                ></div>
+              </div>
+              <span class="bar-value">{count}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="chart">
+        <h3>Drakter per tiår</h3>
+        <div class="bar-chart">
+          {tiaarStat.map(([dec, count]) => (
+            <div class="bar-row">
+              <span class="bar-label">{dec}-tallet</span>
+              <div class="bar-track">
+                <div class="bar-fill bar-fill-alt" style={`width: ${(count / maxTiaar) * 100}%`}></div>
               </div>
               <span class="bar-value">{count}</span>
             </div>
@@ -233,6 +329,7 @@ const modalPayload = {
         data-type={drakt.type}
         data-farge={drakt.farger.join(", ").toLowerCase()}
         data-aar={drakt.sesong}
+        data-mapcode={toMapCode(drakt.landskode, drakt.land)}
       >
         <DraktCard drakt={drakt} />
       </div>
@@ -261,6 +358,7 @@ const modalPayload = {
             data-type={drakt.type}
             data-farge={drakt.farger.join(", ").toLowerCase()}
             data-aar={drakt.sesong}
+            data-mapcode={toMapCode(drakt.landskode, drakt.land)}
           >
             <td><a href={`${import.meta.env.BASE_URL}/drakt/${drakt.id}`}>{drakt.navn}</a></td>
             <td>{drakt.sesong}</td>
@@ -285,7 +383,23 @@ const modalPayload = {
     </div>
   </div>
 
+  <!-- Modal for verdenskart -->
+  <div id="kart-modal" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="kart-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog modal-dialog-wide" role="document">
+      <button class="modal-close" data-close aria-label="Lukk">
+        <Icon name="x" size={20} />
+      </button>
+      <div class="kart-head">
+        <h2 id="kart-title">Hvor kommer draktene fra?</h2>
+        <p>Klikk på et land for å se draktene derfra. Mørkere farge = flere drakter.</p>
+      </div>
+      <div id="kart-container" class="kart-container"></div>
+    </div>
+  </div>
+
   <script type="application/json" id="modal-data" set:html={JSON.stringify(modalPayload)} is:inline></script>
+  <script type="application/json" id="kart-data" set:html={JSON.stringify(kartPayload)} is:inline></script>
 </Base>
 
 <style>
@@ -417,6 +531,73 @@ const modalPayload = {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .stat-bredde {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
+    margin: -0.5rem 0 1.75rem;
+    padding: 0.4rem 0.6rem;
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    cursor: pointer;
+  }
+
+  .stat-bredde strong {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .stat-bredde-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .stat-bredde:hover .stat-bredde-cta,
+  .stat-bredde:focus-visible .stat-bredde-cta {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: #fff;
+  }
+
+  .bar-label-farge {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .farge-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    flex-shrink: 0;
+  }
+
+  .farge-navn {
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bar-fill.bar-fill-farge {
+    background: var(--farge);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
   }
 
   .bar-track {
@@ -749,6 +930,31 @@ const modalPayload = {
     animation: modal-pop 0.18s ease;
   }
 
+  .modal-dialog-wide {
+    max-width: 920px;
+  }
+
+  .kart-head {
+    padding: 1.5rem 1.75rem 0.25rem;
+  }
+
+  .kart-head h2 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--color-text);
+  }
+
+  .kart-head p {
+    margin-top: 0.35rem;
+    font-size: 0.9rem;
+    color: var(--color-muted);
+  }
+
+  .kart-container {
+    height: min(60vh, 520px);
+    margin: 0.5rem 1rem 1.25rem;
+  }
+
   .modal-close {
     position: absolute;
     top: 0.75rem;
@@ -884,6 +1090,10 @@ const modalPayload = {
 </style>
 
 <script>
+  import jsVectorMap from "jsvectormap";
+  import "jsvectormap/dist/maps/world.js";
+  import "jsvectormap/dist/jsvectormap.css";
+
   // Module scripts are deferred, so DOM is already ready
   const search = document.getElementById("search") as HTMLInputElement;
   const filterLand = document.getElementById("filter-land") as HTMLSelectElement;
@@ -913,6 +1123,12 @@ const modalPayload = {
     });
   });
 
+  let mapCode = "";
+
+  interface KartData { counts: Record<string, number>; labels: Record<string, string>; }
+  const kartEl = document.getElementById("kart-data");
+  const kart: KartData = kartEl ? JSON.parse(kartEl.textContent || "{}") : { counts: {}, labels: {} };
+
   function applyFilters() {
     const query = search.value.toLowerCase().trim();
     const land = filterLand.value;
@@ -921,7 +1137,7 @@ const modalPayload = {
     const tiaar = filterTiaar.value;
     let visible = 0;
 
-    const hasFilters = !!(query || land || type || farge || tiaar);
+    const hasFilters = !!(query || land || type || farge || tiaar || mapCode);
     resetBtn.hidden = !hasFilters;
 
     // Highlight active filter pills
@@ -942,8 +1158,9 @@ const modalPayload = {
       const matchType = !type || el.dataset.type === type;
       const matchFarge = !farge || el.dataset.farge?.includes(farge);
       const matchTiaar = !tiaar || (el.dataset.aar || "").match(new RegExp(`${tiaar.slice(0, 3)}\\d`));
+      const matchMap = !mapCode || el.dataset.mapcode === mapCode;
 
-      return matchSearch && matchLand && matchType && matchFarge && matchTiaar;
+      return matchSearch && matchLand && matchType && matchFarge && matchTiaar && matchMap;
     }
 
     gridItems.forEach((item) => {
@@ -957,8 +1174,9 @@ const modalPayload = {
       row.hidden = !show;
     });
 
+    const sted = mapCode && kart.labels[mapCode] ? ` fra ${kart.labels[mapCode]}` : "";
     resultsCount.textContent = hasFilters
-      ? `Viser ${visible} av ${gridItems.length} drakter`
+      ? `Viser ${visible} av ${gridItems.length} drakter${sted}`
       : "";
   }
 
@@ -968,11 +1186,12 @@ const modalPayload = {
     filterType.value = "";
     filterFarge.value = "";
     filterTiaar.value = "";
+    mapCode = "";
     applyFilters();
   }
 
   search.addEventListener("input", applyFilters);
-  filterLand.addEventListener("change", applyFilters);
+  filterLand.addEventListener("change", () => { mapCode = ""; applyFilters(); });
   filterType.addEventListener("change", applyFilters);
   filterFarge.addEventListener("change", applyFilters);
   filterTiaar.addEventListener("change", applyFilters);
@@ -1079,21 +1298,96 @@ const modalPayload = {
       }
       return;
     }
-    if (target.closest("[data-close]")) closeModal();
+    if (target.closest("[data-close]")) {
+      if (target.closest("#kart-modal")) closeKart();
+      else closeModal();
+    }
   });
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape") { closeKart(); closeModal(); }
   });
+
+  // --- Verdenskart-modal ---
+  const kartModal = document.getElementById("kart-modal") as HTMLElement;
+  const openKartBtn = document.getElementById("open-kart") as HTMLButtonElement | null;
+  let map: any = null;
+  let mapInited = false;
+  let kartFocused: HTMLElement | null = null;
+
+  function bucket(n: number): string {
+    if (n >= 40) return "5";
+    if (n >= 15) return "4";
+    if (n >= 6) return "3";
+    if (n >= 2) return "2";
+    return "1";
+  }
+
+  const kartScale: Record<string, string> = {
+    "1": "#dcefd6", "2": "#a9d9a4", "3": "#6bb96f", "4": "#369a51", "5": "#166534",
+  };
+
+  function initMap() {
+    const values: Record<string, string> = {};
+    for (const code in kart.counts) values[code] = bucket(kart.counts[code]);
+
+    map = new jsVectorMap({
+      selector: "#kart-container",
+      map: "world",
+      zoomOnScroll: false,
+      zoomButtons: true,
+      backgroundColor: "transparent",
+      regionStyle: {
+        initial: { fill: "#e8efe6", stroke: "#ffffff", strokeWidth: 0.4 },
+        hover: { fillOpacity: 0.8, cursor: "pointer" },
+      },
+      series: { regions: [{ attribute: "fill", scale: kartScale, values }] },
+      onRegionTooltipShow(_event: Event, tooltip: any, code: string) {
+        const name = tooltip.text();
+        const n = kart.counts[code] || 0;
+        tooltip.text(`${name} \u2014 ${n} ${n === 1 ? "drakt" : "drakter"}`, true);
+      },
+      onRegionClick(_event: Event, code: string) {
+        const n = kart.counts[code] || 0;
+        if (!n) return;
+        mapCode = code;
+        filterLand.value = "";
+        applyFilters();
+        closeKart();
+        document.getElementById("controls")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      },
+    });
+  }
+
+  function openKart() {
+    kartFocused = document.activeElement as HTMLElement | null;
+    kartModal.hidden = false;
+    document.body.classList.add("modal-open");
+    if (!mapInited) { initMap(); mapInited = true; }
+    requestAnimationFrame(() => map && map.updateSize());
+    (kartModal.querySelector(".modal-close") as HTMLElement | null)?.focus();
+  }
+
+  function closeKart() {
+    if (kartModal.hidden) return;
+    kartModal.hidden = true;
+    document.body.classList.remove("modal-open");
+    kartFocused?.focus();
+    kartFocused = null;
+  }
+
+  openKartBtn?.addEventListener("click", openKart);
+
 </script>
 
 <script>
   // Lukk modal ved tilbake-navigasjon om den er aapen (ryddig for hash-endringer)
   window.addEventListener("pageshow", () => {
-    const m = document.getElementById("drakt-modal");
-    if (m && !m.hidden) {
-      m.hidden = true;
-      document.body.classList.remove("modal-open");
-    }
+    let open = false;
+    ["drakt-modal", "kart-modal"].forEach((id) => {
+      const m = document.getElementById(id);
+      if (m && !m.hidden) { m.hidden = true; open = true; }
+    });
+    if (open) document.body.classList.remove("modal-open");
   });
 </script>
