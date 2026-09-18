@@ -8129,7 +8129,7 @@
     "navn": "Kapp Verde",
     "type": "landslag",
     "land": "Kapp Verde",
-    "landskode": "",
+    "landskode": "cv",
     "sesongStart": "2026",
     "sesongSlutt": "",
     "sesong": "2026",
@@ -8141,6 +8141,63 @@
     "spiller": "",
     "notat": "VM-drakta fra året de VM-debuterte, spilte 4 uavgjort og likevel røk ut.",
     "kitArchiveUrl": "",
+    "bilde": ""
+  },
+  {
+    "id": "nor-08",
+    "navn": "Norge",
+    "type": "2026, 2027",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "2026",
+    "sesongSlutt": "2027",
+    "sesong": "2026–2027",
+    "drakttype": "",
+    "farger": [
+      "rød"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "6 Berg. VM-drakta!",
+    "kitArchiveUrl": "",
+    "bilde": ""
+  },
+  {
+    "id": "wyd-01",
+    "navn": "Wydad AC",
+    "type": "2025, 2026",
+    "land": "Marokko",
+    "landskode": "ma",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "",
+    "farger": [
+      "rød, hvit"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/wydad-athletic-club-2025-26-home-2-kit-409485/",
+    "bilde": ""
+  },
+  {
+    "id": "wyd-02",
+    "navn": "Wydad AC",
+    "type": "2025, 2026",
+    "land": "Marokko",
+    "landskode": "ma",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "",
+    "farger": [
+      "rød"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/wydad-athletic-club-2025-26-home-kit-422939/",
     "bilde": ""
   }
 ]
