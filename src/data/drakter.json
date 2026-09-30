@@ -8121,7 +8121,7 @@
     "produsent": "",
     "spiller": "",
     "notat": "2 Thorsby. VM-drakta!",
-    "kitArchiveUrl": "",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/norway-2026-third-kit-466861/",
     "bilde": ""
   },
   {
@@ -8146,7 +8146,7 @@
   {
     "id": "nor-08",
     "navn": "Norge",
-    "type": "2026, 2027",
+    "type": "landslag",
     "land": "Norge",
     "landskode": "no",
     "sesongStart": "2026",
@@ -8159,13 +8159,13 @@
     "produsent": "",
     "spiller": "",
     "notat": "6 Berg. VM-drakta!",
-    "kitArchiveUrl": "",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/norway-2026-home-kit-442771/",
     "bilde": ""
   },
   {
     "id": "wyd-01",
     "navn": "Wydad AC",
-    "type": "2025, 2026",
+    "type": "landslag",
     "land": "Marokko",
     "landskode": "ma",
     "sesongStart": "2025",
@@ -8184,7 +8184,7 @@
   {
     "id": "wyd-02",
     "navn": "Wydad AC",
-    "type": "2025, 2026",
+    "type": "landslag",
     "land": "Marokko",
     "landskode": "ma",
     "sesongStart": "2025",
@@ -8198,6 +8198,120 @@
     "spiller": "",
     "notat": "",
     "kitArchiveUrl": "https://www.footballkitarchive.com/wydad-athletic-club-2025-26-home-kit-422939/",
+    "bilde": ""
+  },
+  {
+    "id": "nor-09",
+    "navn": "Norge",
+    "type": "landslag",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "2026",
+    "sesongSlutt": "2027",
+    "sesong": "2026–2027",
+    "drakttype": "",
+    "farger": [
+      "svart"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "7 Sørloth. Den sorte VM-drakta!",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/norway-2026-away-kit-441582/",
+    "bilde": ""
+  },
+  {
+    "id": "eik-01",
+    "navn": "FK Eik Tønsberg",
+    "type": "klubb",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "2024",
+    "sesongSlutt": "2024",
+    "sesong": "2024",
+    "drakttype": "",
+    "farger": [
+      "hvit"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "Draktnummer 15 fra 2024-sesongen.",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/fk-eik-tonsberg-2024-home-kit-261512/",
+    "bilde": ""
+  },
+  {
+    "id": "ton-01",
+    "navn": "FK Tønsberg",
+    "type": "klubb",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "2015",
+    "sesongSlutt": "",
+    "sesong": "2015",
+    "drakttype": "",
+    "farger": [
+      "hvit, rød"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "Draktnummer 8 fra 2015-sesongen. FK Tønsberg er senere slått sammen med Eik Tønsberg. Norsk Tipping-ligaen-patch.",
+    "kitArchiveUrl": "",
+    "bilde": ""
+  },
+  {
+    "id": "wal-01",
+    "navn": "Walton & Hersham FC",
+    "type": "klubb",
+    "land": "England",
+    "landskode": "gb-eng",
+    "sesongStart": "2023",
+    "sesongSlutt": "2024",
+    "sesong": "2023–2024",
+    "drakttype": "",
+    "farger": [
+      "rød"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/walton-hersham-2023-24-home-kit-199736/",
+    "bilde": ""
+  },
+  {
+    "id": "isl-01",
+    "navn": "Island",
+    "type": "landslag",
+    "land": "Island",
+    "landskode": "is",
+    "sesongStart": "2017",
+    "sesongSlutt": "2018",
+    "sesong": "2017–2018",
+    "drakttype": "",
+    "farger": [
+      "blå"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "VM-drakta fra 2018.",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/iceland-2018-home-kit-7738/",
+    "bilde": ""
+  },
+  {
+    "id": "lyn-10",
+    "navn": "Lyn",
+    "type": "klubb",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "2026",
+    "sesongSlutt": "2026",
+    "sesong": "2026",
+    "drakttype": "",
+    "farger": [
+      "hvit"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "20 Berget. Spesialdrakt brukt i kamp. Kjøpt på auksjon til inntekt for Goldenchild.",
+    "kitArchiveUrl": "",
     "bilde": ""
   }
 ]
