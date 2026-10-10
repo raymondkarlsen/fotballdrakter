@@ -8217,7 +8217,7 @@
     "spiller": "",
     "notat": "7 Sørloth. Den sorte VM-drakta!",
     "kitArchiveUrl": "https://www.footballkitarchive.com/norway-2026-away-kit-441582/",
-    "bilde": ""
+    "bilde": "nor-09-b.jpg"
   },
   {
     "id": "eik-01",
@@ -8236,7 +8236,7 @@
     "spiller": "",
     "notat": "Draktnummer 15 fra 2024-sesongen.",
     "kitArchiveUrl": "https://www.footballkitarchive.com/fk-eik-tonsberg-2024-home-kit-261512/",
-    "bilde": ""
+    "bilde": "eik-01b.jpg"
   },
   {
     "id": "ton-01",
@@ -8255,7 +8255,7 @@
     "spiller": "",
     "notat": "Draktnummer 8 fra 2015-sesongen. FK Tønsberg er senere slått sammen med Eik Tønsberg. Norsk Tipping-ligaen-patch.",
     "kitArchiveUrl": "",
-    "bilde": ""
+    "bilde": "ton-01b.jpg"
   },
   {
     "id": "wal-01",
@@ -8274,7 +8274,7 @@
     "spiller": "",
     "notat": "",
     "kitArchiveUrl": "https://www.footballkitarchive.com/walton-hersham-2023-24-home-kit-199736/",
-    "bilde": ""
+    "bilde": "wal-01.jpg"
   },
   {
     "id": "isl-01",
@@ -8312,6 +8312,82 @@
     "spiller": "",
     "notat": "20 Berget. Spesialdrakt brukt i kamp. Kjøpt på auksjon til inntekt for Goldenchild.",
     "kitArchiveUrl": "",
-    "bilde": ""
+    "bilde": "lyn-10.jpg"
+  },
+  {
+    "id": "grl-01",
+    "navn": "Grønland",
+    "type": "landslag",
+    "land": "Grønland",
+    "landskode": "gl",
+    "sesongStart": "2025",
+    "sesongSlutt": "2025",
+    "sesong": "2025",
+    "drakttype": "hjemme",
+    "farger": [
+      "rød"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "grl-01.jpg"
+  },
+  {
+    "id": "bro-01",
+    "navn": "Brøndby IF",
+    "type": "klubb",
+    "land": "Danmark",
+    "landskode": "dk",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "borte",
+    "farger": [
+      "blå, gul"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "bro-01.jpg"
+  },
+  {
+    "id": "utr-01",
+    "navn": "FC Utrecht",
+    "type": "klubb",
+    "land": "Nederland",
+    "landskode": "nl",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "tredje",
+    "farger": [
+      "blå"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "utr-01.jpg"
+  },
+  {
+    "id": "uae-01",
+    "navn": "De forente arabiske emirater",
+    "type": "landslag",
+    "land": "De forente arabiske emirater",
+    "landskode": "ae",
+    "sesongStart": "2026",
+    "sesongSlutt": "2027",
+    "sesong": "2026–2027",
+    "drakttype": "hjemme",
+    "farger": [
+      "hvit"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "uae-01.jpg"
   }
 ]
