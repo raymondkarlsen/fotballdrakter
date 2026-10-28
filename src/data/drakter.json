@@ -8165,7 +8165,7 @@
   {
     "id": "wyd-01",
     "navn": "Wydad AC",
-    "type": "landslag",
+    "type": "klubb",
     "land": "Marokko",
     "landskode": "ma",
     "sesongStart": "2025",
@@ -8173,7 +8173,8 @@
     "sesong": "2025–2026",
     "drakttype": "",
     "farger": [
-      "rød, hvit"
+      "rød",
+      "hvit"
     ],
     "produsent": "",
     "spiller": "",
@@ -8184,7 +8185,7 @@
   {
     "id": "wyd-02",
     "navn": "Wydad AC",
-    "type": "landslag",
+    "type": "klubb",
     "land": "Marokko",
     "landskode": "ma",
     "sesongStart": "2025",
@@ -8249,7 +8250,8 @@
     "sesong": "2015",
     "drakttype": "",
     "farger": [
-      "hvit, rød"
+      "hvit",
+      "rød"
     ],
     "produsent": "",
     "spiller": "",
@@ -8275,6 +8277,25 @@
     "notat": "",
     "kitArchiveUrl": "https://www.footballkitarchive.com/walton-hersham-2023-24-home-kit-199736/",
     "bilde": "wal-01.jpg"
+  },
+  {
+    "id": "pry-01",
+    "navn": "Prestatyn Town",
+    "type": "klubb",
+    "land": "Wales",
+    "landskode": "gb-wls",
+    "sesongStart": "2011",
+    "sesongSlutt": "2012",
+    "sesong": "2011–2012",
+    "drakttype": "",
+    "farger": [
+      "blå"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/prestatyn-town-2011-12-away-kit-463535/",
+    "bilde": ""
   },
   {
     "id": "isl-01",
@@ -8344,7 +8365,8 @@
     "sesong": "2025–2026",
     "drakttype": "borte",
     "farger": [
-      "blå, gul"
+      "blå",
+      "gul"
     ],
     "produsent": "",
     "spiller": "",
@@ -8389,5 +8411,105 @@
     "notat": "",
     "kitArchiveUrl": "",
     "bilde": "uae-01.jpg"
+  },
+  {
+    "id": "klf-01",
+    "navn": "Kløfta",
+    "type": "klubb",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "",
+    "sesongSlutt": "",
+    "sesong": "",
+    "drakttype": "hjemme",
+    "farger": [
+      "svart",
+      "hvit"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "Draktnummer 40.",
+    "kitArchiveUrl": "",
+    "bilde": "klf-01.jpg"
+  },
+  {
+    "id": "skj-01",
+    "navn": "Skjergård",
+    "type": "klubb",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "",
+    "sesongSlutt": "",
+    "sesong": "",
+    "drakttype": "",
+    "farger": [
+      "hvit",
+      "blå"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "Draktnummer 13.",
+    "kitArchiveUrl": "",
+    "bilde": "skj-01.jpg"
+  },
+  {
+    "id": "sku-01",
+    "navn": "Skudenes",
+    "type": "klubb",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "",
+    "sesongSlutt": "",
+    "sesong": "",
+    "drakttype": "borte",
+    "farger": [
+      "hvit",
+      "rød"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "sku-01.jpg"
+  },
+  {
+    "id": "fyl-01",
+    "navn": "Fyllingen",
+    "type": "klubb",
+    "land": "Norge",
+    "landskode": "no",
+    "sesongStart": "",
+    "sesongSlutt": "",
+    "sesong": "",
+    "drakttype": "hjemme",
+    "farger": [
+      "blå",
+      "hvit"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "Draktnummer 11.",
+    "kitArchiveUrl": "",
+    "bilde": "fyl-01.jpg"
+  },
+  {
+    "id": "sif-01",
+    "navn": "Silkeborg IF",
+    "type": "klubb",
+    "land": "Danmark",
+    "landskode": "dk",
+    "sesongStart": "2006",
+    "sesongSlutt": "2007",
+    "sesong": "2006–2007",
+    "drakttype": "hjemme",
+    "farger": [
+      "rød",
+      "hvit"
+    ],
+    "produsent": "",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "https://www.footballkitarchive.com/silkeborg-if-2007-08-home-kit-283800/",
+    "bilde": "sif-01.jpg"
   }
 ]
