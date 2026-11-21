@@ -19,7 +19,8 @@ npm run dev
 
 Dataen ligger i Google Sheets-fanen `drakter_v2`. En planlagt GitHub Action
 (`.github/workflows/sync-sheets.yml`) henter fanen automatisk hver dag og
-committer oppdatert `src/data/drakter.json`.
+committer oppdatert `src/data/drakter.json`. Ved endringer starter den
+publisering til GitHub Pages automatisk.
 
 For å oppdatere manuelt:
 

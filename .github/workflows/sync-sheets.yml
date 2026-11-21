@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
     steps:
       - uses: actions/checkout@v4
 
@@ -46,6 +47,14 @@ jobs:
 
           Automatisk sync fra spreadsheet."
           git push
+
+      # Commits fra GITHUB_TOKEN starter ikke andre workflows,
+      # så publiseringen må startes eksplisitt.
+      - name: Start publisering til GitHub Pages
+        if: steps.check.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref master
 
       - name: Ingen endringer
         if: steps.check.outputs.changed == 'false'
