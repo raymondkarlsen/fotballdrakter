@@ -8511,5 +8511,103 @@
     "notat": "",
     "kitArchiveUrl": "https://www.footballkitarchive.com/silkeborg-if-2007-08-home-kit-283800/",
     "bilde": "sif-01.jpg"
+  },
+  {
+    "id": "afw-02",
+    "navn": "AFC Wimbledon",
+    "type": "klubb",
+    "land": "England",
+    "landskode": "gb-eng",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "hjemme",
+    "farger": [
+      "blå",
+      "gul"
+    ],
+    "produsent": "Lotto",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "afw-02.jpg"
+  },
+  {
+    "id": "afw-03",
+    "navn": "AFC Wimbledon",
+    "type": "klubb",
+    "land": "England",
+    "landskode": "gb-eng",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "borte",
+    "farger": [
+      "grønn",
+      "svart"
+    ],
+    "produsent": "Lotto",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "afw-03.jpg"
+  },
+  {
+    "id": "afw-04",
+    "navn": "AFC Wimbledon",
+    "type": "klubb",
+    "land": "England",
+    "landskode": "gb-eng",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "tredje",
+    "farger": [
+      "gul"
+    ],
+    "produsent": "Lotto",
+    "spiller": "",
+    "notat": "",
+    "kitArchiveUrl": "",
+    "bilde": "afw-04.jpg"
+  },
+  {
+    "id": "afw-05",
+    "navn": "AFC Wimbledon",
+    "type": "klubb",
+    "land": "England",
+    "landskode": "gb-eng",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "keeper",
+    "farger": [
+      "grå",
+      "svart"
+    ],
+    "produsent": "Lotto",
+    "spiller": "",
+    "notat": "Hjemmekeeperdrakt",
+    "kitArchiveUrl": "",
+    "bilde": "afw-05.jpg"
+  },
+  {
+    "id": "afw-06",
+    "navn": "AFC Wimbledon",
+    "type": "klubb",
+    "land": "England",
+    "landskode": "gb-eng",
+    "sesongStart": "2025",
+    "sesongSlutt": "2026",
+    "sesong": "2025–2026",
+    "drakttype": "keeper",
+    "farger": [
+      "lyseblå"
+    ],
+    "produsent": "Lotto",
+    "spiller": "",
+    "notat": "Tredje keeperdrakt",
+    "kitArchiveUrl": "",
+    "bilde": "afw-06.jpg"
   }
 ]
